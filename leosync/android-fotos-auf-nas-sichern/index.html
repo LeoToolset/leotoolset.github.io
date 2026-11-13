@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#3972a6">
+    <meta name="robots" content="index, follow">
+
+    <title>Android-Fotos auf NAS sichern – automatisch per SMB | LeoSync</title>
+
+    <meta name="description" content="Android-Fotos automatisch auf dein NAS sichern: LeoSync überträgt per SMB im Heimnetz, sortiert nach Jahr, Monat und Land. Ohne Cloud, kostenlos und Open Source.">
+
+    <link rel="canonical" href="https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/">
+    <link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/">
+    <link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/">
+    <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LeoSync">
+    <meta property="og:url" content="https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/">
+    <meta property="og:title" content="Android-Fotos auf NAS sichern – automatisch per SMB | LeoSync">
+    <meta property="og:description" content="Android-Fotos automatisch auf dein NAS sichern: LeoSync überträgt per SMB im Heimnetz, sortiert nach Jahr, Monat und Land. Ohne Cloud, kostenlos und Open Source.">
+    <meta property="og:locale" content="de_CH">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <link rel="icon" type="image/png" href="../../images/LeoSync/logo.png">
+    <link rel="stylesheet" href="../../css/leosync.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "LeoSync", "item": "https://apop85.github.io/leosync/"},
+                    {"@type": "ListItem", "position": 2, "name": "Android-Fotos auf NAS sichern", "item": "https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/"}
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/#webpage",
+                "url": "https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/",
+                "name": "Android-Fotos auf NAS sichern – automatisch per SMB | LeoSync",
+                "description": "Android-Fotos automatisch auf dein NAS sichern: LeoSync überträgt per SMB im Heimnetz, sortiert nach Jahr, Monat und Land. Ohne Cloud, kostenlos und Open Source.",
+                "inLanguage": "de",
+                "isPartOf": {"@type": "WebSite", "@id": "https://apop85.github.io/leosync/#website"},
+                "about": {"@type": "SoftwareApplication", "@id": "https://apop85.github.io/leosync/#software"}
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [{"@type":"Question","name":"Funktioniert LeoSync mit Synology oder QNAP?","acceptedAnswer":{"@type":"Answer","text":"LeoSync verbindet sich mit SMB2/SMB3-Freigaben mit Benutzername und Passwort, wie sie auch Synology- und QNAP-NAS anbieten. Die App ist mit einem NAS getestet und funktioniert dort einwandfrei. Mit Verbindung testen siehst du sofort, ob es bei dir klappt."}},{"@type":"Question","name":"Brauche ich eine Cloud oder ein Konto?","acceptedAnswer":{"@type":"Answer","text":"Nein. Die Dateien gehen nur zwischen Handy und NAS oder PC. LeoSync hat keinen Server und braucht kein Konto."}},{"@type":"Question","name":"Läuft die Sicherung auch unterwegs?","acceptedAnswer":{"@type":"Answer","text":"Standardmässig nur im eingetragenen WLAN. Unter Einstellungen Übertragung kannst du mobile Daten oder VPN zulassen; das kann Datenverbrauch und Kosten verursachen."}},{"@type":"Question","name":"Was passiert, wenn das NAS ausgeschaltet ist?","acceptedAnswer":{"@type":"Answer","text":"LeoSync wartet und prüft im WLAN alle 30 Minuten erneut. Sobald das NAS erreichbar ist, werden neue Fotos übertragen."}}]
+            }
+        ]
+    }
+    </script>
+    <meta name="leo-analytics" content="https://apop85.goatcounter.com/count">
+</head>
+
+<body class="privacy-page help-page landing-page">
+
+<header class="site-header">
+    <div class="container navigation">
+
+        <a class="brand" href="../">
+            <picture>
+                <source srcset="../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Hauptnavigation">
+            <a href="../#funktionen">Funktionen</a>
+            <a href="../#sicherheit">Sicherheit</a>
+            <a href="../#download">Download</a>
+            <a href="../#faq">FAQ</a>
+            <a href="../hilfe.html">Hilfe</a>
+            <a href="../../">Leo</a>
+            <a class="language-button" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/" hreflang="en" lang="en" aria-label="Switch to English" data-track="language_switch">EN</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero help-hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <nav class="breadcrumb" aria-label="Brotkrümel">
+                <ol>
+                    <li><a href="../">LeoSync Startseite</a></li>
+                    <li aria-current="page">Android-Fotos auf NAS sichern</li>
+                </ol>
+            </nav>
+            <h1>Android-Fotos auf dem NAS sichern – automatisch und ohne Cloud</h1>
+            <p class="hero-description">LeoSync überträgt Fotos und Videos von deinem Android-Handy automatisch auf dein NAS oder deinen PC. Direkt im Heimnetz per SMB, sortiert und ohne Cloud-Zwischenstation.</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-hero">↓ <span>LeoSync kostenlos herunterladen</span></a>
+            </div>
+            <ul class="trust-list"><li>Kostenlos</li><li>Open Source (MIT)</li><li>Android 10+</li><li>Beta-Version</li></ul>
+            <div class="hero-note">Aktuelle Version: <span data-leo-version>–</span></div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-decoration"></div>
+            <picture>
+                <source srcset="../../images/head.webp" type="image/webp">
+                <img class="hero-dog" src="../../images/head.png" alt="Leo, das Maskottchen von LeoSync" width="780" height="780">
+            </picture>
+        </div>
+
+    </div>
+</section>
+
+<main class="container">
+
+    <article class="privacy-content">
+
+        <h2 id="warum">Warum Smartphone-Fotos auf einem NAS sichern?</h2>
+
+        <p>Fotos und Videos füllen den Handy-Speicher schneller, als man denkt, und ein verlorenes oder defektes Handy nimmt die Erinnerungen mit. Ein NAS im Heimnetz löst beides: Die Dateien liegen auf einem eigenen Gerät mit viel Platz, ohne Abo und ohne dass sie bei einem Cloud-Anbieter landen. LeoSync überträgt sie automatisch, sobald dein Handy im Heim-WLAN ist.</p>
+
+        <h2 id="funktionsweise">So sichert LeoSync deine Fotos</h2>
+
+        <ul>
+            <li><strong>Direkt per SMB:</strong> LeoSync spricht SMB2/SMB3, das Protokoll der Windows-Netzwerkfreigabe, das auch NAS-Geräte anbieten. Es gibt keinen Zwischenserver.</li>
+            <li><strong>Automatisch:</strong> Sobald das Handy mit einem eingetragenen WLAN verbunden ist, startet die Sicherung im Hintergrund. Ist das NAS aus, prüft LeoSync alle 30 Minuten erneut.</li>
+            <li><strong>Sortiert:</strong> Die Fotos landen nach Jahr, Monat und Reiseland in Ordnern, zum Beispiel <code>2026\06 - Ägypten</code>. Das Land wird offline aus den GPS-Daten bestimmt.</li>
+            <li><strong>Ohne Duplikate:</strong> LeoSync gleicht mit dem Freigabeordner ab und überträgt nichts doppelt. Abgebrochene Uploads werden fortgesetzt.</li>
+            <li><strong>Geprüft:</strong> Auf Wunsch liest LeoSync jede Datei nach dem Hochladen zurück und vergleicht sie mit dem Original, bevor Fotos vom Handy entfernt werden.</li>
+        </ul>
+
+        <h2 id="voraussetzungen">Voraussetzungen</h2>
+
+        <ul>
+            <li>Android 10 oder neuer.</li>
+            <li>Ein NAS (oder PC) mit einer SMB-Freigabe (SMB2/SMB3) und einem Benutzer mit Schreibrecht auf den Zielordner.</li>
+            <li>Handy und NAS im selben Netz. Trage die IP-Adresse des NAS ein (z. B. <code>\\192.168.1.50\Fotos</code>), denn Namen mit <code>.local</code> löst Android nicht zuverlässig auf.</li>
+            <li>Der Windows-Weg ist ausführlich in der <a href="../hilfe.html#ordner-freigeben">Hilfe</a> beschrieben. Bei einem NAS legst du Freigabe und Benutzer in dessen Verwaltungsoberfläche an. Wie du die Übertragung bei Synology, QNAP oder Samba verschlüsselst, steht in der <a href="../hilfe.html#verschluesselung">Hilfe</a>.</li>
+        </ul>
+
+        <h2 id="nas-kompatibilitaet">Welche NAS und SMB-Umgebungen funktionieren?</h2>
+
+        <p>LeoSync ist mit einer Windows-Ordnerfreigabe und mit einem NAS getestet und funktioniert dort einwandfrei. Voraussetzung ist eine SMB2/SMB3-Freigabe mit Benutzername und Passwort, wie sie gängige NAS-Systeme anbieten, zum Beispiel von Synology oder QNAP. Mit <strong>Verbindung testen</strong> zeigt dir die App sofort, ob Anmeldung und Zielordner bei dir funktionieren.</p>
+
+        <p>Eine Eigenheit gibt es bei manchen NAS (Samba): Die PC-Kennung ist dort möglicherweise nicht stabil. Stelle in diesem Fall im Profil <strong>Nur WLAN-Name</strong> ein.</p>
+
+        <h2 id="einrichtung">Einrichtung in fünf Schritten</h2>
+
+        <ol>
+            <li>Auf dem NAS einen Freigabeordner für die Fotos anlegen und einem Benutzer Schreibrecht geben.</li>
+            <li>LeoSync installieren und die angezeigten Berechtigungen erteilen.</li>
+            <li>Mit <strong>Profil hinzufügen</strong> den Typ <strong>Fotos &amp; Videos sichern</strong> wählen und die IP-Adresse des NAS, Benutzer und Passwort eintragen. <strong>Ordner auf dem PC wählen…</strong> zeigt die Freigaben zur Auswahl.</li>
+            <li>Mit <strong>Verbindung testen</strong> prüfen, ob alles stimmt.</li>
+            <li>Auf <strong>Simulieren</strong> tippen, um ohne Übertragung zu sehen, was passieren würde, und dann einmal von Hand <strong>Synchronisieren</strong>. Danach läuft die Sicherung automatisch.</li>
+        </ol>
+
+        <div class="help-phones">
+            <figure><div class="phone-frame"><picture><source srcset="../../images/LeoSync/new_profile_bright_de.webp" type="image/webp"><img src="../../images/LeoSync/new_profile_bright_de.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Neues Profil: Auswahl zwischen Fotos und Videos sichern und Ordner synchronisieren"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Profiltyp wählen</figcaption></figure>
+            <figure><div class="phone-frame"><picture><source srcset="../../images/LeoSync/profile_connection_test_bright_de.webp" type="image/webp"><img src="../../images/LeoSync/profile_connection_test_bright_de.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Profil bearbeiten mit Freigabe-Pfad, Benutzer und erfolgreichem Verbindungstest"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Ziel eintragen und Verbindung testen</figcaption></figure>
+            <figure><div class="phone-frame"><picture><source srcset="../../images/LeoSync/all_synced_bright_de.webp" type="image/webp"><img src="../../images/LeoSync/all_synced_bright_de.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Startseite: Leo schläft, alles ist synchronisiert"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Alles gesichert</figcaption></figure>
+        </div>
+
+        <h2 id="sicherheit-nas">Sicher im Alltag</h2>
+
+        <p>Gelöschte oder überschriebene Dateien landen bei Ordner-Profilen im Papierkorb <code>@LeoSync-Bin</code>. Die Schutzbremse hält an und fragt nach, wenn auf einmal viele Dateien gelöscht würden. Mit <strong>Speicher freigeben</strong> räumst du alte Dateien vom Handy, die nachweislich auf dem NAS liegen. Alle Funktionen findest du auf der <a href="../#funktionen">LeoSync-Startseite</a>.</p>
+
+        <h2 id="faq">Häufige Fragen</h2>
+
+<h3>Funktioniert LeoSync mit Synology oder QNAP?</h3>
+<p>LeoSync verbindet sich mit SMB2/SMB3-Freigaben mit Benutzername und Passwort, wie sie auch Synology- und QNAP-NAS anbieten. Die App ist mit einem NAS getestet und funktioniert dort einwandfrei. Mit Verbindung testen siehst du sofort, ob es bei dir klappt.</p>
+<h3>Brauche ich eine Cloud oder ein Konto?</h3>
+<p>Nein. Die Dateien gehen nur zwischen Handy und NAS oder PC. LeoSync hat keinen Server und braucht kein Konto.</p>
+<h3>Läuft die Sicherung auch unterwegs?</h3>
+<p>Standardmässig nur im eingetragenen WLAN. Unter Einstellungen Übertragung kannst du mobile Daten oder VPN zulassen; das kann Datenverbrauch und Kosten verursachen.</p>
+<h3>Was passiert, wenn das NAS ausgeschaltet ist?</h3>
+<p>LeoSync wartet und prüft im WLAN alle 30 Minuten erneut. Sobald das NAS erreichbar ist, werden neue Fotos übertragen.</p>
+
+        <h2 id="weiter">Weiterführende Seiten</h2>
+
+        <ul>
+<li><a href="../android-backup-ohne-cloud/">Android-Backup ohne Cloud: Vorteile lokaler Sicherung</a></li>
+<li><a href="../android-fotos-auf-pc-uebertragen/">Android-Fotos automatisch auf den PC übertragen</a></li>
+<li><a href="../android-dateien-synchronisieren/">Android-Dateien mit PC oder NAS synchronisieren</a></li>
+<li><a href="../">LeoSync Startseite: alle Funktionen im Überblick</a></li>
+<li><a href="../hilfe.html">Hilfe: Ordner freigeben und Profil einrichten</a></li>
+<li><a href="https://github.com/Apop85/Sync2PC/releases/latest">LeoSync auf GitHub Releases herunterladen</a></li>
+        </ul>
+
+    </article>
+
+</main>
+
+<section class="cta-band" aria-label="Bereit, deine Fotos zu sichern?">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text">
+            <h2>Bereit, deine Fotos zu sichern?</h2>
+            <p>LeoSync ist kostenlos und quelloffen. Die aktuelle APK gibt es auf GitHub Releases.</p>
+        </div>
+        <div class="cta-band-actions">
+            <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-end">↓ <span>LeoSync kostenlos herunterladen</span></a>
+            <a class="cta-band-link" href="../hilfe.html">Einrichtung in der Hilfe</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            <picture>
+                <source srcset="../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync · Leo – Independent Software</span>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer-Navigation">
+            <a href="../../">Leo Startseite</a>
+            <a href="../">LeoSync</a>
+            <a href="https://apop85.github.io/leosync/en/android-photo-backup-nas/" hreflang="en" lang="en">English</a>
+            <a href="../privacy-de.html">Datenschutz</a>
+            <a href="../agb-de.html">AGB</a>
+            <a href="https://github.com/Apop85/Sync2PC" target="_blank" rel="noopener noreferrer" data-track="github_repository_click">GitHub</a>
+        </nav>
+
+        <div class="footer-copy">© 2026 Leo – Independent Software</div>
+
+    </div>
+
+</footer>
+
+<script src="../../js/leosync.js" defer></script>
+</body>
+</html>

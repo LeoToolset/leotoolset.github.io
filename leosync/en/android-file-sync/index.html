@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#3972a6">
+    <meta name="robots" content="index, follow">
+
+    <title>Android File Sync over SMB – One-Way and Two-Way | LeoSync</title>
+
+    <meta name="description" content="Sync Android files with your PC or NAS over SMB: any folders and file types, one-way or two-way, with trash and safety brake. Free, no cloud.">
+
+    <link rel="canonical" href="https://apop85.github.io/leosync/en/android-file-sync/">
+    <link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-dateien-synchronisieren/">
+    <link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-file-sync/">
+    <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-file-sync/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LeoSync">
+    <meta property="og:url" content="https://apop85.github.io/leosync/en/android-file-sync/">
+    <meta property="og:title" content="Android File Sync over SMB – One-Way and Two-Way | LeoSync">
+    <meta property="og:description" content="Sync Android files with your PC or NAS over SMB: any folders and file types, one-way or two-way, with trash and safety brake. Free, no cloud.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_CH">
+
+    <link rel="icon" type="image/png" href="../../../images/LeoSync/logo.png">
+    <link rel="stylesheet" href="../../../css/leosync.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "LeoSync", "item": "https://apop85.github.io/leosync/en/"},
+                    {"@type": "ListItem", "position": 2, "name": "Android file sync", "item": "https://apop85.github.io/leosync/en/android-file-sync/"}
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://apop85.github.io/leosync/en/android-file-sync/#webpage",
+                "url": "https://apop85.github.io/leosync/en/android-file-sync/",
+                "name": "Android File Sync over SMB – One-Way and Two-Way | LeoSync",
+                "description": "Sync Android files with your PC or NAS over SMB: any folders and file types, one-way or two-way, with trash and safety brake. Free, no cloud.",
+                "inLanguage": "en",
+                "isPartOf": {"@type": "WebSite", "@id": "https://apop85.github.io/leosync/#website"},
+                "about": {"@type": "SoftwareApplication", "@id": "https://apop85.github.io/leosync/#software"}
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [{"@type":"Question","name":"Can LeoSync sync folders in both directions?","acceptedAnswer":{"@type":"Answer","text":"Yes. For a folder profile you choose phone to PC, PC to phone or both ways. With two-way sync, LeoSync compares phone, PC and the last state and detects conflicts."}},{"@type":"Question","name":"What happens if a file was changed on both sides?","acceptedAnswer":{"@type":"Answer","text":"LeoSync asks you which version wins. The other version goes to the trash and can be restored."}},{"@type":"Question","name":"Are deleted files removed permanently right away?","acceptedAnswer":{"@type":"Answer","text":"No. Replaced and deleted files go to the @LeoSync-Bin trash and are only emptied after the set period, by default after 30 days."}},{"@type":"Question","name":"Which file types are supported?","acceptedAnswer":{"@type":"Answer","text":"All of them. With filters you can include or exclude certain files."}}]
+            }
+        ]
+    }
+    </script>
+    <meta name="leo-analytics" content="https://apop85.goatcounter.com/count">
+</head>
+
+<body class="privacy-page help-page landing-page">
+
+<header class="site-header">
+    <div class="container navigation">
+
+        <a class="brand" href="../">
+            <picture>
+                <source srcset="../../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../#funktionen">Features</a>
+            <a href="../#sicherheit">Security</a>
+            <a href="../#download">Download</a>
+            <a href="../#faq">FAQ</a>
+            <a href="../help.html">Help</a>
+            <a href="../../../">Leo</a>
+            <a class="language-button" href="https://apop85.github.io/leosync/android-dateien-synchronisieren/" hreflang="de" lang="de" aria-label="Zur deutschen Version wechseln" data-track="language_switch">DE</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero help-hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="../">LeoSync home</a></li>
+                    <li aria-current="page">Android file sync</li>
+                </ol>
+            </nav>
+            <h1>Android file sync – keep folders in step with your PC or NAS</h1>
+            <p class="hero-description">LeoSync syncs any folders between your Android phone and your PC or NAS over SMB, one-way or both ways, without a cloud.</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-hero">↓ <span>Download LeoSync for Android</span></a>
+            </div>
+            <ul class="trust-list"><li>Free</li><li>Open source (MIT)</li><li>Android 10+</li><li>Beta version</li></ul>
+            <div class="hero-note">Latest version: <span data-leo-version>–</span></div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-decoration"></div>
+            <picture>
+                <source srcset="../../../images/head.webp" type="image/webp">
+                <img class="hero-dog" src="../../../images/head.png" alt="Leo, the LeoSync mascot" width="780" height="780">
+            </picture>
+        </div>
+
+    </div>
+</section>
+
+<main class="container">
+
+    <article class="privacy-content">
+
+        <h2 id="how-it-works">How the synchronization works</h2>
+
+        <p>Besides photo backup, LeoSync offers profiles of the type <strong>Sync a folder</strong>. They keep any folder on the phone in step with a folder on your PC or NAS, 1:1 and with all file types. You choose the direction: phone to PC, PC to phone, or both ways.</p>
+
+        <p>For two-way sync, LeoSync compares three states: phone, PC and the state of the last sync. That is how the app knows what is new, changed or deleted. If the same file was changed on both sides, you decide which version wins; the other one goes to the trash.</p>
+
+        <h2 id="smb">SMB and connecting</h2>
+
+        <p>Transfers run via SMB2/SMB3 directly between your phone and your PC or NAS. In the profile you enter the share (for example <code>\\192.168.1.20\Data</code>), user and password; the IP address is more reliable than a <code>.local</code> name. <strong>Test connection</strong> shows right away whether everything is correct. If you wish, LeoSync also recognises your PC by a PC ID before the user name and password are sent.</p>
+
+        <h2 id="features">Supported features</h2>
+
+        <ul>
+            <li><strong>Any folders and file types</strong>, one-way or two-way.</li>
+            <li><strong>Filters:</strong> sync only certain files or exclude files, with patterns such as <code>*.pdf</code> or <code>Temp/**</code>.</li>
+            <li><strong>Apply deletions</strong> (optional): deleted and replaced files go to the <code>@LeoSync-Bin</code> trash and can be restored.</li>
+            <li><strong>Safety brake:</strong> if a folder is missing or more than 20 % of the files would be deleted, LeoSync stops and asks.</li>
+            <li><strong>Version protection:</strong> the overwritten version on the other side stays in the trash.</li>
+            <li><strong>Simulation:</strong> shows beforehand what would happen, without transferring anything.</li>
+            <li><strong>Robust:</strong> interrupted transfers are resumed, and up to four files run in parallel. File modification dates are preserved.</li>
+        </ul>
+
+        <div class="help-phones">
+            <figure><div class="phone-frame"><picture><source srcset="../../../images/LeoSync/papierkorb_wiederherstellung_bright_en.webp" type="image/webp"><img src="../../../images/LeoSync/papierkorb_wiederherstellung_bright_en.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Trash with one deleted file selected and the buttons Restore and Delete permanently"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Trash: restore files</figcaption></figure>
+            <figure><div class="phone-frame"><picture><source srcset="../../../images/LeoSync/schutzbremse_bright_en.webp" type="image/webp"><img src="../../../images/LeoSync/schutzbremse_bright_en.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync home screen with the warning Many files would be deleted and the buttons Do not delete and Move to trash anyway"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Safety brake: LeoSync asks first</figcaption></figure>
+        </div>
+
+        <h2 id="configuration">Configuration options</h2>
+
+        <ul>
+            <li><strong>Direction:</strong> phone → PC, PC → phone or both ways. If you change the direction of an existing profile, LeoSync shows what changes before saving.</li>
+            <li><strong>Check interval:</strong> one setting for all folder profiles under Settings → Transfer, 15 to 1440 minutes (default 60).</li>
+            <li><strong>Trash:</strong> empty after 0 to 3650 days (0 = never), default 30 days.</li>
+            <li><strong>Safety brake:</strong> threshold from 1 to 100 %.</li>
+            <li><strong>Triggers:</strong> automatic on the Wi-Fi you entered, optionally over mobile data or VPN, only while charging, pausable, or by hand.</li>
+        </ul>
+
+        <p>The <a href="../help.html">help</a> describes setting up the PC step by step.</p>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+<h3>Can LeoSync sync folders in both directions?</h3>
+<p>Yes. For a folder profile you choose phone to PC, PC to phone or both ways. With two-way sync, LeoSync compares phone, PC and the last state and detects conflicts.</p>
+<h3>What happens if a file was changed on both sides?</h3>
+<p>LeoSync asks you which version wins. The other version goes to the trash and can be restored.</p>
+<h3>Are deleted files removed permanently right away?</h3>
+<p>No. Replaced and deleted files go to the @LeoSync-Bin trash and are only emptied after the set period, by default after 30 days.</p>
+<h3>Which file types are supported?</h3>
+<p>All of them. With filters you can include or exclude certain files.</p>
+
+        <h2 id="weiter">Related pages</h2>
+
+        <ul>
+<li><a href="../android-photos-to-pc/">Transfer Android photos to your PC automatically</a></li>
+<li><a href="../android-photo-backup-nas/">Back up Android photos to a NAS</a></li>
+<li><a href="../android-backup-without-cloud/">Android backup without the cloud</a></li>
+<li><a href="../help.html">Help: share a folder and set up a profile</a></li>
+<li><a href="https://github.com/Apop85/Sync2PC/releases/latest">Download LeoSync from GitHub Releases</a></li>
+        </ul>
+
+    </article>
+
+</main>
+
+<section class="cta-band" aria-label="Ready to back up your photos?">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text">
+            <h2>Ready to back up your photos?</h2>
+            <p>LeoSync is free and open source. The latest APK is available on GitHub Releases.</p>
+        </div>
+        <div class="cta-band-actions">
+            <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-end">↓ <span>Download LeoSync for Android</span></a>
+            <a class="cta-band-link" href="../help.html">Setup guide</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            <picture>
+                <source srcset="../../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync · Leo – Independent Software</span>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="../../../">Leo home</a>
+            <a href="../">LeoSync</a>
+            <a href="https://apop85.github.io/leosync/android-dateien-synchronisieren/" hreflang="de" lang="de">Deutsch</a>
+            <a href="../../privacy-en.html">Privacy</a>
+            <a href="../../terms-en.html">Terms</a>
+            <a href="https://github.com/Apop85/Sync2PC" target="_blank" rel="noopener noreferrer" data-track="github_repository_click">GitHub</a>
+        </nav>
+
+        <div class="footer-copy">© 2026 Leo – Independent Software</div>
+
+    </div>
+
+</footer>
+
+<script src="../../../js/leosync.js" defer></script>
+</body>
+</html>

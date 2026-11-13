@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#3972a6">
+    <meta name="robots" content="index, follow">
+
+    <title>Android Backup Without the Cloud – Local Photo Backup | LeoSync</title>
+
+    <meta name="description" content="Android backup without the cloud: back up photos and videos locally to your own PC or NAS. LeoSync uses SMB, needs no account or server, and is free and open source.">
+
+    <link rel="canonical" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/">
+    <link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-backup-ohne-cloud/">
+    <link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/">
+    <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LeoSync">
+    <meta property="og:url" content="https://apop85.github.io/leosync/en/android-backup-without-cloud/">
+    <meta property="og:title" content="Android Backup Without the Cloud – Local Photo Backup | LeoSync">
+    <meta property="og:description" content="Android backup without the cloud: back up photos and videos locally to your own PC or NAS. LeoSync uses SMB, needs no account or server, and is free and open source.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_CH">
+
+    <link rel="icon" type="image/png" href="../../../images/LeoSync/logo.png">
+    <link rel="stylesheet" href="../../../css/leosync.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "LeoSync", "item": "https://apop85.github.io/leosync/en/"},
+                    {"@type": "ListItem", "position": 2, "name": "Android backup without the cloud", "item": "https://apop85.github.io/leosync/en/android-backup-without-cloud/"}
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://apop85.github.io/leosync/en/android-backup-without-cloud/#webpage",
+                "url": "https://apop85.github.io/leosync/en/android-backup-without-cloud/",
+                "name": "Android Backup Without the Cloud – Local Photo Backup | LeoSync",
+                "description": "Android backup without the cloud: back up photos and videos locally to your own PC or NAS. LeoSync uses SMB, needs no account or server, and is free and open source.",
+                "inLanguage": "en",
+                "isPartOf": {"@type": "WebSite", "@id": "https://apop85.github.io/leosync/#website"},
+                "about": {"@type": "SoftwareApplication", "@id": "https://apop85.github.io/leosync/#software"}
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [{"@type":"Question","name":"Can I back up Android photos without the cloud?","acceptedAnswer":{"@type":"Answer","text":"Yes. LeoSync transfers photos and videos directly via SMB to your own PC or NAS. There is no cloud service and no account."}},{"@type":"Question","name":"What data does LeoSync send to the internet?","acceptedAnswer":{"@type":"Answer","text":"Apart from syncing with your PC or NAS, only the update check on GitHub. Diagnostic data only leaves the phone if you share it yourself."}},{"@type":"Question","name":"Does a local backup replace a second backup?","acceptedAnswer":{"@type":"Answer","text":"No. Important photos should also be on another drive, so that a failure of the PC or NAS does not affect everything."}},{"@type":"Question","name":"How much does LeoSync cost?","acceptedAnswer":{"@type":"Answer","text":"LeoSync is free and open source (MIT licence). The app is currently in beta."}}]
+            }
+        ]
+    }
+    </script>
+    <meta name="leo-analytics" content="https://apop85.goatcounter.com/count">
+</head>
+
+<body class="privacy-page help-page landing-page">
+
+<header class="site-header">
+    <div class="container navigation">
+
+        <a class="brand" href="../">
+            <picture>
+                <source srcset="../../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../#funktionen">Features</a>
+            <a href="../#sicherheit">Security</a>
+            <a href="../#download">Download</a>
+            <a href="../#faq">FAQ</a>
+            <a href="../help.html">Help</a>
+            <a href="../../../">Leo</a>
+            <a class="language-button" href="https://apop85.github.io/leosync/android-backup-ohne-cloud/" hreflang="de" lang="de" aria-label="Zur deutschen Version wechseln" data-track="language_switch">DE</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero help-hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="../">LeoSync home</a></li>
+                    <li aria-current="page">Android backup without the cloud</li>
+                </ol>
+            </nav>
+            <h1>Android backup without the cloud: back up photos locally to your PC or NAS</h1>
+            <p class="hero-description">With LeoSync you back up Android photos and videos to your own PC or NAS, with no cloud provider, no account and full control over your data.</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-hero">↓ <span>Download LeoSync for Android</span></a>
+            </div>
+            <ul class="trust-list"><li>Free</li><li>Open source (MIT)</li><li>Android 10+</li><li>Beta version</li></ul>
+            <div class="hero-note">Latest version: <span data-leo-version>–</span></div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-decoration"></div>
+            <picture>
+                <source srcset="../../../images/head.webp" type="image/webp">
+                <img class="hero-dog" src="../../../images/head.png" alt="Leo, the LeoSync mascot" width="780" height="780">
+            </picture>
+        </div>
+
+    </div>
+</section>
+
+<main class="container">
+
+    <article class="privacy-content">
+
+        <h2 id="benefits">Benefits of a local backup</h2>
+
+        <ul>
+            <li><strong>Your data stays with you:</strong> Photos sit on your PC or NAS on your own network, not with a provider.</li>
+            <li><strong>No subscription, no provider storage limit:</strong> Capacity is set by your own drive.</li>
+            <li><strong>Fast access at home:</strong> Large videos travel over your Wi-Fi instead of your internet connection.</li>
+            <li><strong>Free phone storage:</strong> Old files that are verifiably on the PC can be removed from the phone.</li>
+        </ul>
+
+        <h2 id="cloud-vs-local">Cloud or local: the main differences</h2>
+
+        <div class="help-table-wrap">
+            <table class="help-table">
+                <thead>
+                    <tr><th scope="col"></th><th scope="col">Cloud backup</th><th scope="col">Local backup with LeoSync</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Where is the data?</td><td>With the provider</td><td>On your PC or NAS</td></tr>
+                    <tr><td>Storage space</td><td>Usually limited, often paid beyond that</td><td>As large as your own drive</td></tr>
+                    <tr><td>Access on the go</td><td>Usually easy</td><td>By default only on your home network (mobile data/VPN optional)</td></tr>
+                    <tr><td>Responsibility</td><td>With the provider</td><td>With you: the PC or NAS needs a backup of its own</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>A local backup does not replace a second backup: important photos should also be on another drive in case the PC or NAS fails.</p>
+
+        <h2 id="privacy-local">Privacy with LeoSync</h2>
+
+        <ul>
+            <li>LeoSync has no server of its own and needs no account.</li>
+            <li>Files only travel between your phone and your PC or NAS. Apart from syncing, the only connection is the update check on GitHub.</li>
+            <li>Passwords are stored encrypted on the phone (Android Keystore).</li>
+            <li>Diagnostic data only leaves the phone if you share it yourself.</li>
+        </ul>
+
+        <p>Details are in the <a href="../../privacy-en.html">privacy policy</a>.</p>
+
+        <h2 id="requirements">Technical requirements</h2>
+
+        <ul>
+            <li>Android 10 or newer.</li>
+            <li>A Windows PC or NAS with an SMB share (SMB2/SMB3) and a user with write permission.</li>
+            <li>Phone and PC on the same Wi-Fi.</li>
+        </ul>
+
+        <h2 id="setup">Setup with LeoSync</h2>
+
+        <ol>
+            <li>Share a folder on the PC (step by step in the <a href="../help.html#share-folder">help</a>).</li>
+            <li>Install LeoSync, grant permissions and create a <strong>Back up photos &amp; videos</strong> profile.</li>
+            <li>Check with <strong>Test connection</strong>, then tap <strong>Sync</strong> once. After that, the backup runs automatically on your home Wi-Fi.</li>
+        </ol>
+
+        <div class="help-phones">
+            <figure><div class="phone-frame"><picture><source srcset="../../../images/LeoSync/profiles_tools_bright_en.webp" type="image/webp"><img src="../../../images/LeoSync/profiles_tools_bright_en.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync home screen with profiles and the tools Free up space and Trash"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Finished profiles with tools</figcaption></figure>
+            <figure><div class="phone-frame"><picture><source srcset="../../../images/LeoSync/syncing_bright_en.webp" type="image/webp"><img src="../../../images/LeoSync/syncing_bright_en.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync home screen: Leo is running, sync in progress"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Leo is running: backup in progress</figcaption></figure>
+        </div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+<h3>Can I back up Android photos without the cloud?</h3>
+<p>Yes. LeoSync transfers photos and videos directly via SMB to your own PC or NAS. There is no cloud service and no account.</p>
+<h3>What data does LeoSync send to the internet?</h3>
+<p>Apart from syncing with your PC or NAS, only the update check on GitHub. Diagnostic data only leaves the phone if you share it yourself.</p>
+<h3>Does a local backup replace a second backup?</h3>
+<p>No. Important photos should also be on another drive, so that a failure of the PC or NAS does not affect everything.</p>
+<h3>How much does LeoSync cost?</h3>
+<p>LeoSync is free and open source (MIT licence). The app is currently in beta.</p>
+
+        <h2 id="weiter">Related pages</h2>
+
+        <ul>
+<li><a href="../android-photo-backup-nas/">Back up Android photos to a NAS</a></li>
+<li><a href="../android-photos-to-pc/">Transfer Android photos to your PC automatically</a></li>
+<li><a href="../android-file-sync/">Sync Android files with your PC or NAS</a></li>
+<li><a href="../">LeoSync home page: all features at a glance</a></li>
+<li><a href="../help.html">Help: share a folder and set up a profile</a></li>
+<li><a href="https://github.com/Apop85/Sync2PC/releases/latest">Download LeoSync from GitHub Releases</a></li>
+        </ul>
+
+    </article>
+
+</main>
+
+<section class="cta-band" aria-label="Ready to back up your photos?">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text">
+            <h2>Ready to back up your photos?</h2>
+            <p>LeoSync is free and open source. The latest APK is available on GitHub Releases.</p>
+        </div>
+        <div class="cta-band-actions">
+            <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-end">↓ <span>Download LeoSync for Android</span></a>
+            <a class="cta-band-link" href="../help.html">Setup guide</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            <picture>
+                <source srcset="../../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync · Leo – Independent Software</span>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="../../../">Leo home</a>
+            <a href="../">LeoSync</a>
+            <a href="https://apop85.github.io/leosync/android-backup-ohne-cloud/" hreflang="de" lang="de">Deutsch</a>
+            <a href="../../privacy-en.html">Privacy</a>
+            <a href="../../terms-en.html">Terms</a>
+            <a href="https://github.com/Apop85/Sync2PC" target="_blank" rel="noopener noreferrer" data-track="github_repository_click">GitHub</a>
+        </nav>
+
+        <div class="footer-copy">© 2026 Leo – Independent Software</div>
+
+    </div>
+
+</footer>
+
+<script src="../../../js/leosync.js" defer></script>
+</body>
+</html>

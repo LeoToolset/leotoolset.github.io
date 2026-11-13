@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leo – Independent Software & LeoSync for Android and Windows</title>
+
+    <meta name="description"
+        content="Discover LeoSync: software for automatically synchronizing photos and files between Android, Windows PCs and NAS devices. Private, simple and without an external cloud.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Leo – Independent Software">
+    <link rel="canonical" href="https://apop85.github.io/en/">
+    <link rel="alternate" hreflang="de-CH" href="https://apop85.github.io/">
+    <link rel="alternate" hreflang="en" href="https://apop85.github.io/en/">
+    <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/">
+    <meta name="theme-color" content="#285681">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_CH">
+    <meta property="og:site_name" content="Leo – Independent Software">
+
+    <meta property="og:title"
+        content="Leo – Independent Software & LeoSync">
+
+    <meta property="og:description"
+        content="Discover LeoSync: synchronize photos and files between Android, Windows and NAS devices. No external cloud and full control over your data.">
+
+    <meta property="og:url"
+        content="https://apop85.github.io/en/">
+
+
+    <style>
+        /* =====================================================
+        LEO – INDEPENDENT SOFTWARE
+        Gemeinsames Designsystem
+        ===================================================== */
+
+        :root {
+            --blue: #3972a6;
+            --blue-dark: #285681;
+            --blue-light: #eaf2fa;
+
+            --background: #f5f8fc;
+            --surface: #ffffff;
+
+            --text: #263b52;
+            --muted: #647b91;
+
+            --accent: #f2bd55;
+            --border: #dce7f1;
+
+            --radius: 20px;
+            --shadow: 0 8px 28px rgba(40, 86, 129, 0.09);
+        }
+
+        /* =====================================================
+        RESET & BASIS
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text);
+
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =====================================================
+        NAVIGATION
+        ===================================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 1.5rem;
+            font-weight: 800;
+
+            color: var(--blue-dark);
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .language {
+            padding: 8px 14px;
+
+            border: 2px solid var(--border);
+            border-radius: 10px;
+
+            background: var(--blue-light);
+            color: var(--blue-dark);
+
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* =====================================================
+        BUTTONS
+        ===================================================== */
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 13px 24px;
+
+            border-radius: 12px;
+
+            background: var(--accent);
+            color: var(--blue-dark);
+
+            font-weight: 750;
+
+            border: 2px solid transparent;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 6px 16px rgba(40, 86, 129, 0.18);
+        }
+
+        .button-secondary {
+            background: var(--blue);
+            color: white;
+        }
+
+        /* =====================================================
+        HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue-dark),
+                    var(--blue)
+                );
+
+            color: white;
+
+            padding: 85px 0 95px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+
+            align-items: center;
+            gap: 55px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            line-height: 1.12;
+
+            margin: 0 0 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            max-width: 600px;
+
+            color: #e3edf7;
+            font-size: 1.15rem;
+
+            margin-bottom: 28px;
+        }
+
+        .hero-mascot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 300px;
+        }
+
+        .hero-mascot img {
+            max-height: 340px;
+            width: auto;
+
+            object-fit: contain;
+
+            filter: drop-shadow(
+                0 12px 16px rgba(0,0,0,0.16)
+            );
+        }
+
+        /* =====================================================
+        SECTIONS
+        ===================================================== */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            line-height: 1.2;
+
+            margin: 0 0 14px;
+
+            color: var(--blue-dark);
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 650px;
+
+            margin: 0 auto;
+        }
+
+        /* =====================================================
+        PRODUCT CARD
+        ===================================================== */
+
+        .product {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+
+            gap: 42px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            padding: 38px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .app-icon {
+            width: 220px;
+            height: 220px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 28px;
+        }
+
+        .product h3 {
+            font-size: 2rem;
+
+            margin: 8px 0 12px;
+
+            color: var(--blue-dark);
+        }
+
+        .product > div > p {
+            color: var(--muted);
+        }
+
+        .tag {
+            display: inline-block;
+
+            background: var(--blue-light);
+            color: var(--blue-dark);
+
+            padding: 5px 13px;
+
+            border-radius: 30px;
+
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        /* =====================================================
+        PRODUCT FEATURES
+        ===================================================== */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .feature {
+            background: var(--blue-light);
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            padding: 20px;
+        }
+
+        .feature h4 {
+            color: var(--blue-dark);
+            margin: 0 0 8px;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 0.92rem;
+
+            margin: 0;
+        }
+
+        /* =====================================================
+        ICONS
+        ===================================================== */
+
+        .mini-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 2.5px solid #1d3550;
+            border-radius: 14px;
+
+            margin-bottom: 14px;
+
+            box-shadow:
+                2px 3px 0 rgba(40,86,129,0.12);
+        }
+
+        .mini-icon svg {
+            width: 34px;
+            height: 34px;
+            overflow: visible;
+        }
+
+        /* =====================================================
+        ABOUT
+        ===================================================== */
+
+        .more {
+            background: var(--blue-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+            gap: 55px;
+        }
+
+        .about-mascot {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-mascot img {
+            max-height: 300px;
+            width: auto;
+
+            object-fit: contain;
+        }
+
+        .about-text h3 {
+            color: var(--blue-dark);
+            font-size: 1.7rem;
+        }
+
+        .about-text p {
+            color: var(--muted);
+        }
+
+        /* =====================================================
+        CONTACT
+        ===================================================== */
+
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-mascot {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-mascot img {
+            height: 150px;
+            width: auto;
+
+            object-fit: contain;
+        }
+
+        /* =====================================================
+        FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--blue-dark);
+            color: #dce9f5;
+
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+
+            flex-wrap: wrap;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* =====================================================
+        RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-mascot {
+                min-height: 220px;
+            }
+
+            .hero-mascot img {
+                max-height: 260px;
+            }
+
+            .product {
+                grid-template-columns: 1fr;
+            }
+
+            .app-icon {
+                margin: auto;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-mascot {
+                order: -1;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 60px 0;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                padding: 12px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .product {
+                padding: 24px;
+                gap: 25px;
+            }
+
+            .app-icon {
+                width: 170px;
+                height: 170px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* =====================================================
+        FOOTER BRAND
+        ===================================================== */
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .footer-brand small {
+            color: #b9cee1;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a {
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .product-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .product-actions .button {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .product-actions .button {
+                width: 100%;
+            }
+        }
+
+        /* =====================================================
+        LEO LOADING SCREEN
+        ===================================================== */
+
+        #leo-loading {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--background);
+
+            opacity: 1;
+            visibility: visible;
+
+            transition:
+                opacity 0.6s ease,
+                visibility 0.6s ease;
+        }
+
+        #leo-loading.finished {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loading-content {
+            width: min(300px, 80%);
+            text-align: center;
+        }
+
+        .loading-mascot {
+            width: 150px;
+            height: 150px;
+
+            object-fit: contain;
+
+            margin: 0 auto 20px;
+
+            animation: leo-bounce 1.8s ease-in-out infinite;
+        }
+
+        .loading-title {
+            color: var(--blue-dark);
+
+            font-size: 1.5rem;
+            font-weight: 800;
+
+            margin-bottom: 22px;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 9px;
+
+            overflow: hidden;
+
+            background: #dce7f1;
+            border-radius: 20px;
+
+            border: 1px solid var(--border);
+        }
+
+        .loading-progress {
+            width: 35%;
+            height: 100%;
+
+            background: var(--blue);
+
+            border-radius: 20px;
+
+            animation: loading-progress 1.5s ease-in-out infinite;
+        }
+
+        .loading-subtitle {
+            color: var(--muted);
+
+            font-size: 0.85rem;
+
+            margin-top: 15px;
+        }
+
+        /* Leo bewegt sich leicht */
+
+        @keyframes leo-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        /* Ladebalken */
+
+        @keyframes loading-progress {
+            0% {
+                transform: translateX(-110%);
+            }
+
+            100% {
+                transform: translateX(300%);
+            }
+        }
+
+        /* Bewegungsreduktion berücksichtigen */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .loading-mascot,
+            .loading-progress {
+                animation: none;
+            }
+
+            .loading-progress {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+        LEO LOADING SCREEN
+        ===================================================== -->
+
+    <div id="leo-loading">
+
+        <div class="loading-content">
+
+            <picture>
+                <source
+                    srcset="../images/head.webp"
+                    type="image/webp">
+
+                <img
+                    src="../images/head.png"
+                    alt="Leo – mascot of Independent Software"
+                   
+                   
+                    width="780"
+                    height="780"
+                    class="loading-mascot">
+            </picture>
+
+            <div class="loading-title">Leo is loading ...</div>
+
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+
+            <div class="loading-subtitle">Just a moment, please</div>
+
+        </div>
+
+    </div>
+
+
+<!-- =====================================================
+     HEADER / NAVIGATION
+     ===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="/en/" class="brand">
+
+                <picture>
+                    <source
+                        srcset="../images/LeoSync/logo.webp"
+                        type="image/webp">
+
+                    <img
+                        src="../images/LeoSync/logo.png"
+                        alt="Leo – logo of Independent Software"
+                       
+                       
+                        class="brand-logo"
+                        width="312"
+                        height="314">
+                </picture>
+
+                <span>Leo</span>
+
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#produkte">Products</a>
+
+                <a href="#ueber">About Leo</a>
+
+                <a href="#kontakt">Contact</a>
+
+                <a href="https://github.com/Apop85"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a class="language" href="../" hreflang="de-CH" lang="de" aria-label="Zu Deutsch wechseln">DE</a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <span class="tag"
+                      style="background:rgba(255,255,255,0.16);
+                             color:white;
+                             border:1px solid rgba(255,255,255,0.25);">Independent software development</span>
+
+                <h1>Independent software for <span>Android and Windows.</span></h1>
+
+                <p>Discover LeoSync: simple software for automatically synchronizing photos and files between Android devices, Windows PCs and NAS systems. No external cloud and full control over your data.</p>
+
+                <a href="#produkte"
+                   class="button">Explore products →</a>
+
+            </div>
+
+
+            <div class="hero-mascot">
+                <picture>
+                    <source
+                        srcset="../images/sit.webp"
+                        type="image/webp">
+
+                    <img
+                        src="../images/sit.png"
+                        alt="Leo – sitting mascot of Independent Software"
+                       
+                       
+                        width="616"
+                        height="780"
+                        fetchpriority="high">
+                </picture>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main>
+
+    <!-- =====================================================
+        PRODUKTE
+        ===================================================== -->
+
+    <section id="produkte">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Products</h2>
+
+                <p>Software for everyday digital life.</p>
+
+            </div>
+
+
+            <!-- =================================================
+                LEOSYNC PRODUCT CARD
+                ================================================= -->
+
+            <article class="product">
+
+                <div class="app-icon">
+                    <picture>
+                        <source
+                            srcset="../images/LeoSync/logo.webp"
+                            type="image/webp">
+
+                        <img
+                            src="../images/LeoSync/logo.png"
+                            alt="LeoSync – synchronization software logo"
+                           
+                           
+                            width="312"
+                            height="314">
+                    </picture>
+                </div>
+
+
+                <div>
+
+                    <span class="tag">ANDROID · PC · NAS</span>
+
+                    <h3>LeoSync – Photo and file synchronization</h3>
+
+                    <p>LeoSync automatically backs up and synchronizes photos, videos and any other files between your Android smartphone and your Windows PC or NAS. Transfers go directly via SMB, without an external cloud.</p>
+
+
+                    <!-- PRODUCT FEATURES -->
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <div class="mini-icon">
+
+                                <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#1d3550" stroke-width="9" stroke-linecap="round"><path d="M9 25 Q32 4 55 25"/><path d="M18 35 Q32 22 46 35"/></g><g fill="none" stroke="#a9d2f1" stroke-width="4" stroke-linecap="round"><path d="M9 25 Q32 4 55 25"/><path d="M18 35 Q32 22 46 35"/></g><circle cx="32" cy="48" r="8" fill="#f2bd55" stroke="#1d3550" stroke-width="3.2"/><path d="M28 45 Q30 42 33 42" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+
+                            </div>
+
+                            <h4>Direct connection</h4>
+
+                            <p>Direct transfer via SMB to your PC or NAS.</p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="mini-icon">
+
+                                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 20 Q6 13 13 13 H25 Q28 13 30 16 L33 20 H51 Q58 20 58 27 V47 Q58 55 50 55 H14 Q6 55 6 47 Z" fill="#80b6e0" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/><path d="M6 30 Q6 25 12 25 H52 Q58 25 58 31 V47 Q58 55 50 55 H14 Q6 55 6 47 Z" fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/><path d="M11 31 Q11 29 14 29 H30" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><g transform="translate(44 42) scale(1.15)" fill="#fff4e0" stroke="#1d3550" stroke-width="1.6" stroke-linejoin="round"><ellipse cx="0" cy="3" rx="4.6" ry="3.8"/><circle cx="-5" cy="-2.2" r="2"/><circle cx="-1.8" cy="-5.2" r="2"/><circle cx="1.8" cy="-5.2" r="2"/><circle cx="5" cy="-2.2" r="2"/></g></svg>
+
+                            </div>
+
+                            <h4>Automatic organization</h4>
+
+                            <p>Photos are filed by year, month and travel country.</p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="mini-icon">
+
+                                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 Q40 11 54 12 V29 Q54 47 32 59 Q10 47 10 29 V12 Q24 11 32 6 Z" fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/><path d="M15 16 Q24 15 30 11 M14 22 V28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><g transform="translate(32 34) scale(2)" fill="#fff4e0" stroke="#1d3550" stroke-width="1.1" stroke-linejoin="round"><ellipse cx="0" cy="3" rx="4.6" ry="3.8"/><circle cx="-5" cy="-2.2" r="2"/><circle cx="-1.8" cy="-5.2" r="2"/><circle cx="1.8" cy="-5.2" r="2"/><circle cx="5" cy="-2.2" r="2"/></g></svg>
+
+                            </div>
+
+                            <h4>Protection against data loss</h4>
+
+                            <p>Recycle bin for deleted and replaced files.</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT LINKS -->
+
+                    <div class="product-actions">
+
+                        <a
+                            href="/leosync/en/"
+                            class="button button-secondary">Discover LeoSync →</a>
+
+                        <a
+                            href="https://github.com/Apop85/Sync2PC"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button">GitHub repository</a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    
+    <!-- =====================================================
+        ABOUT LEO
+        ===================================================== -->
+
+    <section id="ueber" class="more">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Who's behind Leo?</h2>
+
+                <p>Independent software. Thoughtful solutions.</p>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="about-mascot">
+                    <picture>
+                        <source
+                            srcset="../images/walk_compressed.webp"
+                            type="image/webp">
+
+                        <img
+                            src="../images/walk_static.png"
+                            alt="Leo – curious walking mascot of Independent Software"
+                           
+                           
+                            width="365"
+                            height="360"
+                            loading="lazy">
+                    </picture>
+                </div>
+
+
+                <div class="about-text">
+
+                    <h3>Practical. Personal. Independent.</h3>
+
+                    <p>Leo stands for software solutions born from real needs. Instead of unnecessary complexity, the focus is on ease of use, thoughtful features and reliable technology.</p>
+
+                    <p>Privacy and user control are not optional extras, but fundamental principles. Your data belongs to you. You decide how and where you use your technology.</p>
+
+                    <p>Development is driven by attention to detail. New ideas emerge wherever existing solutions are unnecessarily complicated or inflexible.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+        CONTACT & SUPPORT
+        ===================================================== -->
+
+    <section id="kontakt" class="contact-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <div class="contact-mascot">
+                    <picture>
+                        <source
+                            srcset="../images/stand.webp"
+                            type="image/webp">
+
+                        <img
+                            src="../images/stand.png"
+                            alt="Leo – standing mascot in the contact section"
+                           
+                           
+                            width="780"
+                            height="780"
+                            loading="lazy">
+                    </picture>
+                </div>
+
+                <h2>Questions? Ideas? Feedback?</h2>
+
+                <p>Great software also grows through exchange with its users. Feedback, suggestions and new ideas are always welcome.</p>
+
+                <p>Found a bug or have a question about LeoSync? Simply use the GitHub repository.</p>
+
+                <a
+                    href="https://github.com/Apop85/Sync2PC/issues"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary">Submit a question or feedback →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+
+            <div>
+                © 2026 Leo – Independent Software
+            </div>
+
+            <small>Independent software development with heart.</small>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/Apop85"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="/leosync/en/">LeoSync</a>
+
+            <a href="/leosync/privacy-en.html">Privacy</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+    /* =====================================================
+    LOADING SCREEN CONTROL
+    ===================================================== */
+
+    function hideLeoLoadingScreen() {
+
+        const loadingScreen =
+            document.getElementById("leo-loading");
+
+        if (!loadingScreen) return;
+
+        loadingScreen.classList.add("finished");
+
+        // Nach der Überblendung vollständig entfernen
+        setTimeout(() => {
+            loadingScreen.remove();
+        }, 700);
+
+    }
+
+    // Sobald alle Inhalte und Bilder geladen sind
+    window.addEventListener("load", () => {
+
+        // Kurze Mindestanzeige, damit Leo sichtbar bleibt
+        setTimeout(hideLeoLoadingScreen, 700);
+
+    });
+
+    // Sicherheitsnetz: niemals dauerhaft blockieren
+    setTimeout(hideLeoLoadingScreen, 8000);
+
+
+</script>
+
+
+</body>
+</html>

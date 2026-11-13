@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#3972a6">
+    <meta name="robots" content="index, follow">
+
+    <title>Android-Fotos auf PC übertragen – ohne USB, automatisch | LeoSync</title>
+
+    <meta name="description" content="Android-Fotos automatisch auf den PC übertragen, ohne USB-Kabel: LeoSync sichert per SMB im Heimnetz auf deinen Windows-PC. Kostenlos, ohne Cloud, Open Source.">
+
+    <link rel="canonical" href="https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/">
+    <link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/">
+    <link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photos-to-pc/">
+    <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photos-to-pc/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LeoSync">
+    <meta property="og:url" content="https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/">
+    <meta property="og:title" content="Android-Fotos auf PC übertragen – ohne USB, automatisch | LeoSync">
+    <meta property="og:description" content="Android-Fotos automatisch auf den PC übertragen, ohne USB-Kabel: LeoSync sichert per SMB im Heimnetz auf deinen Windows-PC. Kostenlos, ohne Cloud, Open Source.">
+    <meta property="og:locale" content="de_CH">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <link rel="icon" type="image/png" href="../../images/LeoSync/logo.png">
+    <link rel="stylesheet" href="../../css/leosync.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "LeoSync", "item": "https://apop85.github.io/leosync/"},
+                    {"@type": "ListItem", "position": 2, "name": "Android-Fotos auf PC übertragen", "item": "https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/"}
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/#webpage",
+                "url": "https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/",
+                "name": "Android-Fotos auf PC übertragen – ohne USB, automatisch | LeoSync",
+                "description": "Android-Fotos automatisch auf den PC übertragen, ohne USB-Kabel: LeoSync sichert per SMB im Heimnetz auf deinen Windows-PC. Kostenlos, ohne Cloud, Open Source.",
+                "inLanguage": "de",
+                "isPartOf": {"@type": "WebSite", "@id": "https://apop85.github.io/leosync/#website"},
+                "about": {"@type": "SoftwareApplication", "@id": "https://apop85.github.io/leosync/#software"}
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [{"@type":"Question","name":"Wie übertrage ich Handy-Fotos ohne USB auf den PC?","acceptedAnswer":{"@type":"Answer","text":"Gib einen Ordner auf dem PC im Netzwerk frei und trage ihn in LeoSync ein. Die App überträgt neue Fotos automatisch per SMB, sobald das Handy im eingetragenen WLAN ist."}},{"@type":"Question","name":"Brauche ich zusätzliche Software auf dem Windows-PC?","acceptedAnswer":{"@type":"Answer","text":"Nein. LeoSync nutzt die Windows-Ordnerfreigabe, die in Windows eingebaut ist. Auf dem PC muss nichts installiert werden."}},{"@type":"Question","name":"Werden die Fotos auf dem Handy gelöscht?","acceptedAnswer":{"@type":"Answer","text":"Nur, wenn du das einstellst. Standard ist behalten. Entfernt werden Fotos erst nach einer geprüften Übertragung und landen im Papierkorb der Galerie."}},{"@type":"Question","name":"Welche Android-Version brauche ich?","acceptedAnswer":{"@type":"Answer","text":"Android 10 oder neuer."}}]
+            }
+        ]
+    }
+    </script>
+    <meta name="leo-analytics" content="https://apop85.goatcounter.com/count">
+</head>
+
+<body class="privacy-page help-page landing-page">
+
+<header class="site-header">
+    <div class="container navigation">
+
+        <a class="brand" href="../">
+            <picture>
+                <source srcset="../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Hauptnavigation">
+            <a href="../#funktionen">Funktionen</a>
+            <a href="../#sicherheit">Sicherheit</a>
+            <a href="../#download">Download</a>
+            <a href="../#faq">FAQ</a>
+            <a href="../hilfe.html">Hilfe</a>
+            <a href="../../">Leo</a>
+            <a class="language-button" href="https://apop85.github.io/leosync/en/android-photos-to-pc/" hreflang="en" lang="en" aria-label="Switch to English" data-track="language_switch">EN</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero help-hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <nav class="breadcrumb" aria-label="Brotkrümel">
+                <ol>
+                    <li><a href="../">LeoSync Startseite</a></li>
+                    <li aria-current="page">Android-Fotos auf PC übertragen</li>
+                </ol>
+            </nav>
+            <h1>Android-Fotos auf den PC übertragen – automatisch und ohne USB-Kabel</h1>
+            <p class="hero-description">LeoSync überträgt Fotos und Videos per WLAN direkt in einen freigegebenen Ordner auf deinem Windows-PC. Einmal eingerichtet, läuft das Backup von allein.</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-hero">↓ <span>LeoSync kostenlos herunterladen</span></a>
+            </div>
+            <ul class="trust-list"><li>Kostenlos</li><li>Open Source (MIT)</li><li>Android 10+</li><li>Beta-Version</li></ul>
+            <div class="hero-note">Aktuelle Version: <span data-leo-version>–</span></div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-decoration"></div>
+            <picture>
+                <source srcset="../../images/head.webp" type="image/webp">
+                <img class="hero-dog" src="../../images/head.png" alt="Leo, das Maskottchen von LeoSync" width="780" height="780">
+            </picture>
+        </div>
+
+    </div>
+</section>
+
+<main class="container">
+
+    <article class="privacy-content">
+
+        <h2 id="moeglichkeiten">Wie lassen sich Android-Fotos auf den PC übertragen?</h2>
+
+        <ul>
+            <li><strong>USB-Kabel:</strong> Funktioniert ohne Einrichtung, ist aber jedes Mal Handarbeit und wird schnell vergessen.</li>
+            <li><strong>Cloud-Dienst:</strong> Bequem, doch die Fotos liegen beim Anbieter, und der Speicherplatz ist meist begrenzt.</li>
+            <li><strong>Netzwerkfreigabe (SMB):</strong> Das Handy schreibt direkt in einen freigegebenen Ordner auf dem PC. Das ist die Variante, die LeoSync automatisiert.</li>
+        </ul>
+
+        <h2 id="smb">So funktioniert die Übertragung per SMB</h2>
+
+        <p>Windows kann Ordner im Netzwerk freigeben. LeoSync verbindet sich per SMB2/SMB3 mit dieser Freigabe, meldet sich mit Benutzername und Passwort an und kopiert neue Fotos und Videos hinein. Ohne USB-Kabel, ohne Zwischenserver und ohne Cloud. Die Fotos werden nach Jahr, Monat und Reiseland sortiert, zum Beispiel <code>2026\06 - Ägypten</code>, und behalten das Änderungsdatum vom Handy.</p>
+
+        <h2 id="einrichtung">Einrichtung</h2>
+
+        <ol>
+            <li>Auf dem PC den Zielordner freigeben und dem Windows-Benutzer <strong>Ändern</strong> und <strong>Lesen</strong> erlauben. Die Schritte stehen in der <a href="../hilfe.html#ordner-freigeben">Hilfe</a>, dort auch, wie du einen eigenen lokalen Benutzer nur für LeoSync anlegst.</li>
+            <li>Die IP-Adresse des PCs mit <code>ipconfig</code> ermitteln, zum Beispiel <code>192.168.1.20</code>.</li>
+            <li>In LeoSync <strong>Profil hinzufügen</strong>, <strong>Fotos &amp; Videos sichern</strong> wählen und PC, Benutzer und Passwort eintragen. <strong>Ordner auf dem PC wählen…</strong> zeigt die Freigaben zur Auswahl.</li>
+            <li>Mit <strong>Verbindung testen</strong> prüfen, dann einmal von Hand <strong>Synchronisieren</strong> tippen.</li>
+        </ol>
+
+        <div class="help-phones">
+            <figure><div class="phone-frame"><picture><source srcset="../../images/LeoSync/profile_connection_test_bright_de.webp" type="image/webp"><img src="../../images/LeoSync/profile_connection_test_bright_de.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Profil bearbeiten mit Freigabe-Pfad, Benutzer, Ordner auf dem PC wählen und erfolgreichem Verbindungstest"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Ziel eintragen und Verbindung testen</figcaption></figure>
+            <figure><div class="phone-frame"><picture><source srcset="../../images/LeoSync/not_synced_yet_bright_de.webp" type="image/webp"><img src="../../images/LeoSync/not_synced_yet_bright_de.jpg" width="1080" height="2412" loading="lazy" alt="LeoSync Startseite: Leo sitzt und wartet auf die erste Synchronisierung"></picture><span class="phone-speaker"></span><span class="phone-camera"></span></div><figcaption>Leo wartet auf die erste Synchronisierung</figcaption></figure>
+        </div>
+
+        <h2 id="automatisierung">Danach läuft es automatisch</h2>
+
+        <p>Sobald das Handy mit einem eingetragenen WLAN verbunden ist, sichert LeoSync neue Fotos im Hintergrund. Ist der PC ausgeschaltet, versucht es LeoSync alle 30 Minuten erneut. Auf Wunsch läuft die Sicherung nur am Ladegerät, und du kannst die Automatik pausieren. Wer Platz auf dem Handy braucht, nutzt <strong>Speicher freigeben</strong>: Dabei wird jede Datei vorher auf dem PC geprüft.</p>
+
+        <h2 id="fehlerbehebung">Fehlerbehebung</h2>
+
+        <div class="help-table-wrap">
+            <table class="help-table">
+                <thead>
+                    <tr><th scope="col">Meldung</th><th scope="col">Was tun?</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Benutzer oder Passwort stimmt nicht</td><td>Windows-Benutzer und Passwort prüfen. Bei einem Microsoft-Konto die E-Mail-Adresse als Benutzer verwenden, oder einen eigenen lokalen Benutzer anlegen.</td></tr>
+                    <tr><td>Der PC ist nicht erreichbar</td><td>PC eingeschaltet (nicht im Ruhezustand)? Handy im selben WLAN? Firewall erlaubt «Datei- und Druckerfreigabe»?</td></tr>
+                    <tr><td>Der PC-Name wurde nicht gefunden</td><td>Statt des Namens die IP-Adresse eintragen, z. B. <code>\\192.168.1.20</code>.</td></tr>
+                    <tr><td>Kein Zugriff auf diesen Ordner</td><td>In den Freigabe-Berechtigungen dem Benutzer <strong>Ändern</strong> erlauben.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Weitere Meldungen und Lösungen findest du in der <a href="../hilfe.html#meldungen">Hilfe</a>.</p>
+
+        <h2 id="faq">Häufige Fragen</h2>
+
+<h3>Wie übertrage ich Handy-Fotos ohne USB auf den PC?</h3>
+<p>Gib einen Ordner auf dem PC im Netzwerk frei und trage ihn in LeoSync ein. Die App überträgt neue Fotos automatisch per SMB, sobald das Handy im eingetragenen WLAN ist.</p>
+<h3>Brauche ich zusätzliche Software auf dem Windows-PC?</h3>
+<p>Nein. LeoSync nutzt die Windows-Ordnerfreigabe, die in Windows eingebaut ist. Auf dem PC muss nichts installiert werden.</p>
+<h3>Werden die Fotos auf dem Handy gelöscht?</h3>
+<p>Nur, wenn du das einstellst. Standard ist behalten. Entfernt werden Fotos erst nach einer geprüften Übertragung und landen im Papierkorb der Galerie.</p>
+<h3>Welche Android-Version brauche ich?</h3>
+<p>Android 10 oder neuer.</p>
+
+        <h2 id="weiter">Weiterführende Seiten</h2>
+
+        <ul>
+<li><a href="../android-fotos-auf-nas-sichern/">Android-Fotos auf NAS sichern</a></li>
+<li><a href="../android-backup-ohne-cloud/">Android-Backup ohne Cloud</a></li>
+<li><a href="../android-dateien-synchronisieren/">Android-Dateien mit PC oder NAS synchronisieren</a></li>
+<li><a href="../hilfe.html">Hilfe: Ordner freigeben und Profil einrichten</a></li>
+<li><a href="https://github.com/Apop85/Sync2PC/releases/latest">LeoSync auf GitHub Releases herunterladen</a></li>
+        </ul>
+
+    </article>
+
+</main>
+
+<section class="cta-band" aria-label="Bereit, deine Fotos zu sichern?">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text">
+            <h2>Bereit, deine Fotos zu sichern?</h2>
+            <p>LeoSync ist kostenlos und quelloffen. Die aktuelle APK gibt es auf GitHub Releases.</p>
+        </div>
+        <div class="cta-band-actions">
+            <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="landing-end">↓ <span>LeoSync kostenlos herunterladen</span></a>
+            <a class="cta-band-link" href="../hilfe.html">Einrichtung in der Hilfe</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            <picture>
+                <source srcset="../../images/LeoSync/logo.webp" type="image/webp">
+                <img src="../../images/LeoSync/logo.png" width="312" height="314" alt="Leo Logo">
+            </picture>
+            <span>LeoSync · Leo – Independent Software</span>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer-Navigation">
+            <a href="../../">Leo Startseite</a>
+            <a href="../">LeoSync</a>
+            <a href="https://apop85.github.io/leosync/en/android-photos-to-pc/" hreflang="en" lang="en">English</a>
+            <a href="../privacy-de.html">Datenschutz</a>
+            <a href="../agb-de.html">AGB</a>
+            <a href="https://github.com/Apop85/Sync2PC" target="_blank" rel="noopener noreferrer" data-track="github_repository_click">GitHub</a>
+        </nav>
+
+        <div class="footer-copy">© 2026 Leo – Independent Software</div>
+
+    </div>
+
+</footer>
+
+<script src="../../js/leosync.js" defer></script>
+</body>
+</html>

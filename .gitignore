@@ -1,0 +1,5 @@
+images/frames/*
+*.txt
+!robots.txt
+!google8ee15792e49e2727.html.txt
+.claude/

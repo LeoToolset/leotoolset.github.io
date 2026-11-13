@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apop85.github.io/sitemap.xml
+Sitemap: https://apop85.github.io/leosync/sitemap.xml

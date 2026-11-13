@@ -1,0 +1,1638 @@
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="theme-color" content="#3972a6">
+
+        <meta name="description" content="Sichere Android-Fotos und Videos automatisch auf deinem PC oder NAS. Mit LeoSync per SMB, ohne Cloud und mit voller Kontrolle über deine Daten.">
+
+        <meta name="robots" content="index, follow">
+
+        <link rel="canonical"
+            href="https://apop85.github.io/leosync/">
+
+        <link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/">
+        <link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/">
+        <link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/">
+
+        <link rel="icon"
+            type="image/png"
+            href="../images/LeoSync/logo.png">
+
+        <link rel="stylesheet"
+            href="../css/leosync.css">
+
+        <title>LeoSync – Android Fotos automatisch auf NAS sichern</title>
+
+        <!-- =====================================================
+            SEO: SOCIAL MEDIA / OPEN GRAPH
+            ===================================================== -->
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="LeoSync">
+        <meta property="og:url"
+            content="https://apop85.github.io/leosync/">
+
+        <meta property="og:title"
+            content="LeoSync – Android Fotos automatisch auf NAS sichern">
+
+        <meta property="og:description"
+            content="Android-Fotos und Videos automatisch auf deinen PC oder dein NAS sichern – per SMB, ohne Cloud, kostenlos und Open Source.">
+
+        <meta property="og:locale" content="de_CH">
+        <meta property="og:locale:alternate" content="en_US">
+
+            <!-- =====================================================
+                SEO: STRUCTURED DATA
+                ===================================================== -->
+
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://apop85.github.io/leosync/#software",
+                        "name": "LeoSync",
+                        "applicationCategory": "UtilitiesApplication",
+                        "operatingSystem": "Android 10 und neuer",
+                        "description": "Android-App für automatisches Foto- und Video-Backup und bidirektionale Dateisynchronisierung über SMB auf den eigenen PC oder NAS, ohne externen Cloud-Speicher.",
+                        "url": "https://apop85.github.io/leosync/",
+                        "inLanguage": "de",
+                        "isAccessibleForFree": true,
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" },
+                        "license": "https://github.com/Apop85/Sync2PC/blob/main/LICENSE",
+                        "downloadUrl": "https://github.com/Apop85/Sync2PC/releases/latest",
+                        "codeRepository": "https://github.com/Apop85/Sync2PC"
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://apop85.github.io/leosync/#website",
+                        "name": "LeoSync",
+                        "url": "https://apop85.github.io/leosync/",
+                        "inLanguage": "de"
+                    }
+                ]
+            }
+            </script>
+        <meta name="leo-analytics" content="https://apop85.goatcounter.com/count">
+</head>
+
+    <body>
+        <!-- =====================================================
+        LEOSYNC ICON LIBRARY
+        ===================================================== -->
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+            style="display:none"
+            aria-hidden="true">
+
+            <!-- =====================================================
+                LEO-STIL: dicke dunkle Konturen, Creme wie Leos Fell,
+                Blau/Gelb als Markenfarben, rosa Akzent (Zunge),
+                weisse Glanzlichter. Gemeinsame Bausteine: Pfote, Knochen.
+                ===================================================== -->
+
+            <defs>
+                <!-- Pfotenabdruck (Farbe via fill auf <use>) -->
+                <g id="leo-paw">
+                    <ellipse cx="0" cy="3" rx="4.6" ry="3.8"/>
+                    <circle cx="-5" cy="-2.2" r="2"/>
+                    <circle cx="-1.8" cy="-5.2" r="2"/>
+                    <circle cx="1.8" cy="-5.2" r="2"/>
+                    <circle cx="5" cy="-2.2" r="2"/>
+                </g>
+                <!-- Knochen (waagrecht, Mitte 0,0) -->
+                <g id="leo-bone">
+                    <rect x="-10" y="-2.6" width="20" height="5.2"/>
+                    <circle cx="-11" cy="-3" r="3.6"/>
+                    <circle cx="-11" cy="3" r="3.6"/>
+                    <circle cx="11" cy="-3" r="3.6"/>
+                    <circle cx="11" cy="3" r="3.6"/>
+                </g>
+            </defs>
+
+            <!-- WIFI / VERBINDUNG -->
+            <symbol id="icon-wifi" viewBox="0 0 64 64">
+                <g fill="none" stroke="#1d3550" stroke-width="9" stroke-linecap="round">
+                    <path d="M9 25 Q32 4 55 25"/>
+                    <path d="M18 35 Q32 22 46 35"/>
+                </g>
+                <g fill="none" stroke="#a9d2f1" stroke-width="4" stroke-linecap="round">
+                    <path d="M9 25 Q32 4 55 25"/>
+                    <path d="M18 35 Q32 22 46 35"/>
+                </g>
+                <circle cx="32" cy="48" r="8" fill="#f2bd55" stroke="#1d3550" stroke-width="3.2"/>
+                <path d="M28 45 Q30 42 33 42" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- ORDNER -->
+            <symbol id="icon-folder" viewBox="0 0 64 64">
+                <path d="M6 20 Q6 13 13 13 H25 Q28 13 30 16 L33 20 H51 Q58 20 58 27 V47 Q58 55 50 55 H14 Q6 55 6 47 Z"
+                      fill="#80b6e0" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M6 30 Q6 25 12 25 H52 Q58 25 58 31 V47 Q58 55 50 55 H14 Q6 55 6 47 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M11 31 Q11 29 14 29 H30" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <use href="#leo-paw" transform="translate(44 42) scale(1.15)" fill="#fff4e0" stroke="#1d3550" stroke-width="1.6" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- FOTO -->
+            <symbol id="icon-photo" viewBox="0 0 64 64">
+                <rect x="7" y="9" width="50" height="46" rx="9"
+                      fill="#fff4e0" stroke="#1d3550" stroke-width="3.2"/>
+                <rect x="13" y="15" width="38" height="25" rx="4.5"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="2.6"/>
+                <circle cx="42" cy="23" r="4.6" fill="#f2bd55" stroke="#1d3550" stroke-width="2.4"/>
+                <path d="M13 36 L25 26 L33 33 L39 29 L51 38 V36.5 Q51 40 47 40 H17 Q13 40 13 36.5 Z"
+                      fill="#80b6e0" stroke="#1d3550" stroke-width="2.4" stroke-linejoin="round"/>
+                <use href="#leo-paw" transform="translate(32 47.5) scale(0.62)" fill="#1d3550"/>
+            </symbol>
+
+            <!-- PAPIERKORB -->
+            <symbol id="icon-recycle" viewBox="0 0 64 64">
+                <g transform="translate(32 11) rotate(-18)">
+                    <use href="#leo-bone" fill="#1d3550" stroke="#1d3550" stroke-width="3.4" stroke-linejoin="round"/>
+                    <use href="#leo-bone" fill="#fff4e0"/>
+                </g>
+                <path d="M16 25 L19 53 Q19.4 58 24 58 H40 Q44.6 58 45 53 L48 25 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <rect x="11" y="17" width="42" height="9" rx="4.5"
+                      fill="#80b6e0" stroke="#1d3550" stroke-width="3.2"/>
+                <path d="M26 33 V50 M32 33 V50 M38 33 V50" fill="none" stroke="#1d3550" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M20 29 L21.4 43" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- SCHILD / SICHERHEIT -->
+            <symbol id="icon-shield" viewBox="0 0 64 64">
+                <path d="M32 6 Q40 11 54 12 V29 Q54 47 32 59 Q10 47 10 29 V12 Q24 11 32 6 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M15 16 Q24 15 30 11 M14 22 V28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <use href="#leo-paw" transform="translate(32 34) scale(2)" fill="#fff4e0" stroke="#1d3550" stroke-width="1.1" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- AKKU / LADEN -->
+            <symbol id="icon-battery" viewBox="0 0 64 64">
+                <rect x="6" y="17" width="45" height="32" rx="9"
+                      fill="#fff4e0" stroke="#1d3550" stroke-width="3.2"/>
+                <path d="M51 27 H56 Q59 27 59 30 V36 Q59 39 56 39 H51"
+                      fill="#80b6e0" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M31 20 L19 35 H28 L24 46 L39 29 H30 L35 20 Z"
+                      fill="#f2bd55" stroke="#1d3550" stroke-width="2.6" stroke-linejoin="round"/>
+                <path d="M11 24 Q11 22 14 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- FILTER -->
+            <symbol id="icon-filter" viewBox="0 0 64 64">
+                <path d="M7 12 Q7 9 10 9 H54 Q57 9 57 12 Q57 14 55 16 L39 33 V49 Q39 52 37 53 L29 57 Q26 58 26 55 V33 L9 16 Q7 14 7 12 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M13 15 H30" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="44" cy="45" r="3" fill="#f2bd55" stroke="#1d3550" stroke-width="2"/>
+                <circle cx="50" cy="55" r="2.4" fill="#f08aa0" stroke="#1d3550" stroke-width="2"/>
+            </symbol>
+
+            <!-- STATISTIK -->
+            <symbol id="icon-chart" viewBox="0 0 64 64">
+                <path d="M8 8 V55 H57" fill="none" stroke="#1d3550" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="14" y="36" width="11" height="19" rx="3" fill="#80b6e0" stroke="#1d3550" stroke-width="3"/>
+                <rect x="29" y="25" width="11" height="30" rx="3" fill="#a9d2f1" stroke="#1d3550" stroke-width="3"/>
+                <rect x="44" y="14" width="11" height="41" rx="3" fill="#f2bd55" stroke="#1d3550" stroke-width="3"/>
+                <path d="M17.5 41 V47 M32.5 30 V37 M47.5 19 V28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                <use href="#leo-paw" transform="translate(49.5 7) scale(0.55)" fill="#1d3550"/>
+            </symbol>
+
+            <!-- AKTUALISIEREN / SYNC -->
+            <symbol id="icon-update" viewBox="0 0 64 64">
+                <g fill="none" stroke="#1d3550" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M50 27 A19 19 0 0 0 17 19"/>
+                    <path d="M14 37 A19 19 0 0 0 47 45"/>
+                </g>
+                <g fill="none" stroke="#a9d2f1" stroke-width="3.6" stroke-linecap="round">
+                    <path d="M50 27 A19 19 0 0 0 17 19"/>
+                    <path d="M14 37 A19 19 0 0 0 47 45"/>
+                </g>
+                <path d="M11 11 L21 12 L16 24 Z" fill="#f2bd55" stroke="#1d3550" stroke-width="2.8" stroke-linejoin="round"/>
+                <path d="M53 53 L43 52 L48 40 Z" fill="#f2bd55" stroke="#1d3550" stroke-width="2.8" stroke-linejoin="round"/>
+                <use href="#leo-paw" transform="translate(32 33) scale(0.95)" fill="#fff4e0" stroke="#1d3550" stroke-width="1.4" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- PROFIL: Leo-Kopf vor Profilkarten -->
+            <symbol id="icon-profile" viewBox="0 0 64 64">
+                <rect x="30" y="6" width="28" height="22" rx="5" fill="#80b6e0" stroke="#1d3550" stroke-width="2.8" transform="rotate(8 44 17)"/>
+                <rect x="22" y="12" width="32" height="24" rx="5" fill="#a9d2f1" stroke="#1d3550" stroke-width="2.8" transform="rotate(-4 38 24)"/>
+                <!-- Ohren -->
+                <path d="M16 24 Q4 26 5 40 Q6 52 16 51 Q20 44 20 34 Z" fill="#f3dfc0" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M44 24 Q56 26 55 40 Q54 52 44 51 Q40 44 40 34 Z" fill="#f3dfc0" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Kopf (Fell-Kontur) -->
+                <path d="M30 12 Q38 8 43 14 Q51 15 50 24 Q56 31 50 38 Q49 47 41 49 Q36 55 30 53 Q24 55 19 49 Q11 47 12 38 Q6 31 12 24 Q11 15 19 14 Q23 8 30 12 Z"
+                      fill="#fff4e0" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <circle cx="24" cy="31" r="3.2" fill="#1d3550"/>
+                <circle cx="38" cy="31" r="3.2" fill="#1d3550"/>
+                <circle cx="25" cy="30" r="1" fill="#fff"/>
+                <circle cx="39" cy="30" r="1" fill="#fff"/>
+                <path d="M26.5 37 Q31 34.5 35.5 37 Q35 40.5 31 40.5 Q27 40.5 26.5 37 Z" fill="#1d3550" stroke="#1d3550" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M27 42.5 Q27 49 31 49 Q35 49 35 42.5 Q31 44.5 27 42.5 Z" fill="#f08aa0" stroke="#1d3550" stroke-width="2.2" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- UHR -->
+            <symbol id="icon-clock" viewBox="0 0 64 64">
+                <!-- Hundeohren statt Wecker-Glocken -->
+                <path d="M9 24 Q3 11 14 8 Q22 8 24 15 Z" fill="#f3dfc0" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M55 24 Q61 11 50 8 Q42 8 40 15 Z" fill="#f3dfc0" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <circle cx="32" cy="35" r="22" fill="#fff4e0" stroke="#1d3550" stroke-width="3.4"/>
+                <path d="M32 18.5 V20.5 M32 49.5 V51.5 M15.5 35 H17.5 M46.5 35 H48.5" fill="none" stroke="#1d3550" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M32 24 V36 L40 41" fill="none" stroke="#1d3550" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="32" cy="36" r="3.4" fill="#f2bd55" stroke="#1d3550" stroke-width="2.2"/>
+                <path d="M17 29 Q20 22 27 20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+            </symbol>
+
+            <!-- BENACHRICHTIGUNG -->
+            <symbol id="icon-bell" viewBox="0 0 64 64">
+                <path d="M32 7 Q35 7 35 10 Q46 12 46 27 Q46 39 53 46 Q55 49 52 49 H12 Q9 49 11 46 Q18 39 18 27 Q18 12 29 10 Q29 7 32 7 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M23 18 Q22 24 22 30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M25 53 Q25 58 32 58 Q39 58 39 53 Z" fill="#f2bd55" stroke="#1d3550" stroke-width="3" stroke-linejoin="round"/>
+                <circle cx="49" cy="14" r="8" fill="#f08aa0" stroke="#1d3550" stroke-width="3"/>
+                <path d="M49 10 V15" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="49" cy="18" r="1.3" fill="#fff"/>
+            </symbol>
+
+            <!-- DIAGNOSE -->
+            <symbol id="icon-diagnostics" viewBox="0 0 64 64">
+                <rect x="9" y="10" width="46" height="48" rx="8" fill="#fff4e0" stroke="#1d3550" stroke-width="3.2"/>
+                <rect x="21" y="4" width="22" height="12" rx="5" fill="#80b6e0" stroke="#1d3550" stroke-width="3"/>
+                <path d="M16 28 H48" fill="none" stroke="#a9d2f1" stroke-width="4" stroke-linecap="round"/>
+                <path d="M15 43 H22 L27 33 L33 52 L38 40 L41 43 H49" fill="none" stroke="#1d3550" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 43 H22 L27 33 L33 52 L38 40 L41 43 H49" fill="none" stroke="#f08aa0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+
+            <!-- ORDNER-SYNC (Import-Symbol, wird bei «Beliebige Ordner» verwendet) -->
+            <symbol id="icon-import" viewBox="0 0 64 64">
+                <path d="M6 20 Q6 13 13 13 H25 Q28 13 30 16 L33 20 H51 Q58 20 58 27 V47 Q58 55 50 55 H14 Q6 55 6 47 Z"
+                      fill="#80b6e0" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M6 30 Q6 25 12 25 H52 Q58 25 58 31 V47 Q58 55 50 55 H14 Q6 55 6 47 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <g fill="none" stroke="#1d3550" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 34 H42 M37 30 L42 34 L37 38"/>
+                    <path d="M48 46 H22 M27 42 L22 46 L27 50"/>
+                </g>
+                <g fill="none" stroke="#f2bd55" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 34 H42 M37 30 L42 34 L37 38"/>
+                    <path d="M48 46 H22 M27 42 L22 46 L27 50"/>
+                </g>
+            </symbol>
+            <!-- SCHLUESSEL -->
+            <symbol id="icon-key" viewBox="0 0 64 64">
+                <path d="M31 25 H57 Q60 25 60 28 V33 Q60 36 57 36 H55 V42 Q55 45 52 45 H49 Q46 45 46 42 V36 H31 Z"
+                      fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2" stroke-linejoin="round"/>
+                <circle cx="21" cy="31" r="15" fill="#f2bd55" stroke="#1d3550" stroke-width="3.2"/>
+                <path d="M12 24 Q15 19 21 18" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+                <use href="#leo-paw" transform="translate(21 33) scale(1.05)" fill="#1d3550"/>
+            </symbol>
+
+            <!-- FESTPLATTE / NAS -->
+            <symbol id="icon-harddrive" viewBox="0 0 64 64">
+                <rect x="6" y="13" width="52" height="40" rx="9" fill="#a9d2f1" stroke="#1d3550" stroke-width="3.2"/>
+                <path d="M12 19 Q12 18 15 18 H30" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M7 36 H57" fill="none" stroke="#1d3550" stroke-width="3"/>
+                <rect x="12" y="23" width="40" height="8" rx="4" fill="#fff4e0" stroke="#1d3550" stroke-width="2.4"/>
+                <circle cx="17" cy="45" r="3.4" fill="#f2bd55" stroke="#1d3550" stroke-width="2.2"/>
+                <circle cx="27" cy="45" r="3.4" fill="#f08aa0" stroke="#1d3550" stroke-width="2.2"/>
+                <use href="#leo-paw" transform="translate(47.5 45) scale(0.6)" fill="#1d3550"/>
+            </symbol>
+
+
+        </svg>
+
+
+        <!-- =====================================================
+            LEOSYNC LOADING SCREEN
+            ===================================================== -->
+
+        <div id="leo-loading">
+
+            <div class="loading-content">
+
+                <picture>
+                    <source srcset="../images/head.webp" type="image/webp">
+                    <img
+                        src="../images/head.png"
+                        alt="Leo"
+                        width="780"
+                        height="780"
+                        class="loading-mascot">
+                </picture>
+
+                <div class="loading-title">LeoSync lädt ...</div>
+
+                <div class="loading-bar">
+
+                    <div class="loading-progress"></div>
+
+                </div>
+
+                <div class="loading-subtitle">Einen kleinen Moment bitte</div>
+
+            </div>
+
+        </div>
+
+
+    <!-- =====================================================
+        HEADER
+        ===================================================== -->
+
+    <header class="site-header">
+        <div class="container navigation">
+
+            <a class="brand" href="../">
+                <picture>
+                    <source srcset="../images/LeoSync/logo.webp" type="image/webp">
+                    <img src="../images/LeoSync/logo.png"
+                        width="312"
+                        height="314"
+                        alt="Leo Logo">
+                </picture>
+                <span>LeoSync</span>
+            </a>
+            
+            <nav class="nav-links" aria-label="Hauptnavigation">
+
+                <a href="#funktionen">Funktionen</a>
+
+                <a href="#sicherheit">Sicherheit</a>
+
+                <a href="#download">Download</a>
+
+                <a href="#faq">FAQ</a>
+
+                <a href="hilfe.html">Hilfe</a>
+
+                <a href="../">Leo</a>
+
+                <a class="language-button" href="en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+    <!-- =====================================================
+        HERO
+        ===================================================== -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span>ANDROID · FOTO-BACKUP · NAS-SYNCHRONISIERUNG</span>
+                </div>
+
+                <h1>Android-Fotos automatisch auf PC oder NAS sichern<span> – ohne Cloud.</span></h1>
+
+                <p class="hero-description">Sichere Fotos und Videos automatisch von deinem Android-Smartphone auf deinem eigenen PC oder NAS. Synchronisiere beliebige Ordner direkt über SMB – ohne externe Cloud-Zwischenstation.</p>
+
+                <div class="hero-actions">
+
+                    <a class="button button-primary"
+                    href="https://github.com/Apop85/Sync2PC/releases/latest" data-track="download" data-pos="hero"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        ↓
+                        <span>LeoSync kostenlos herunterladen</span>
+
+                    </a>
+
+                    <a class="button button-secondary"
+                    href="#funktionen">Funktionen entdecken</a>
+
+                </div>
+
+                <ul class="trust-list" aria-label="Kostenlos, Open Source (MIT), Android 10+, Beta-Version"><li>Kostenlos</li><li>Open Source (MIT)</li><li>Android 10+</li><li>Beta-Version</li></ul>
+
+                <div class="hero-note">Aktuelle Version: <span data-leo-version>–</span></div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="hero-decoration"></div>
+
+                <picture>
+                    <source srcset="../images/head.webp" type="image/webp">
+                    <img class="hero-dog"
+                        src="../images/head.png"
+                        alt="Leo, das Maskottchen von LeoSync"
+                        width="780"
+                        height="780"
+                        fetchpriority="high">
+                </picture>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+        TRUST STRIP
+        ===================================================== -->
+
+    <div class="trust-strip">
+
+        <div class="container trust-items">
+
+            <span class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Keine externe Cloud</span>
+            </span>
+
+            <span class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Direkte SMB-Verbindung</span>
+            </span>
+
+            <span class="trust-item">
+                <span class="trust-check">✓</span>
+                <span>Deine Daten bleiben bei dir</span>
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+        PRODUCT INTRODUCTION
+        ===================================================== -->
+
+    <section class="intro-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Android-Fotos sichern. Dateien frei synchronisieren.</h2>
+
+                <p>LeoSync verbindet dein Android-Smartphone direkt mit deinem PC oder NAS. Sichere Fotos und Videos automatisch und synchronisiere Dateien über SMB. Du bestimmst, wo deine Daten gespeichert werden.</p>
+
+            </div>
+
+            <div class="intro-grid">
+
+                <article class="intro-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-photo"/>
+                        </svg>
+                    </div>
+
+                    <h3>Fotos und Videos automatisch sichern</h3>
+
+                    <p>Neue Fotos und Videos werden erkannt und über dein Heim-WLAN auf deinen PC oder NAS übertragen, auf Wunsch auch über mobile Daten oder VPN (standardmässig aus). Die Ablage erfolgt nach Jahr, Monat und – wenn zutreffend – Reiseland.</p>
+
+                    <div class="folder-example">
+                        <span class="folder">📁 Fotos</span><br>
+                        &nbsp;&nbsp;📁 2026<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;📁 06<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMG_20260614.jpg<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;📁 07 - Italien<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMG_20260712.jpg
+                    </div>
+
+                </article>
+
+                <article class="intro-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-import"/>
+                        </svg>
+                    </div>
+
+                    <h3>Beliebige Ordner synchronisieren</h3>
+
+                    <p>Synchronisiere beliebige Ordner und Dateitypen zwischen deinem Android-Gerät und dem PC. Einseitig oder in beide Richtungen.</p>
+
+                    <div class="folder-example">
+                        <span class="folder">📁 Projekte</span><br>
+                        &nbsp;&nbsp;📁 Dokumente<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Planung.pdf<br>
+                        &nbsp;&nbsp;📁 Bilder<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Entwurf.png<br>
+                        &nbsp;&nbsp;📁 Notizen<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Ideen.txt
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- DOG IMAGE: SITTING -->
+
+            <div class="dog-panel">
+
+                <div class="dog-panel-image">
+
+                    <picture>
+                        <source srcset="../images/sit.webp" type="image/webp">
+                        <img
+                            src="../images/sit.png"
+                           
+                           
+                            alt="Leo sitzt aufmerksam"
+                            width="616"
+                            height="780"
+                            loading="lazy">
+                    </picture>
+
+                </div>
+
+                <div class="dog-panel-content">
+
+                    <h3>Deine Dateien bleiben bei dir.</h3>
+
+                    <p>Keine monatlichen Cloud-Abos und kein zusätzlicher Speicherplatz bei einem fremden Anbieter. LeoSync überträgt deine Dateien direkt auf die von dir konfigurierte Netzwerkfreigabe.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+        PROFILE TYPES
+        ===================================================== -->
+
+    <section class="modes-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Zwei Profiltypen. Viele Möglichkeiten.</h2>
+
+                <p>Wähle den Profiltyp, der zu deinem Einsatzzweck passt.</p>
+
+            </div>
+
+                        <!-- APP SCREENSHOT: NEW PROFILE -->
+
+            <div class="app-preview">
+
+                <div class="app-preview-content">
+
+                    <span class="section-label">Schnell eingerichtet</span>
+
+                    <h2>Dein neues Profil einrichten.</h2>
+
+                    <p>Mit wenigen Einstellungen richtest du ein neues Synchronisierungsprofil ein und verbindest dein Smartphone mit deinem eigenen Speicher.</p>
+
+                    <p>Du bestimmst selbst, welche Ordner synchronisiert werden und wie die Übertragung erfolgen soll.</p>
+
+                </div>
+
+                <div class="app-preview-image">
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/new_profile_bright_de.webp"
+                               
+                               
+                                type="image/webp">
+                            <img
+                                src="../images/LeoSync/new_profile_bright_de.jpg"
+                               
+                               
+                               
+                               
+                                width="1080"
+                                height="2412"
+                                alt="LeoSync – Neues Synchronisierungsprofil erstellen"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- APP SCREENSHOT: NOT YET SYNCHRONIZED -->
+
+            <div class="app-preview app-preview-reverse">
+
+                <div class="app-preview-content">
+
+                    <span class="section-label">Alles im Blick</span>
+
+                    <h2>Auch vor der ersten Sicherung informiert.</h2>
+
+                    <p>LeoSync zeigt dir jederzeit den aktuellen Status. Du siehst auf einen Blick, ob noch Fotos auf ihre Sicherung warten.</p>
+
+                    <p>So weisst du immer, ob deine Sicherung bereits eingerichtet ist und ob noch etwas zu tun ist.</p>
+
+                </div>
+
+                <div class="app-preview-image">
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/not_synced_yet_bright_de.webp"
+                               
+                               
+                                type="image/webp">
+                            <img
+                                src="../images/LeoSync/not_synced_yet_bright_de.jpg"
+                               
+                               
+                               
+                               
+                                width="1080"
+                                height="2412"
+                                alt="LeoSync – Noch nichts synchronisiert"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PROFILE CARDS -->
+
+            <div class="mode-grid">
+
+                <article class="mode-card">
+
+                    <span class="mode-label">01 · PHOTO BACKUP</span>
+
+                    <h3>Fotos und Videos sichern</h3>
+
+                    <p>Sichere deine Aufnahmen automatisch auf dem PC. LeoSync sortiert die Dateien anhand ihres Aufnahmedatums.</p>
+
+                    <ul>
+                        <li>Übertragung vom Handy zum PC</li>
+
+                        <li>Sortierung nach Jahr und Monat</li>
+
+                        <li>Offline-Ländererkennung anhand von GPS</li>
+
+                        <li>Duplikaterkennung</li>
+
+                        <li>Mehrstufige Prüfung nach dem Upload</li>
+
+                        <li>Optionales Aufräumen nach erfolgreicher Sicherung</li>
+                    </ul>
+
+                </article>
+
+                <article class="mode-card">
+
+                    <span class="mode-label">02 · FOLDER SYNC</span>
+
+                    <h3>Ordner synchronisieren</h3>
+
+                    <p>Halte beliebige Ordner und Dateien auf Handy und PC auf demselben Stand.</p>
+
+                    <ul>
+                        <li>Handy → PC, PC → Handy oder beidseitig</li>
+
+                        <li>Unterstützung beliebiger Dateitypen</li>
+
+                        <li>Drei-Wege-Abgleich mit Konflikterkennung: Du entscheidest, welche Version gilt</li>
+
+                        <li>Papierkorb für gelöschte und ersetzte Dateien</li>
+
+                        <li>Schutz vor unbeabsichtigtem Löschen</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+            <!-- DOG IMAGE: BELLY -->
+
+            <div class="dog-panel reverse">
+
+                <div class="dog-panel-image">
+
+                    <picture>
+                        <source srcset="../images/belly.webp" type="image/webp">
+                        <img
+                            src="../images/belly.png"
+                           
+                           
+                            alt="Leo liegt entspannt auf dem Rücken"
+                            width="780"
+                            height="520"
+                            loading="lazy">
+                    </picture>
+
+                </div>
+
+                <div class="dog-panel-content">
+
+                    <h3>Entspannt zurücklehnen.</h3>
+
+                    <p>Ist dein Profil einmal eingerichtet, übernimmt LeoSync die Arbeit im Hintergrund. Du behältst die Kontrolle über die Einstellungen und kannst jederzeit manuell eingreifen.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+        APP PREVIEW: SYNCHRONIZATION IN ACTION
+        ===================================================== -->
+
+    <section class="app-showcase-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Deine Synchronisierung. Jederzeit im Blick.</h2>
+
+                <p>LeoSync zeigt dir transparent, was gerade passiert und wann deine Dateien vollständig übertragen wurden.</p>
+
+            </div>
+
+            <!-- SYNCHRONIZATION IN PROGRESS -->
+
+            <div class="app-preview">
+
+                <div class="app-preview-content">
+
+                    <span class="section-label">Während der Übertragung</span>
+
+                    <h2>Fortschritt jederzeit nachvollziehen.</h2>
+
+                    <p>Verfolge den aktuellen Synchronisierungsfortschritt direkt in der App. Du siehst, welche Dateien übertragen werden und wie weit der Vorgang bereits fortgeschritten ist.</p>
+
+                </div>
+
+                <div class="app-preview-image">
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/syncing_bright_de.webp"
+                               
+                               
+                                type="image/webp">
+                            <img
+                                src="../images/LeoSync/syncing_bright_de.jpg"
+                               
+                               
+                               
+                               
+                                width="1080"
+                                height="2412"
+                                alt="LeoSync Android-App – Laufende Dateisynchronisierung zwischen Smartphone und PC"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SYNCHRONIZATION COMPLETED -->
+
+            <div class="app-preview app-preview-reverse">
+
+                <div class="app-preview-content">
+
+                    <span class="section-label">Erfolgreich abgeschlossen</span>
+
+                    <h2>Alles synchronisiert.</h2>
+
+                    <p>Nach erfolgreicher Übertragung zeigt dir LeoSync, dass keine Dateien mehr auf ihre Synchronisierung warten.</p>
+
+                    <p>So hast du jederzeit die Gewissheit, dass deine Dateien auf dem aktuellen Stand sind.</p>
+
+                </div>
+
+                <div class="app-preview-image">
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/all_synced_bright_de.webp"
+                               
+                               
+                                type="image/webp">
+                            <img
+                                src="../images/LeoSync/all_synced_bright_de.jpg"
+                               
+                               
+                               
+                               
+                                width="1080"
+                                height="2412"
+                                alt="LeoSync – Alle Dateien synchronisiert"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cta-band" aria-label="Bereit für dein automatisches Foto-Backup?">
+        <div class="container cta-band-inner">
+            <div class="cta-band-text">
+                <h2>Bereit für dein automatisches Foto-Backup?</h2>
+                <p>LeoSync ist kostenlos, quelloffen und sichert deine Fotos direkt auf deinen eigenen PC oder dein NAS.</p>
+            </div>
+            <div class="cta-band-actions">
+                <a class="button button-primary" href="https://github.com/Apop85/Sync2PC/releases/latest" target="_blank" rel="noopener noreferrer" data-track="download" data-pos="mid-page">↓ <span>LeoSync kostenlos herunterladen</span></a>
+                <a class="cta-band-link" href="hilfe.html">Einrichtung in der Hilfe</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =====================================================
+        TECHNICAL FEATURES
+        ===================================================== -->
+
+    <section class="features-section" id="funktionen">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Android-Datei&shy;synchronisierung mit zuverlässiger Übertragung.</h2>
+                <p>LeoSync bietet fortsetzbare SMB-Dateiübertragungen, mehrere Synchronisierungsprofile und eine zuverlässige Kontrolle deiner Dateien zwischen Android, PC und NAS.</p>
+
+            </div>
+
+            <div class="features-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-update"/>
+                        </svg>
+                    </div>
+
+                    <h3>Fortsetzbare SMB-Dateiübertragungen</h3>
+                    <p>Wird eine Dateiübertragung zwischen Android und PC oder NAS unterbrochen, kann LeoSync den Upload fortsetzen. Bis zu vier Übertragungen laufen parallel. Dateien werden erst nach vollständiger Übertragung endgültig umbenannt.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-profile"/>
+                        </svg>
+                    </div>
+
+                    <h3>Mehrere Synchronisierungsprofile verwalten</h3>
+                    <p>Erstelle mehrere Synchronisierungsprofile für unterschiedliche PC- und NAS-Ziele. Mit der Simulation kannst du vor einer Android-Datei&shy;synchronisierung prüfen, welche Änderungen vorgenommen würden.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-clock"/>
+                        </svg>
+                    </div>
+
+                    <h3>Dateidatum bei der Synchronisierung erhalten</h3>
+                    <p>Bei der Übertragung auf den PC bleibt das Änderungsdatum der Dateien vom Android-Gerät erhalten. So bleiben wichtige Zeitinformationen auch nach der Dateisynchronisierung bestehen.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-recycle"/>
+                        </svg>
+                    </div>
+
+                    <h3>Papierkorb für synchronisierte Dateien</h3>
+                    <p>Der LeoSync-Papierkorb schützt gelöschte und ersetzte Dateien. Die Aufbewahrungsfrist lässt sich für jedes Synchronisierungsprofil individuell einstellen. Standardmässig werden Dateien nach 30 Tagen entfernt. Mit 0 Tagen bleiben sie dauerhaft erhalten.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-shield"/>
+                        </svg>
+                    </div>
+
+                    <h3>Schutzbremse gegen Massenlöschungen</h3>
+
+                    <p>Würden auf einmal viele Dateien gelöscht (Standard: mehr als 20 %), fehlt ein ganzer Ordner oder passt ein neu gewählter Ordner nicht zum bisherigen Stand, hält LeoSync den Ordner-Sync an und fragt zuerst bei dir nach. Die Schwelle lässt sich pro Profil einstellen.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-diagnostics"/>
+                        </svg>
+                    </div>
+
+                    <h3>Simulation und Freigabe vor dem Start</h3>
+
+                    <p>Nach dem Anlegen eines Profils kannst du zuerst simulieren, was passieren würde, ohne dass etwas übertragen wird. Ein neues Profil startet erst automatisch, nachdem du es einmal von Hand synchronisiert hast.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-folder"/>
+                        </svg>
+                    </div>
+
+                    <h3>Eigene Monatsordner</h3>
+
+                    <p>Monatsordner können umbenannt werden, solange die Monatszahl erhalten bleibt. Bereits vorhandene Ordner werden weiterverwendet. Für Fotos-Profile stehen drei Ordnerstrukturen zur Wahl: <code>Jahr\Monat - Land</code> (Standard), <code>Jahr\Land\Monat</code> oder <code>Jahr\Monat\Land</code>. Die Wahl ist bis zur ersten Synchronisierung des Profils möglich.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-bell"/>
+                        </svg>
+                    </div>
+
+                    <h3>Sicherungserinnerung</h3>
+
+                    <p>Wenn neue Fotos warten und längere Zeit keine Sicherung erfolgt ist, kann LeoSync dich daran erinnern. Der Zeitraum ist einstellbar.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-harddrive"/>
+                        </svg>
+                    </div>
+
+                    <h3>Speicherplatz auf dem Handy freigeben</h3>
+
+                    <p>Alte Dateien, die nachweislich auf dem PC liegen, kann LeoSync vom Handy entfernen. Jede Datei wird vorher auf dem PC geprüft. Die Auswahl erfolgt nach Alter, Ordner, Dateityp, Grösse und Ausnahmen, mit Vorschau. Fotos und Videos landen ab Android 11 im Papierkorb der Galerie.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-filter"/>
+                        </svg>
+                    </div>
+
+                    <h3>Dateifilter für Ordner-Profile</h3>
+
+                    <p>Mit «Nur diese Dateien» und «Diese Dateien ausschliessen» legst du über Muster wie <code>*.pdf</code> oder <code>Temp/**</code> fest, was synchronisiert wird.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-chart"/>
+                        </svg>
+                    </div>
+
+                    <h3>Statistik zu deinen Sicherungen</h3>
+
+                    <p>LeoSync zeigt dir Anzahl und Speicherbedarf deiner gesicherten Fotos und Videos pro Jahr und Land.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-key"/>
+                        </svg>
+                    </div>
+
+                    <h3>Profile sichern und wiederherstellen</h3>
+
+                    <p>Profile, Einstellungen und Sync-Status lassen sich als Datei exportieren und wieder importieren. SMB-Passwörter werden nur mit einem Export-Passwort verschlüsselt mitgesichert.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-shield"/>
+                        </svg>
+                    </div>
+
+                    <h3>SMB-Verschlüsselung pro Profil</h3>
+
+                    <p>Pro Profil wählst du, ob die Übertragung verschlüsselt wird: <em>Aus</em>, <em>Wenn möglich</em> (Standard) oder <em>Erforderlich</em>. Bei «Erforderlich» wird ohne Verschlüsselung keine Verbindung aufgebaut und kein Passwort gesendet. Verschlüsselung gibt es ab SMB 3; «Verbindung testen» zeigt, ob sie aktiv ist.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-battery"/>
+                        </svg>
+                    </div>
+
+                    <h3>Pause und «Nur beim Laden»</h3>
+
+                    <p>Die Automatik lässt sich für eine bestimmte Zeit oder «für immer» pausieren; dann synchronisiert LeoSync nur noch von Hand. Auf Wunsch läuft die Synchronisierung nur, solange das Handy am Ladegerät hängt.</p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-diagnostics"/>
+                        </svg>
+                    </div>
+
+                    <h3>Verlauf und Diagnose</h3>
+
+                    <p>Der Verlauf zeigt jeden Lauf mit Protokoll und lässt sich über das Android-Teilen-Menü exportieren. Die kopierbaren Diagnosedaten enthalten keine Passwörter, Benutzer-, Rechner- oder Ordnernamen. Für gängige Hersteller zeigt die App, welche Einstellungen den Hintergrundbetrieb sichern.</p>
+
+                </article>
+
+            </div>
+
+            <!-- APP SCREENSHOT: PROFILES AND TOOLS -->
+
+            <div class="app-preview app-preview-reverse">
+
+                <div class="app-preview-content">
+
+                    <span class="section-label">Alles im Griff</span>
+
+                    <h2>Profile und Werkzeuge zentral verwalten.</h2>
+
+                    <p>Verwalte deine Synchronisierungsprofile und greife direkt auf die wichtigsten Werkzeuge von LeoSync zu.</p>
+
+                    <p>Die übersichtliche Oberfläche gibt dir jederzeit die Kontrolle über deine Sicherungen und Synchronisierungen.</p>
+
+                </div>
+
+                <div class="app-preview-image">
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/profiles_tools_bright_de.webp"
+                               
+                               
+                                type="image/webp">
+                            <img
+                                src="../images/LeoSync/profiles_tools_bright_de.jpg"
+                               
+                               
+                               
+                               
+                                width="1080"
+                                height="2412"
+                                alt="LeoSync – Profile und Tools"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+        SECURITY
+        ===================================================== -->
+
+    <section class="safety-section" id="sicherheit">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Privates Android-Backup. Deine Daten bleiben bei dir.</h2>
+                <p>So geht LeoSync mit deinen Dateien, Zugangsdaten und Standortdaten um.</p>
+
+            </div>
+
+            <div class="safety-grid">
+
+                <!-- OWN STORAGE -->
+
+                <article class="safety-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-folder"/>
+                        </svg>
+                    </div>
+
+                    <h3>Android-Fotos auf eigenem PC oder NAS speichern</h3>
+                    <p>LeoSync überträgt deine Fotos, Videos und Dateien direkt über eine SMB-Netzwerkfreigabe auf deinen Windows-PC oder NAS. Ein Cloud-Konto brauchst du dafür nicht. Du bestimmst selbst, wo dein Android-Backup liegt.</p>
+
+                </article>
+
+                <!-- LOCAL PROCESSING -->
+
+                <article class="safety-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-chart"/>
+                        </svg>
+                    </div>
+
+                    <h3>Lokale GPS- und Ländererkennung</h3>
+                    <p>LeoSync erkennt das Land deiner Fotos direkt auf dem Android-Gerät anhand der GPS-Metadaten und einer integrierten Datenbank. Die geografische Zuordnung benötigt keinen externen Geolocation-Dienst und keine Cloud-Abfrage.</p>
+
+                </article>
+
+                <!-- PROTECTED CREDENTIALS -->
+
+                <article class="safety-card">
+
+                    <div class="feature-icon">
+                        <svg aria-hidden="true">
+                            <use href="#icon-key"/>
+                        </svg>
+                    </div>
+
+                    <h3>SMB-Passwörter sicher im Android Keystore speichern</h3>
+                    <p>Die Zugangsdaten für deine SMB-Netzwerkfreigaben werden mithilfe des Android Keystore geschützt gespeichert. Deine SMB-Passwörter werden nicht automatisch an den Entwickler übertragen. So bleiben die Zugangsdaten für deinen PC oder NAS unter deiner Kontrolle. Pro Profil kannst du zusätzlich die PC-Kennung prüfen lassen: LeoSync erkennt deinen PC, bevor Benutzername und Passwort gesendet werden. Das schützt davor, dass die Zugangsdaten an einen fremden Server in einem fremden Netz gehen.</p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+        WORKFLOW
+        ===================================================== -->
+
+    <section class="workflow-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>In wenigen Schritten startklar.</h2>
+
+                <p>Die Einrichtung führt dich durch die wichtigsten Einstellungen.</p>
+
+            </div>
+
+            <!-- =====================================================
+                DOG IMAGE: WALKING LEO
+                ===================================================== -->
+
+            <div class="dog-panel">
+                <div class="dog-panel-image">
+
+                    <picture>
+                        <source srcset="../images/walk_compressed.webp" type="image/webp">
+                        <img src="../images/walk.gif"
+                           
+                           
+                            alt="Leo läuft voller Energie los"
+                            width="365"
+                            height="360"
+                            loading="lazy">
+                    </picture>
+                </div>
+
+                <div class="dog-panel-content">
+
+                    <h3>Und los geht's!</h3>
+
+                    <p>LeoSync kümmert sich um deine Dateien. Die Synchronisierung läuft automatisch im Hintergrund, sobald deine Bedingungen erfüllt sind. Du behältst jederzeit die Kontrolle.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="workflow">
+
+                <article class="workflow-step">
+
+                    <div class="step-number">1</div>
+
+                    <h3>Installieren</h3>
+
+                    <p>Lade die aktuelle APK über GitHub Releases herunter und installiere LeoSync auf deinem Android-Gerät.</p>
+
+                </article>
+
+                <article class="workflow-step">
+
+                    <div class="step-number">2</div>
+
+                    <h3>Profil einrichten</h3>
+
+                    <p>Lege deine Netzwerkfreigabe, Zugangsdaten, WLAN-Verbindung und die zu synchronisierenden Quellordner fest.</p>
+
+                </article>
+
+                <article class="workflow-step">
+
+                    <div class="step-number">3</div>
+
+                    <h3>Erste Synchronisierung</h3>
+
+                    <p>Starte zunächst eine Simulation oder eine manuelle Synchronisierung. Ein neues Profil wird erst nach einer ersten manuellen Synchronisierung automatisch ausgeführt.</p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- =====================================================
+        REQUIREMENTS
+        ===================================================== -->
+
+    <section class="requirements-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Was du dafür benötigst.</h2>
+
+                <p>Die technischen Voraussetzungen für deine erste Synchronisierung.</p>
+
+            </div>
+
+            <div class="requirements-box">
+
+                <h3>Systemvoraussetzungen</h3>
+
+                <ul>
+
+                    <li>Android 10 oder neuer</li>
+
+                    <li>Windows-PC oder NAS mit SMB2- oder SMB3-Freigabe</li>
+
+                    <li>Benutzerkonto mit Schreibrechten auf der Freigabe</li>
+
+                    <li>Netzwerkverbindung zwischen Handy und Speicherziel</li>
+
+                </ul>
+
+                <p class="requirements-note">Hinweis: Für die automatische WLAN-Erkennung benötigt Android bestimmte Berechtigungen. Insbesondere kann die Standortberechtigung erforderlich sein, damit Android den WLAN-Namen bereitstellt. LeoSync verwendet diese Berechtigung nicht zur Standortbestimmung.</p>
+
+                <p class="requirements-note">Die App erscheint auf Deutsch oder Englisch, je nach Sprache deines Handys. Die Sprache lässt sich in den Einstellungen auch fest wählen.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+        DOWNLOAD
+        ===================================================== -->
+
+    <section class="download-section" id="download">
+
+        <div class="container">
+
+            <div class="download-panel">
+
+                <div class="download-content">
+
+                    <span class="beta-label">BETA</span>
+
+                    <h2>Android-Fotos sichern und Dateien synchronisieren.</h2>
+
+                    <p>Lade LeoSync für Android herunter und sichere Fotos und Videos automatisch auf deinem eigenen Windows-PC oder NAS. Synchronisiere beliebige Dateien und Ordner direkt über SMB – ohne externe Cloud.</p>
+
+                    <a class="button button-primary"
+                    href="https://github.com/Apop85/Sync2PC/releases/latest" data-track="download" data-pos="download-section"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        ↓
+
+                        <span>LeoSync kostenlos herunterladen</span>
+
+                    </a>
+
+                    <div class="download-info">Lade die aktuelle LeoSync-APK direkt über GitHub Releases herunter und installiere sie auf deinem Android-Gerät. LeoSync kann anschliessend selbstständig nach verfügbaren Updates suchen.</div>
+
+                    <div class="download-links">
+
+                        <a href="https://github.com/Apop85/Sync2PC"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                            GitHub Repository
+                        </a>
+
+                        <a href="https://github.com/Apop85/Sync2PC/blob/main/README.md"
+                        target="_blank"
+                        rel="noopener noreferrer">Dokumentation</a>
+
+                        <a href="https://github.com/Apop85/Sync2PC/blob/main/PATCHNOTES.md"
+                        target="_blank"
+                        rel="noopener noreferrer">Patchnotes</a>
+
+                    </div>
+
+                </div>
+
+                <div class="download-visuals">
+
+                    <div class="phone-frame">
+                        <picture>
+                            <source
+                                srcset="../images/LeoSync/splashscreen_bright.webp"
+                                type="image/webp">
+                            <img class="download-splash"
+                                src="../images/LeoSync/splashscreen_bright.jpg"
+                                alt="LeoSync Android-App – Startbildschirm der Foto-Backup- und Dateisynchronisierungs-App"
+                                width="1080"
+                                height="2412"
+                                loading="lazy">
+                            <span class="phone-speaker"></span>
+                            <span class="phone-camera"></span>
+                        </picture>
+                    </div>
+
+                    <picture>
+                        <source srcset="../images/stand.webp" type="image/webp">
+                        <img class="download-dog"
+                            src="../images/stand.png"
+                           
+                           
+                            alt="Leo steht auf den Hinterbeinen und bittet um Aufmerksamkeit"
+                            width="780"
+                            height="780"
+                            loading="lazy">
+                    </picture>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+        FAQ
+        ===================================================== -->
+
+    <section class="faq-section" id="faq">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Häufige Fragen zu Android Foto-Backup und Synchronisierung.</h2>
+                <p>Antworten zu LeoSync, automatischem Foto-Backup, NAS-Synchronisierung und Dateitransfer über SMB.</p>
+
+            </div>
+
+            <div class="faq-list">
+
+                <!-- QUESTION 1 -->
+
+                <details>
+
+                    <summary>Kann ich mit LeoSync Android-Fotos ohne Cloud sichern?</summary>
+                    <p>Ja. LeoSync sichert Fotos und Videos direkt von deinem Android-Smartphone auf deinen eigenen PC oder NAS. Die Übertragung erfolgt über SMB im lokalen Netzwerk. Du benötigst weder ein Cloud-Konto noch einen externen Cloud-Speicherdienst.</p>
+
+                </details>
+
+                <!-- QUESTION 2 -->
+
+                <details>
+
+                    <summary>Kann ich Android-Fotos auf einem NAS sichern?</summary>
+                    <p>Ja. Mit LeoSync kannst du Fotos und Videos automatisch von deinem Android-Smartphone auf einem NAS sichern. Voraussetzung ist eine erreichbare SMB2- oder SMB3-Netzwerkfreigabe und ein Benutzerkonto mit den erforderlichen Schreibrechten.</p>
+
+                </details>
+
+                <!-- QUESTION 3 -->
+
+                <details>
+
+                    <summary>Kann ich Dateien zwischen Android und PC synchronisieren?</summary>
+                    <p>Ja. Mit den Ordner-Profilen von LeoSync kannst du Dateien zwischen deinem Android-Smartphone und einem Windows-PC synchronisieren. Die Übertragung funktioniert vom Handy zum PC, vom PC zum Handy oder bidirektional über eine SMB-Netzwerkfreigabe.</p>
+
+                </details>
+
+                <!-- QUESTION 4 -->
+
+                <details>
+
+                    <summary>Was passiert bei einem Synchronisierungskonflikt?</summary>
+
+                    <p>LeoSync verwendet einen Drei-Wege-Abgleich zwischen Handy, PC und dem zuletzt bekannten Stand. Wurde dieselbe Datei auf beiden Seiten geändert, entscheidest du je Datei: Handy behalten, PC behalten oder beide behalten (die Handy-Version erhält dann das Suffix <code>_conflict-phone</code>). Alternativ kannst du im Profil festlegen, dass automatisch die neuere Datei gewinnt. Die unterlegene Version landet immer im Papierkorb. Bei einseitigen Profilen gewinnt die Quelle.</p>
+
+                </details>
+
+                <!-- QUESTION 5 -->
+
+                <details>
+
+                    <summary>Wie kann ich gelöschte Dateien in LeoSync wiederherstellen?</summary>
+                    <p>Der integrierte LeoSync-Papierkorb bewahrt gelöschte Dateien und ersetzte Dateiversionen auf. Du kannst einzelne Dateien, komplette Ordner oder alle Dateien eines bestimmten Tages wiederherstellen. So lassen sich versehentlich gelöschte oder überschriebene Dateien zurückholen.</p>
+
+                </details>
+
+                <!-- QUESTION 6 -->
+
+                <details>
+
+                    <summary>Ist LeoSync kostenlos?</summary>
+
+                    <p>Ja. LeoSync kannst du kostenlos über GitHub Releases herunterladen. Die App steht unter der MIT-Lizenz, den Quellcode findest du im GitHub-Repository. Die aktuelle Version ist eine Beta.</p>
+
+                </details>
+
+                <!-- QUESTION 7 -->
+
+                <details>
+
+                    <summary>Wie bekomme ich Hilfe?</summary>
+
+                    <p>Eine Schritt-für-Schritt-Anleitung mit Lösungen für häufige Meldungen findest du auf der <a href="hilfe.html">Hilfeseite</a>, weitere Dokumentation im GitHub-Repository. Fragen, Fehlerberichte und Verbesserungsvorschläge kannst du über GitHub Issues einreichen.</p>
+
+                </details>
+
+                <!-- QUESTION 8 -->
+
+                <details>
+
+                    <summary>Welche Berechtigungen benötigt LeoSync?</summary>
+
+                    <p>Damit LeoSync alle Funktionen nutzen kann, benötigt die App je nach Android-Version und Verwendung einige Berechtigungen, die du ausdrücklich freigeben musst.</p>
+
+
+                    <h4>1. Fotos und Videos</h4>
+
+                    <p>LeoSync benötigt Zugriff auf deine Fotos und Videos, um die ausgewählten Medien sichern und synchronisieren zu können.</p>
+
+                    <ul>
+                        <li>Fotos: Ermöglicht den Zugriff auf deine Bilder.</li>
+                        <li>Videos: Ermöglicht den Zugriff auf deine Videos.</li>
+                        <li>Standort in Fotos: Ermöglicht das Lesen der GPS-Daten in deinen Fotos, damit LeoSync die Länderordner anlegen kann.</li>
+                    </ul>
+
+
+                    <h4>2. Standort und WLAN-Erkennung</h4>
+
+                    <p>Android verlangt für die automatische Erkennung des verbundenen WLAN-Namens (SSID) bestimmte Standortberechtigungen. Damit LeoSync dein WLAN auch im Hintergrund erkennen kann, kann zusätzlich die Einstellung „Standort – Immer zulassen“ erforderlich sein.</p>
+
+                    <ul>
+                        <li>Standortzugriff: Ermöglicht die von Android vorgeschriebene WLAN-Erkennung.</li>
+                        <li>Standortzugriff im Hintergrund: Ermöglicht die WLAN-Erkennung, auch wenn LeoSync nicht geöffnet ist.</li>
+                    </ul>
+
+                    <p>Wichtig zum Datenschutz: LeoSync verwendet die beiden Standortberechtigungen dieses Abschnitts ausschliesslich zur WLAN-Erkennung. Dein aktueller Standort wird weder ermittelt noch übertragen. Die Ländererkennung erfolgt unabhängig davon vollständig offline anhand der GPS-Koordinaten in den Metadaten deiner Fotos und Videos.</p>
+
+
+                    <h4>3. Benachrichtigungen</h4>
+
+                    <p>LeoSync benötigt deine Zustimmung, um dich über laufende und abgeschlossene Synchronisierungen informieren zu können. Unter Android 13 und neuer muss der Benachrichtigungszugriff ausdrücklich freigegeben werden.</p>
+
+
+                    <h4>4. Akkuoptimierung</h4>
+
+                    <p>Damit Hintergrundsynchronisierungen möglichst zuverlässig ausgeführt werden, kann LeoSync eine Ausnahme von der Android-Akkuoptimierung anfordern. Dadurch werden Einschränkungen durch Energiesparmassnahmen reduziert. Du musst dieser Einstellung gegebenenfalls ausdrücklich zustimmen.</p>
+
+
+                    <h4>5. Installation von App-Updates</h4>
+
+                    <p>Wenn LeoSync Updates direkt über APK-Dateien installiert, muss Android gegebenenfalls die Berechtigung erteilt werden, Apps aus dieser Quelle zu installieren. Die Installation eines Updates muss anschliessend von dir bestätigt werden.</p>
+
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section" aria-labelledby="guides-title">
+        <div class="container">
+            <h2 id="guides-title">Mehr erfahren</h2>
+            <p class="guide-sub">Anleitungen für typische Anwendungsfälle.</p>
+            <div class="guide-grid">
+                <a class="guide-card" href="android-fotos-auf-nas-sichern/"><strong>Android-Fotos auf NAS sichern</strong><span>Automatisch per SMB auf dein NAS, sortiert nach Jahr, Monat und Land.</span></a>
+                <a class="guide-card" href="android-fotos-auf-pc-uebertragen/"><strong>Android-Fotos auf den PC übertragen</strong><span>Ohne USB-Kabel direkt in einen freigegebenen Windows-Ordner.</span></a>
+                <a class="guide-card" href="android-backup-ohne-cloud/"><strong>Android-Backup ohne Cloud</strong><span>Vorteile und Grenzen lokaler Sicherung, Datenschutz bei LeoSync.</span></a>
+                <a class="guide-card" href="android-dateien-synchronisieren/"><strong>Android-Dateien synchronisieren</strong><span>Beliebige Ordner per SMB abgleichen, einseitig oder beidseitig.</span></a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- =====================================================
+        FOOTER
+        ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <picture>
+                    <source srcset="../images/LeoSync/logo.webp" type="image/webp">
+                    <img src="../images/LeoSync/logo.png"
+                        width="312"
+                        height="314"
+                        alt="Leo Logo">
+                </picture>
+
+                <span>LeoSync · Leo – Independent Software</span>
+
+            </div>
+
+            <nav class="footer-links" aria-label="Footer-Navigation">
+
+                <a href="../">Leo Startseite</a>
+
+                <a href="hilfe.html">Hilfe</a>
+
+                <a href="privacy-de.html">Datenschutz</a>
+
+                <a href="agb-de.html">AGB</a>
+
+                <a href="https://github.com/Apop85/Sync2PC"
+                target="_blank"
+                rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </nav>
+
+            <div class="footer-copy">
+
+                <span>© 2026 Leo – Independent Software. Alle Rechte vorbehalten.</span>
+
+                <span> · LeoSync Beta</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/leosync.js" defer></script>
+
+    </body>
+</html>
