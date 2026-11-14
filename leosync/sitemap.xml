@@ -2,107 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://apop85.github.io/leosync/</loc>
+        <loc>https://leotoolset.github.io/leosync/</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/</loc>
+        <loc>https://leotoolset.github.io/leosync/en/</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/hilfe.html</loc>
+        <loc>https://leotoolset.github.io/leosync/hilfe.html</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/hilfe.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/help.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/hilfe.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/help.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/help.html</loc>
+        <loc>https://leotoolset.github.io/leosync/en/help.html</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/hilfe.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/help.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/hilfe.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/help.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/privacy-de.html</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/privacy-de.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/privacy-en.html"/>
+        <loc>https://leotoolset.github.io/leosync/privacy-de.html</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/privacy-de.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/privacy-en.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/privacy-en.html</loc>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/privacy-de.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/privacy-en.html"/>
+        <loc>https://leotoolset.github.io/leosync/privacy-en.html</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/privacy-de.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/privacy-en.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/agb-de.html</loc>
+        <loc>https://leotoolset.github.io/leosync/agb-de.html</loc>
         <lastmod>2026-11-12</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/agb-de.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/terms-en.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/agb-de.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/terms-en.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/terms-en.html</loc>
+        <loc>https://leotoolset.github.io/leosync/terms-en.html</loc>
         <lastmod>2026-11-12</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/agb-de.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/terms-en.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/agb-de.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/terms-en.html"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/</loc>
+        <loc>https://leotoolset.github.io/leosync/android-fotos-auf-nas-sichern/</loc>
         <lastmod>2026-11-11</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-fotos-auf-nas-sichern/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-photo-backup-nas/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-photo-backup-nas/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/android-photo-backup-nas/</loc>
+        <loc>https://leotoolset.github.io/leosync/en/android-photo-backup-nas/</loc>
         <lastmod>2026-11-11</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-nas-sichern/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photo-backup-nas/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-fotos-auf-nas-sichern/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-photo-backup-nas/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-photo-backup-nas/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/android-backup-ohne-cloud/</loc>
+        <loc>https://leotoolset.github.io/leosync/android-backup-ohne-cloud/</loc>
         <lastmod>2026-11-10</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-backup-ohne-cloud/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-backup-ohne-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-backup-without-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-backup-without-cloud/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/android-backup-without-cloud/</loc>
+        <loc>https://leotoolset.github.io/leosync/en/android-backup-without-cloud/</loc>
         <lastmod>2026-11-10</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-backup-ohne-cloud/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-backup-without-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-backup-ohne-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-backup-without-cloud/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-backup-without-cloud/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/</loc>
+        <loc>https://leotoolset.github.io/leosync/android-fotos-auf-pc-uebertragen/</loc>
         <lastmod>2026-11-10</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photos-to-pc/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photos-to-pc/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-fotos-auf-pc-uebertragen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-photos-to-pc/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-photos-to-pc/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/android-photos-to-pc/</loc>
+        <loc>https://leotoolset.github.io/leosync/en/android-photos-to-pc/</loc>
         <lastmod>2026-11-10</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-fotos-auf-pc-uebertragen/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-photos-to-pc/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-photos-to-pc/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-fotos-auf-pc-uebertragen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-photos-to-pc/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-photos-to-pc/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/android-dateien-synchronisieren/</loc>
+        <loc>https://leotoolset.github.io/leosync/android-dateien-synchronisieren/</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-dateien-synchronisieren/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-file-sync/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-file-sync/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-dateien-synchronisieren/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-file-sync/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-file-sync/"/>
     </url>
     <url>
-        <loc>https://apop85.github.io/leosync/en/android-file-sync/</loc>
+        <loc>https://leotoolset.github.io/leosync/en/android-file-sync/</loc>
         <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="de" href="https://apop85.github.io/leosync/android-dateien-synchronisieren/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://apop85.github.io/leosync/en/android-file-sync/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://apop85.github.io/leosync/en/android-file-sync/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://leotoolset.github.io/leosync/android-dateien-synchronisieren/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://leotoolset.github.io/leosync/en/android-file-sync/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/leosync/en/android-file-sync/"/>
     </url>
 </urlset>
