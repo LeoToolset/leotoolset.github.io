@@ -2284,3 +2284,15 @@ section {
         animation: none;
     }
 }
+
+
+/* Platzhalter statt Download-Schaltfläche (Play-Store-Veröffentlichung steht aus) */
+.button-soon {
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+
+.button-soon:hover {
+    transform: none;
+}
