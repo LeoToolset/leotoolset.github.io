@@ -1181,6 +1181,12 @@ section {
     }
 }
 
+.help-phones.two {
+    grid-template-columns: repeat(2, minmax(0, 250px));
+    justify-content: center;
+    gap: 32px;
+}
+
 .help-phones.single {
     grid-template-columns: minmax(0, 260px);
     justify-content: center;
@@ -1270,6 +1276,7 @@ section {
     .help-shots.cols-3,
     .help-phones,
     .help-phones.four,
+    .help-phones.two,
     .help-phones.single {
         grid-template-columns: 1fr;
         padding: 16px;
