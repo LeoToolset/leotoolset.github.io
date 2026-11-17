@@ -167,7 +167,7 @@ setTimeout(hideLeoLoadingScreen, 8000);
     const targets = document.querySelectorAll("[data-leo-version]");
     if (!targets.length || !window.fetch) return;
 
-    fetch("https://raw.githubusercontent.com/Apop85/Sync2PC/refs/heads/main/version.properties")
+    fetch("https://raw.githubusercontent.com/LeoToolset/LeoSync/refs/heads/main/version.properties")
         .then((response) => response.ok ? response.text() : Promise.reject(response.status))
         .then((text) => {
             const get = (key) => {
@@ -195,7 +195,7 @@ setTimeout(hideLeoLoadingScreen, 8000);
 
 (function initTracking() {
 
-    const REPO = "github.com/Apop85/Sync2PC";
+    const REPO = "github.com/LeoToolset/LeoSync";
 
     const meta = document.querySelector('meta[name="leo-analytics"]');
     const endpoint = meta && meta.content;
