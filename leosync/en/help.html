@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="theme-color" content="#1a6fd1">
+        <meta name="theme-color" content="#0d141d" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
 
     <title>LeoSync Help – Setup, Profiles and Common Messages</title>
@@ -111,10 +112,6 @@
             </ol>
         </nav>
 
-                <p>LeoSync backs up photos, videos and any folder from your phone to your Windows PC – directly on your home network, without a cloud and without an account. Files only travel between phone and PC.</p>
-
-                <p>LeoSync backs up photos, videos and any folder from your phone to your Windows PC – directly on your home network, without a cloud and without an account. Files only travel between phone and PC.</p>
-
         <h2 id="share-folder">1. On the PC: share a folder</h2>
 
         <ol>
@@ -197,11 +194,11 @@
 
         <p>The wizard guides you step by step through name, source, target and options. For the target, the PC is enough (<code>\\192.168.1.20</code>) plus user and password; <strong>Choose folder on the PC…</strong> then lists the shares and folders. <strong>Test connection</strong> shows right away whether everything is correct.</p>
 
-        <p>For photo profiles you choose the <strong>folder structure</strong>: <code>Year\Month - Country</code> (default), <code>Year\Country\Month</code> or <code>Year\Month\Country</code>. It can be changed until the profile's first sync. Several photo profiles with the same target must use the same structure.</p>
+        <p>For photo profiles you choose the <strong>folder structure</strong>. With the switch <strong>Sort by country</strong> you decide whether photos taken abroad go into country folders. <strong>On:</strong> <code>Year\Month - Country</code> (default), <code>Year\Country\Month</code>, <code>Year\Month\Country</code>, <code>Year - Country</code> (e.g. <code>2026 - Egypt\IMG_1.jpg</code>) or <code>Year\Country</code> (<code>2026\Egypt\IMG_1.jpg</code>). <strong>Off:</strong> <code>Year\Month</code> (<code>2026\06\IMG_1.jpg</code>) or <strong>Year only</strong> (<code>2026\IMG_1.jpg</code>). There is also <strong>Keep structure</strong>: LeoSync keeps the phone's folders (e.g. <code>DCIM\Camera\IMG_1.jpg</code>) without year, month or country folders. If you move or rename photos on the phone, LeoSync backs them up again in the new folder; the old copy on the PC stays. Home country and photos without a location stay without a country. Structure and switch can be changed until the profile's first sync, after that they are locked. Several photo profiles with the same target must use the same structure. If the PC already has renamed folders that start with the year (or month), LeoSync asks (for the year structures &quot;2026, whole year&quot;).</p>
 
-        <p><strong>Country folders</strong> (photo profiles only): For these LeoSync reads the capture location (GPS data in the photo) from your photos to choose the folder. Only when you choose country folders does LeoSync ask for the <strong>Location in photos</strong> permission, with an explanation. The location is evaluated only on the phone and neither stored nor sent; the photos themselves are transferred unchanged. If you decline, country folders stay off; if the permission is missing later, the profile says "Capture location: permission missing" with <strong>Grant</strong>.</p>
+        <p><strong>Country folders</strong> (photo profiles only): For these LeoSync reads the capture location (GPS data in the photo) from your photos to choose the folder. Only when you choose a structure with a country (not for &quot;Year\Month - Country&quot;) does LeoSync ask for the <strong>Location in photos</strong> permission, with an explanation. The location is evaluated only on the phone and neither stored nor sent; the photos themselves are transferred unchanged. If you decline, country folders stay off; if the permission is missing later, the profile says &quot;Capture location: permission missing&quot; with <strong>Grant</strong>.</p>
 
-        <p>Under <strong>PC recognition</strong> in the profile you see whether LeoSync recognises your PC: <strong>PC recognised</strong>, <strong>Not recognised yet</strong> or <strong>Different PC</strong>. LeoSync recognises your PC by its ID, so it only syncs with your PC and not with another device. The ID is checked before the user name and password are sent. If the PC is not recognised yet, tap <strong>Test connection</strong> when you are at home. With <strong>Different PC</strong> (e.g. after a fresh Windows installation, when the ID changes) nothing is synced; check that it really is your PC answering, then confirm with <strong>Test connection</strong>. LeoSync needs no Wi-Fi name and no location permission for this.</p>
+        <p>Under <strong>PC ID</strong> in the profile you see whether LeoSync recognises your PC: <strong>PC recognised</strong>, <strong>Not recognised yet</strong> or <strong>Different PC</strong>. LeoSync recognises your PC by its ID, so it only syncs with your PC and not with another device. The ID is checked before the user name and password are sent. If the PC is not recognised yet, tap <strong>Test connection</strong> when you are at home. With <strong>Different PC</strong> (e.g. after a fresh Windows installation, when the ID changes) nothing is synced; check that it really is your PC answering, then confirm with <strong>Test connection</strong>. LeoSync needs no Wi-Fi name and no location permission for this.</p>
 
         <p>Under <strong>Known networks: N</strong> you see in how many networks LeoSync has already reliably recognised your PC. On unknown Wi-Fi networks it only searches briefly for the PC to save battery; the PC ID is what protects you, not the known networks. LeoSync does not show network names, only the number. After a move or a router change you can reset the known networks with <strong>Forget</strong>: LeoSync learns them again the next time it connects, and no file is lost. Profiles from an old backup that used to depend on the Wi-Fi name are switched to the PC ID on import (a history entry says so); if a profile does not know the PC yet, tap <strong>Test connection</strong> once.</p>
 
@@ -209,6 +206,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/laenderordner_berechtigung_dialog_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/laenderordner_berechtigung_dialog_en.jpg">
                         <source srcset="../../images/LeoSync/laenderordner_berechtigung_dialog_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/laenderordner_berechtigung_dialog_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «New profile»: dialog «Read where your photos were taken?» with the buttons «Continue» and «Not now»">
@@ -221,6 +220,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/pc_erkennung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/pc_erkennung_en.jpg">
                         <source srcset="../../images/LeoSync/pc_erkennung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/pc_erkennung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Edit profile»: «PC ID» card with «PC recognised», «Known networks: 1» and the button «Forget»">
@@ -229,6 +230,51 @@
                     <span class="phone-camera"></span>
                 </div>
                 <figcaption>PC ID and known networks</figcaption>
+            </figure>
+        </div>
+
+        <div class="help-phones">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/ordnerstruktur_land_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/ordnerstruktur_land_en.jpg">
+                        <source srcset="../../images/LeoSync/ordnerstruktur_land_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/ordnerstruktur_land_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync photos profile: «Folder structure» card with the «Sort by country» switch, the structure field and the home country">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Photos profile: folder structure with country</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/ordnerstruktur_auswahl_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/ordnerstruktur_auswahl_en.jpg">
+                        <source srcset="../../images/LeoSync/ordnerstruktur_auswahl_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/ordnerstruktur_auswahl_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: «Choose folder structure» dialog with six structures, including «Keep structure»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>«Choose folder structure» dialog</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/heimatland_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/heimatland_en.jpg">
+                        <source srcset="../../images/LeoSync/heimatland_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/heimatland_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: «Choose home country» list with the option «No home country»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Choose home country</figcaption>
             </figure>
         </div>
 
@@ -263,6 +309,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/new_profile_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/new_profile_en.jpg">
                         <source srcset="../../images/LeoSync/new_profile_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/new_profile_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «New profile»: choose between «Back up photos &amp; videos» and «Sync folder»">
@@ -275,6 +323,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/profile_connection_test_verschluesselt_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/profile_connection_test_verschluesselt_en.jpg">
                         <source srcset="../../images/LeoSync/profile_connection_test_verschluesselt_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/profile_connection_test_verschluesselt_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Edit profile» with share path, user, «Choose folder on the PC…» and a successful connection test («Connection OK», «Encrypted (SMB 3.1.1)»)">
@@ -287,6 +337,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verschluesselung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verschluesselung_en.jpg">
                         <source srcset="../../images/LeoSync/verschluesselung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/verschluesselung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Edit profile»: «PC ID» card and below it the «Encryption» card with the options «Off», «If possible (recommended)» and «Required»">
@@ -299,6 +351,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/profiles_tools_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/profiles_tools_en.jpg">
                         <source srcset="../../images/LeoSync/profiles_tools_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/profiles_tools_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen with two profiles («Fotos» with a shield icon for the encrypted connection, «Dokumente» with «2 open») and the tools «Free up space» and «Trash»">
@@ -315,7 +369,7 @@
         <ul>
             <li><strong>Automatic:</strong> As soon as the phone is connected to a Wi-Fi where LeoSync recognises your PC, it syncs in the background. Known networks (see section 2) it checks as before; on an unknown Wi-Fi it only searches briefly for the PC to save battery.</li>
             <li><strong>Updates:</strong> LeoSync is updated through Google Play; there is no update page in the app. <strong>About LeoSync</strong> says "Updates are delivered through Google Play".</li>
-            <li><strong>After the import:</strong> When you import a backup, the profiles deliberately wait for their first start. At the top of the home screen the <strong>After the import</strong> card shows the next step per profile with a button: <strong>Choose folder</strong> (if the phone folder has to be linked again), <strong>Test connection</strong> (if the PC is not recognised yet) and <strong>Start now</strong> (first sync). The card can be collapsed but not swiped away; it disappears as soon as every profile has run once.</li>
+            <li><strong>After the import:</strong> When you import a backup, the profiles deliberately wait for their first start. On the home screen the <strong>Messages</strong> tile summarises this, for example &quot;2 profiles are waiting for the first sync&quot;, with a <strong>Start now</strong> button for the first sync; the hint disappears after the start. If the phone folder has to be linked again or the PC is not recognised yet (<strong>Test connection</strong>), LeoSync reports that on the profile concerned. There is no separate <strong>After the import</strong> card with individual steps any more.</li>
             <li><strong>Check interval for folder profiles:</strong> Under <strong>Settings → Transfer</strong>, <strong>Folder profiles: check interval (minutes)</strong> (15 to 1440, default 60) sets how often LeoSync checks folder profiles for changes. The setting applies to all folder profiles (formerly per profile, the shortest one was effective); on update the app takes over the shortest previous interval. Checks only run while an active folder profile exists.</li>
             <li><strong>New photos (minimum age):</strong> <strong>Minimum age for photos (minutes)</strong> under <strong>Settings → Transfer</strong> sets how old a photo must be at least. After a series of photos only one catch-up run happens, as soon as the newest photo has reached the minimum age (instead of one per photo); if no photos are ready to transfer, no run starts and no history entry is created.</li>
             <li><strong>Mobile data/VPN:</strong> Under <strong>Settings → Transfer</strong> you can allow automatic sync outside Wi-Fi as well (off by default). This can use data and, with some mobile plans, cost money, for example abroad. If the PC is not reachable, LeoSync only retries every 2 hours outside Wi-Fi. When roaming (outside your home mobile network, e.g. abroad), no automatic run starts over mobile data or VPN; Wi-Fi and starting by hand work as usual.</li>
@@ -325,25 +379,29 @@
             <li><strong>Icons on the profile card:</strong> At the top right the card shows only the icons that apply, from left to right without gaps: <strong>PC</strong> (the PC's identifier is known, "PC recognised") and the <strong>shield</strong> (the last sign-in was encrypted; red with a warning triangle if encryption was refused). The state is also shown in the text lines below the name. There is no Wi-Fi icon any more because LeoSync no longer reads the Wi-Fi name.</li>
             <li><strong>The dog</strong> shows the state: sleeping = everything backed up, running = sync in progress, standing = waiting for your decision, sitting = waiting (e.g. for Wi-Fi, the first sync, or files that follow later). The status card never says "all up to date" with an open conflict, no connection, pending files, or an error in the last run.</li>
             <li><strong>"Not everything backed up yet"</strong> (with a repeat icon): If a file changed on the phone or PC during the sync, LeoSync skips it in that run and catches up later. The run still counts as successful; the history says "· N follow later", and the home page says "N files changed during the run and follow at the next sync." You do not need to do anything: LeoSync automatically starts a follow-up run after 5 minutes, at most one per hour (pause and "manual only" are respected). After that the usual triggers such as folder check and Wi-Fi apply. As soon as a run ends without pending files, the card says "All backed up and up to date" again.</li>
-            <li><strong>"No connection" and "Start not possible":</strong> If a start could not be carried out because the PC or Wi-Fi is not available, the status card shows "No connection" (the sitting dog on a blue circle while files are waiting) instead of "Ready" or an error; a manual start reports "Start not possible". "All backed up" appears only once every active profile has been started successfully by hand. "Waiting for the home Wi-Fi." appears only after an interruption in the middle of a run. With "No connection" the card also shows how many files are waiting (1 file / N files waiting for synchronisation). The profile card of a folder profile additionally shows "· N open": new files or files changed since the last comparison in the phone folder. The number is counted on the phone only (no network); there is no counter for "PC → Phone", and Photos profiles do not show it.</li>
+            <li><strong>"No connection" and "Start not possible":</strong> If a start could not be carried out because the PC or Wi-Fi is not available, the status card shows "No connection" (the sitting dog on a blue circle while files are waiting) instead of "Ready" or an error; a manual start reports "Start not possible". "All backed up" appears only once every active profile has been started successfully by hand. "Waiting for a Wi-Fi." appears only after an interruption in the middle of a run. With "No connection" the card also shows how many files are waiting (1 file / N files waiting for synchronisation). The profile card of a folder profile additionally shows "· N open": new files or files changed since the last comparison in the phone folder. The number is counted on the phone only (no network); there is no counter for "PC → Phone", and Photos profiles do not show it.</li>
             <li><strong>Backup:</strong> The messages on export and import also count the sync state of folder profiles (previously only photo files; the folder state was already included).</li>
             <li><strong>Date and time:</strong> All displays follow the phone's system settings (region, 12 h/24 h), even if the app language differs (e.g. US format with a German app). Fixed formats remain for file names, backup/export, diagnostics and trash day folders.</li>
             <li><strong>"Last synchronisation":</strong> The home screen shows the last run without errors (with the profile), not the last attempt; a run without errors counts even if there was nothing to transfer. Runs with errors, partial success or cancellation do not change the time. Without a successful run it says "No successful synchronisation yet." (wording not checked against the app).</li>
+            <li><strong>"Next check at 10:21":</strong> This line under the status on the home screen tells you when LeoSync will look again by itself if a check is scheduled for later, for example the follow-up sync for photos just taken, or a new attempt when the PC was not reachable. It only appears if at least one profile exists, nothing is running or waiting, and you have not paused manually.</li>
             <li><strong>"Messages" on the home screen:</strong> Problems are collected in one card you can page through (arrows and counter), grouped by cause: if the same cause affects several profiles (the same PC, share or account), it appears once, with the affected profiles. Each profile keeps its own state; no error disappears through grouping. The colour follows the most serious entry (reddish: safety brake, security, you need to act; yellow: decisions and temporary messages). Tips (for example battery) and the checklist after the import are there too, uncoloured. "Try again" repeats only the profiles of the group; you enter a new password once per PC and account. "PC not reachable" appears only after 24 hours without a successful run. The heading of the status card is <strong>Errors</strong> (safety brake, security, you need to act, missing required permission), <strong>Waiting for you</strong> (conflict, month folder, delete confirmation) or <strong>Messages</strong> (temporary).</li>
             <li><strong>Profile names:</strong> Each profile name may occur only once (case and spaces at the edges are ignored). It is checked at <strong>Next</strong> in the name step, when saving and when editing. Existing duplicate names are not renamed but reported when editing; saving other changes remains possible. Import with <strong>Add</strong> deliberately does not check names.</li>
             <li><strong>"Access denied" in the connection test:</strong> If encryption is set to <strong>Off</strong>, the message names it as a possible cause (the server may require it).</li>
             <li><strong>Import "Replace":</strong> The warning stays fixed at the top in the error colour; the backup details scroll below it.</li>
             <li><strong>"Phone folder: access lost":</strong> If LeoSync no longer has access to a profile's phone folder (e.g. after importing the settings), the profile card shows (with a warning icon) "Phone folder: access lost – tap and choose again". Tapping opens the profile, where you choose the folder again.</li>
-            <li><strong>Free up space:</strong> In the tools on the home screen, LeoSync removes old files from the phone that are verifiably on the PC. Each file is checked on the PC first; you choose by age, folder, file type and size and see a preview. Photos and videos go to the gallery trash (Android 10 has none; a note says so). The result states how many files were deleted and skipped and how much space was freed. <strong>Tip:</strong> Free up phone storage only after a sync, most safely with <strong>Free up space</strong> in LeoSync. Google Photos can delete originals before they are backed up (<strong>Free up space</strong> in Google Photos); LeoSync shows a one-time note about this after the photo-profile wizard.</li>
-            <li><strong>Backup of your settings:</strong> Profiles, settings and sync state can be exported to a file and imported again. Passwords are only included, encrypted, with an export password. The app language is not part of the backup. On import, <strong>Replace</strong> is highlighted in a warning colour because it replaces the existing profiles.</li>
+            <li><strong>Free up space:</strong> In the tools on the home screen, LeoSync removes old files from the phone that are verifiably on the PC. Each file is checked on the PC first; you choose by age, folder, file type and size and see a preview. Photos and videos go to the gallery trash (Android 10 has none; a note says so). The result states how many files were deleted and skipped and how much space was freed. A file counts as backed up only if the selected profile backed it up with the same size and modification date; a backup made by another profile with the same source does not count. <strong>Tip:</strong> Free up phone storage only after a sync, most safely with <strong>Free up space</strong> in LeoSync. Google Photos can delete originals before they are backed up (<strong>Free up space</strong> in Google Photos); LeoSync shows a one-time note about this after the photo-profile wizard.</li>
+            <li><strong>Backup of your settings:</strong> Profiles, settings and sync state can be exported to a file and imported again. Passwords are only included, encrypted, with an export password. The app language is not part of the backup. On import, <strong>Replace</strong> is highlighted in a warning colour because it replaces the existing profiles. <strong>Recommendation:</strong> Always create the backup with an export password. Only then is it protected against later changes: if the file was modified or is damaged, LeoSync rejects the import before anything is written. Only import backups that you created yourself. Older app versions cannot read a backup made with an export password; backups from earlier versions can still be imported but are not protected against changes (export again). <strong>Confirm the PC after the import:</strong> From an unconfirmed backup (no export password, wrong password or from an older version) LeoSync does not take over the PC identifier. Open each affected profile and tap <strong>Test connection</strong>; until the PC is confirmed, LeoSync sends nothing. The confirmation applies to all profiles of the same PC. The preview shows PC, share and user for each profile and warns about an unconfirmed file; the result names the profiles whose PC you have to confirm. If the <strong>Re-enter password</strong> dialog first asks you to open the profile, the PC is not yet confirmed.</li>
             <li><strong>History:</strong> With <strong>Delete history</strong> you remove the entries. LeoSync asks first and then offers <strong>Undo</strong> while the message at the bottom is visible. Error entries show a recommended action. The history filter resets when you leave the page.</li>
-            <li><strong>Language:</strong> The app language follows the phone's language (German, otherwise English). Under Settings → Language you can set it permanently.</li>
+            <li><strong>Language and colours:</strong> The app language follows the phone's language (German, otherwise English). Under Settings → <strong>Language &amp; colours</strong> you can set it permanently. The <strong>Colours</strong> card is there too: LeoSync has its own colour scheme (light and dark; this always follows your phone settings). With <strong>System colours</strong> (Android 12 and later) the colours follow your wallpaper. You find the backup under Settings → <strong>Diagnostics &amp; backup</strong>.</li>
+            <li><strong>Home country:</strong> The home country applies to all photo profiles with country folders; photos taken there get no country folder. At first it is not set: when you set up a photo profile with a country, you choose it from the list in the wizard. With <strong>No home country</strong> every country gets its own folder, including your own. You can change it under Settings → <strong>Language &amp; colours</strong>; if photo profiles with country folders exist, LeoSync asks first (default <strong>Cancel</strong>). Photos already filed stay where they are; new photos go into their folder under the new rule, and there may be questions about renamed folders. If you used LeoSync before, you keep your previous home country. The list scrolls to the selected country.</li>
         </ul>
 
         <div class="help-phones four">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/not_synced_yet_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/not_synced_yet_en.jpg">
                         <source srcset="../../images/LeoSync/not_synced_yet_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/not_synced_yet_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: Leo is sitting, no sync has run yet, with the «Messages» tile pointing to the first sync">
@@ -356,6 +414,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/keine_verbindung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/keine_verbindung_en.jpg">
                         <source srcset="../../images/LeoSync/keine_verbindung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/keine_verbindung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: Leo sitting on a blue circle, «No connection» and «2 files are waiting to sync.»">
@@ -368,6 +428,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/syncing_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/syncing_en.jpg">
                         <source srcset="../../images/LeoSync/syncing_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/syncing_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: Leo is running, the progress display shows the files and data volume of the current profile, with a pause button below">
@@ -380,6 +442,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/all_synced_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/all_synced_en.jpg">
                         <source srcset="../../images/LeoSync/all_synced_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/all_synced_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: Leo is sleeping, the status card says «Everything backed up and up to date»">
@@ -395,6 +459,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/paused_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/paused_en.jpg">
                         <source srcset="../../images/LeoSync/paused_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/paused_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: Leo lying on his back, the status card says «Paused – manual syncing only»">
@@ -407,6 +473,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/meldungen_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/meldungen_en.jpg">
                         <source srcset="../../images/LeoSync/meldungen_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/meldungen_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: «Messages» tile with arrows and the counter «1 of 3», heading «Errors»">
@@ -419,18 +487,22 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/nach_dem_import_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/nach_dem_import_en.jpg">
                         <source srcset="../../images/LeoSync/nach_dem_import_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/nach_dem_import_bright_en.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync home screen: «After the import» card with the button «Choose folder»">
+                             alt="LeoSync home screen: «Messages» tile with «2 profiles are waiting for their first sync» and the button «Start now»">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>After the import: the next step per profile</figcaption>
+                <figcaption>After the import: profiles wait for the first start</figcaption>
             </figure>
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/settings_transfer_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/settings_transfer_en.jpg">
                         <source srcset="../../images/LeoSync/settings_transfer_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/settings_transfer_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Settings → Transfer» with the fields «Minimum age for photos (minutes)» and «Folder profiles: check interval (minutes)»">
@@ -442,20 +514,66 @@
             </figure>
         </div>
 
+        <div class="help-phones">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/naechste_pruefung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/naechste_pruefung_en.jpg">
+                        <source srcset="../../images/LeoSync/naechste_pruefung_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/naechste_pruefung_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync home screen with the line «Next check at 9:51 PM» below the status">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Home screen: «Next check at …»</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/speicher_freigeben_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/speicher_freigeben_en.jpg">
+                        <source srcset="../../images/LeoSync/speicher_freigeben_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/speicher_freigeben_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync «Free up space» with the preview of the files that would be removed from the phone">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Free up space with preview</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/sprache_farben_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/sprache_farben_en.jpg">
+                        <source srcset="../../images/LeoSync/sprache_farben_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/sprache_farben_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync «Settings → Language &amp; colours» with the «Colours» card and the «System colours» switch">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Settings â†’ Language &amp; colours</figcaption>
+            </figure>
+        </div>
+
         <h2 id="safety">4. Keeping your files safe</h2>
 
         <ul>
             <li><strong>Check after upload:</strong> LeoSync reads the file back from the PC and compares it with the original. The levels range from <em>Off</em> to <em>Complete</em>; the default is <em>Medium</em>. If photos are removed from the phone, a check is always done.</li>
             <li><strong>Trash:</strong> For folder profiles, deleted and overwritten files go to the <code>@LeoSync-Bin</code> folder (on phone and PC/NAS; a normal, visible folder, whereas the former name <code>.LeoSync-Bin</code> was hidden on QNAP/Samba). LeoSync renames older trash folders (<code>.LeoSync-Bin</code> and others) automatically on the next run or moves their contents, without copying or overwriting anything; the history shows a line about it. If a PC rejects the name <code>@LeoSync-Bin</code>, LeoSync uses <code>.LeoSync-Bin</code> there and warns in the history. The row for each version in the trash shows "changed …" (the file's modification time), otherwise "deleted on …". Entries can be restored via <strong>Tools → Trash</strong>: choose the profile, select entries and tap <strong>Restore</strong> (or <strong>Delete permanently</strong>). Each file on the phone has <strong>Open</strong>: it opens the file for viewing only with the default app or the Android app chooser, nothing changes in the trash; without a suitable app or if the file is missing, a message appears. Files only on the PC have no <strong>Open</strong>. <strong>Show</strong> (Phone and PC / Phone only / PC only) and <strong>Day</strong> narrow the list; if a filter changes and the selection would contain hidden entries, the selection is cleared. The selection bar and the delete dialog name the sides concerned. <strong>Restore</strong> always writes back to phone and PC, even with a filter; the dialog states how many files are replaced according to the sync state (the current version goes to the trash first) and how many are newly created. On the phone, LeoSync places an empty <code>.nomedia</code> file in the trash so the gallery does not show it (not for download folders with a number tag); files in the trash are not backed up by a photo profile and not offered by <strong>Free up space</strong>. It is emptied after 30 days (adjustable). Photo profiles have no trash of their own: removed photos are in the gallery trash. A note appears in the trash while the move from <code>.LeoSync-Bin</code> to <code>@LeoSync-Bin</code> is waiting for pending restores (nothing is lost; if restores failed several times, try them again or discard them) or when your PC or NAS rejects the name <code>@LeoSync-Bin</code> and LeoSync stays with <code>.LeoSync-Bin</code> (normal, your files are protected).</li>
-            <li><strong>Safety brake:</strong> If many files would be deleted at once (default: more than 20 %) or a whole folder is missing, LeoSync stops and asks you first. You then choose between <strong>Don't delete</strong> and <strong>Move to trash anyway</strong>; until then the profile rests.</li>
+            <li><strong>Safety brake:</strong> If many files would be deleted at once (default: more than 20 %) or a whole folder is missing, LeoSync stops and asks you first. You then choose between <strong>Don't delete</strong> and <strong>Move to trash anyway</strong>; until then the profile rests. The same question appears when an unusually large number of already synced files would be <strong>replaced</strong> by changed versions from the other side (title <strong>Many files would be replaced</strong>, same thresholds, independent of version protection): <strong>Not now</strong> changes nothing and the profile rests, <strong>Transfer anyway</strong> releases the run once (with an extra confirmation if version protection is off). The simulation reports that the run would stop and ask.</li>
             <li><strong>Confirm change:</strong> If you change the direction of an existing folder profile or switch on <strong>Apply deletions</strong>, LeoSync shows what changes before saving, and you confirm with <strong>Save</strong> or cancel with <strong>Cancel</strong>. With a one-way direction, differing files on the target side are replaced; the replaced version may go to the trash.</li>
-            <li><strong>Removing after backup:</strong> Before LeoSync removes a backed-up photo from the phone, it checks the copy on the PC again. If the PC is not reachable, nothing is deleted ("PC not reachable – nothing deleted"). If the copy is missing or differs, the original stays on the phone and is backed up again on the next run. <strong>Free up space</strong> additionally checks size, partial checksum and modification date.</li>
+            <li><strong>Removing after backup:</strong> Before LeoSync removes a backed-up photo from the phone, it checks the copy on the PC again. If the PC is not reachable, nothing is deleted ("PC not reachable – nothing deleted"). If the copy is missing or differs, the original stays on the phone and is backed up again on the next run. <strong>Free up space</strong> additionally checks size, partial checksum and modification date. Android 10 has no trash: if you choose <strong>Move to trash</strong> in a Photos profile, the profile editor points out that the photos are deleted from the phone permanently after backup. Whether a second profile also has to back up a file before the original is removed depends on the actual type (photo or video) and on that profile's filter patterns.</li>
             <li><strong>Conflicts:</strong> If a file was changed on phone and PC and no automatic rule is set, you decide which version wins. The other one goes to the trash. On the conflict card the newer side is marked "(newer)"; with the same timestamp (to the second) it says "(same age)". With <strong>Keep both</strong>, the phone file becomes the conflict copy <code>…_conflict-phone</code>; if that name already exists, it is called <code>…_conflict-phone-2</code>, <code>-3</code> and so on. The conflict copy never overwrites an existing PC file. <strong>Undo</strong> after a decision works reliably: once you have undone it, LeoSync no longer carries out the decision, even if a sync is running at that moment. For images and videos the conflict card additionally shows, where it can be determined, the resolution of both sides (with duration for videos); the higher one is labelled "(larger)" but never preselected. Messengers often shrink photos; the file with the higher resolution usually has the better quality.</li>
             <li><strong>Encryption:</strong> With the <strong>Required</strong> level, LeoSync sends the user name and password only if the connection can be encrypted (see <strong>Turning on encryption</strong>).</li>
             <li><strong>PC ID:</strong> LeoSync sends the user name and password only to a recognised PC. With an unknown PC, the app does not sign in and skips the profile. The ID is not secret: it protects against an unknown server on a foreign network, not against a targeted attack.</li>
-            <li><strong>Encryption or signing no longer available:</strong> If a profile used to connect encrypted (or signed) and the PC or NAS no longer offers that, LeoSync pauses the profile and transfers nothing. Possible causes: you changed the setting on the NAS or PC, or someone is interfering with the connection on the network. The home screen and the profile show a card "Encryption no longer available" (or "Signing no longer available"), the profile card shows the shield icon in red with a warning triangle, the history says "Paused: encryption refused (previously encrypted)", and LeoSync notifies you once. <strong>Test connection</strong> checks again; <strong>Allow unencrypted</strong> (or <strong>Allow without signing</strong>) resets the marker and afterwards transfers without that protection. Only choose it if you changed the setting yourself.</li>
+            <li><strong>Encryption or signing no longer available:</strong> If a profile used to connect encrypted (or signed) and the PC or NAS no longer offers that, LeoSync pauses the profile and transfers nothing. Possible causes: you changed the setting on the NAS or PC, or someone is interfering with the connection on the network. The home screen (in the "Messages" card) and the profile show a card "Encryption not available" (or "Signing no longer available"), the profile card shows the shield icon in red with a warning triangle, the history says "Paused: encryption refused (previously encrypted)", and LeoSync notifies you once. The card has the buttons <strong>Try again</strong> (checks again), <strong>Reduce protection: &lt;profile&gt;</strong> (after a confirmation, sets the profile's encryption to "If possible"; <strong>Cancel</strong> is preselected) and <strong>Open profile</strong>. For signing the button is <strong>Allow without signing</strong>. Only reduce the protection if you changed the setting yourself.</li>
             <li><strong>Encryption automatically set to "Required":</strong> If the PC actually encrypts while a profile is set to <strong>If possible</strong>, LeoSync switches it to <strong>Required</strong> itself and tells you in the history and with a line at the top of the profile (with <strong>OK</strong>). This protects against a silent downgrade. The level stays freely selectable: if you set it back to <strong>If possible</strong> or <strong>Off</strong>, LeoSync asks ("Less protection?"), and afterwards it never switches this profile automatically again.</li>
             <li><strong>Different drive detected:</strong> LeoSync remembers the identifier of the drive behind the PC share. If it differs, the folder sync stops before touching any file. The card names the possible causes (hard disk or NAS replaced, drive reformatted, another device at the same address). <strong>Do not sync</strong> leaves the profile paused; <strong>This is the right drive – continue</strong> adopts the new identifier, after which a spot check examines the PC folder. This protects against data loss but is not a protection against a targeted attack. LeoSync uses the creation time of the share as the identifier; if it is recreated on the same drive or a NAS does not deliver it consistently, the card may appear more often. No file is ever lost because of it.</li>
+            <li><strong>Connection cannot be tampered with:</strong> In an encrypted connection LeoSync rejects unencrypted replies and disconnects (the run ends with an error). If a server once signed the connection without encryption, LeoSync requires signing from then on; if it later refuses, the card «Signing no longer available» appears. Connections without encryption and without signing can be altered on the network, which is why encryption is recommended. LeoSync rejects guest and anonymous sign-ins as soon as a user is entered.</li>
             <li><strong>Renaming and moving (folder profiles):</strong> With <strong>Apply deletions</strong>, LeoSync detects when you rename or move a file or a whole folder and does the same on the other side (instead of deleting and uploading again); the content is checked first. <strong>Without "Apply deletions", both names stay on both sides when you rename, so duplicates arise on purpose.</strong> The history says "renamed/moved: old → new". If your phone's storage location cannot move anything, the detection is off for that profile (nothing is ever copied).</li>
             <li><strong>Changed and deleted:</strong> With direction <strong>Both ways</strong> and <strong>Apply deletions</strong>: if a file was deleted on one side and changed on the other, it is restored instead of going to the trash; the history says so.</li>
             <li><strong>Names Windows does not allow:</strong> LeoSync does not upload files with invalid characters, a trailing period or space, or reserved names (e.g. <code>CON</code>) to the PC but skips them with a notice (not an error). Names that differ only in upper/lower case are reported as a collision.</li>
@@ -466,6 +584,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/papierkorb_profilwahl_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/papierkorb_profilwahl_en.jpg">
                         <source srcset="../../images/LeoSync/papierkorb_profilwahl_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/papierkorb_profilwahl_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Trash»: choose which trash to open">
@@ -478,6 +598,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/papierkorb_wiederherstellung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/papierkorb_wiederherstellung_en.jpg">
                         <source srcset="../../images/LeoSync/papierkorb_wiederherstellung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/papierkorb_wiederherstellung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync trash of the profile «Dokumente» with the filters «Show» and «Day», a file with the «Open» button and the buttons «Restore» and «Delete permanently»">
@@ -490,6 +612,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzbremse_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzbremse_en.jpg">
                         <source srcset="../../images/LeoSync/schutzbremse_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/schutzbremse_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen with the status card «Errors», the «Messages» tile and the warning «Many files would be deleted» with the buttons «Don't delete» and «Move to trash anyway»">
@@ -502,6 +626,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/konflikt_aufloesung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/konflikt_aufloesung_en.jpg">
                         <source srcset="../../images/LeoSync/konflikt_aufloesung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/konflikt_aufloesung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Conflicts» for two images: resolution of both sides, the larger one labelled «(larger)», and the buttons «Keep phone», «Keep PC» and «Keep both»">
@@ -513,10 +639,12 @@
             </figure>
         </div>
 
-        <div class="help-phones">
+        <div class="help-phones four">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzkarte_verschluesselung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzkarte_verschluesselung_en.jpg">
                         <source srcset="../../images/LeoSync/schutzkarte_verschluesselung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/schutzkarte_verschluesselung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: «Encryption not available» card with the buttons «Try again», «Reduce protection» and «Open profile»">
@@ -529,18 +657,22 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
-                        <source srcset="../../images/LeoSync/schutzkarte_profilkarte_bright_en.webp" type="image/webp">
-                        <img src="../../images/LeoSync/schutzkarte_profilkarte_bright_en.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync profile card «Dokumente» with a red shield and the line «Encryption refused»">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/dialog_schutz_verringern_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/dialog_schutz_verringern_en.jpg">
+                        <source srcset="../../images/LeoSync/dialog_schutz_verringern_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/dialog_schutz_verringern_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: confirmation «Less protection?» with the preselected button «Cancel» and the option «Reduce protection»">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>Profile card: red shield when encryption is refused</figcaption>
+                <figcaption>Confirmation «Reduce protection»: «Cancel» is preselected</figcaption>
             </figure>
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/anderes_laufwerk_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/anderes_laufwerk_en.jpg">
                         <source srcset="../../images/LeoSync/anderes_laufwerk_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/anderes_laufwerk_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: «Different drive detected» card with the buttons «Don't sync» and «This is the right drive – continue»">
@@ -550,16 +682,32 @@
                 </div>
                 <figcaption>Different drive detected: LeoSync stops</figcaption>
             </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzbremse_ersetzt_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/schutzbremse_ersetzt_en.jpg">
+                        <source srcset="../../images/LeoSync/schutzbremse_ersetzt_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/schutzbremse_ersetzt_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync home screen: question «Many files would be replaced» with the buttons «Not now» and «Transfer anyway»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Safety brake: LeoSync asks before many files are replaced</figcaption>
+            </figure>
         </div>
 
         <h2 id="messages">5. Common messages</h2>
 
-        <p>This is how a message looks after <strong>Test connection</strong> (left: user name or password is wrong, right: the share requires encryption):</p>
+        <p>This is how a message looks after <strong>Test connection</strong> (left: user name or password is wrong, right: the PC or NAS cannot make an encrypted connection):</p>
 
         <div class="help-phones two">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verbindungsfehler_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verbindungsfehler_en.jpg">
                         <source srcset="../../images/LeoSync/verbindungsfehler_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/verbindungsfehler_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Edit profile» with the error «User name or password is wrong» after the connection test">
@@ -572,14 +720,16 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verbindungstest_verschluesselung_verlangt_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/verbindungstest_verschluesselung_verlangt_en.jpg">
                         <source srcset="../../images/LeoSync/verbindungstest_verschluesselung_verlangt_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/verbindungstest_verschluesselung_verlangt_bright_en.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync «Edit profile»: the connection test reports «No access to this folder» and recommends setting the profile's encryption to «If possible» or «Required»">
+                             alt="LeoSync «Edit profile»: the connection test reports «Connection not possible: Your PC or NAS cannot make an encrypted connection» and offers «Help: turn on encryption»">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>Connection test: the share requires encryption</figcaption>
+                <figcaption>Connection test: PC or NAS cannot encrypt</figcaption>
             </figure>
         </div>
 
@@ -602,7 +752,7 @@
                     </tr>
                     <tr>
                         <td>No access to this folder</td>
-                        <td>Allow <strong>Change</strong> for the user in the share permissions.</td>
+                        <td>Allow <strong>Change</strong> for the user in the share permissions. If the share requires encryption but the profile is not encrypted, set the profile's encryption to <strong>If possible</strong> or <strong>Required</strong> (the app appends this hint).</td>
                     </tr>
                     <tr>
                         <td>The PC is not reachable</td>
@@ -611,6 +761,14 @@
                     <tr>
                         <td>PC not reachable – nothing deleted</td>
                         <td>Shown as a message at the bottom (about 8 seconds, dismissible) when LeoSync could not check the PC while removing after backup. The files stay marked and on the phone. Check the connection and try again.</td>
+                    </tr>
+                    <tr>
+                        <td>Access to photos and videos is missing (message "Allow access")</td>
+                        <td>Photo backup only runs with full media access. If the permission is missing (revoked or reset automatically by Android) or you chose <strong>Only selected photos</strong> on Android 14, LeoSync reports an error instead of "nothing to do" and notifies you once. Tap <strong>Allow access</strong> and choose <strong>Allow access to all photos and videos</strong>. While access is missing, LeoSync does not change any delete state and frees nothing in <strong>Free up space</strong>. The "not backed up for a long time" reminder also appears without access. <strong>Tip "Keep permissions"</strong> (Android 11 and newer): Android removes permissions of unused apps automatically; turn off the automatic removal for LeoSync in the app info.</td>
+                    </tr>
+                    <tr>
+                        <td>Login failed / Login paused</td>
+                        <td>The PC rejected the user name or password (or the account is locked). To avoid locking your account on the PC or your IP address on the NAS, LeoSync then tries to log in in the background <strong>at most once in 24 hours</strong> per PC and account, regardless of the number of profiles; the other profiles of the same account keep showing "Login failed". A notification appears only the first time. If you correct the password, tap <strong>Try again</strong> or <strong>Test connection</strong>, or start manually, LeoSync tries immediately; a successful login ends the pause. A failure of <strong>Test connection</strong> also pauses the account (all profiles of the same PC and account).</td>
                     </tr>
                     <tr>
                         <td>The PC is not recognised yet / PC unknown</td>
@@ -625,8 +783,8 @@
                         <td>Was the folder renamed or moved? Rename it back and tap <strong>Check again</strong> – or choose a new folder.</td>
                     </tr>
                     <tr>
-                        <td>Encryption no longer available / Encryption refused</td>
-                        <td>The profile used to be encrypted and the PC or NAS no longer offers encryption. Nothing is transferred until you decide. Tap <strong>Test connection</strong>. If you changed the setting on the NAS or PC yourself, you can <strong>Allow unencrypted</strong>; otherwise leave the profile paused (see section 4).</td>
+                        <td>Encryption not available / Encryption refused</td>
+                        <td>The profile requires encryption (or used to be encrypted) and the PC or NAS does not offer it now. Nothing is transferred until you decide. Tap <strong>Try again</strong>. If you changed the setting on the NAS or PC yourself, you can choose <strong>Reduce protection: &lt;profile&gt;</strong>; otherwise leave the profile paused (see section 4).</td>
                     </tr>
                     <tr>
                         <td>Different drive detected</td>
@@ -634,6 +792,37 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="help-phones two">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/medienzugriff_fehlt_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/medienzugriff_fehlt_en.jpg">
+                        <source srcset="../../images/LeoSync/medienzugriff_fehlt_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/medienzugriff_fehlt_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync home screen: message «Access to photos and videos is missing» with the buttons «Allow access» and «Try again»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Message: access to photos and videos is missing</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/anmeldung_pausiert_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/anmeldung_pausiert_en.jpg">
+                        <source srcset="../../images/LeoSync/anmeldung_pausiert_bright_en.webp" type="image/webp">
+                        <img src="../../images/LeoSync/anmeldung_pausiert_bright_en.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync home screen: message «Sign-in failed» with the buttons «Enter password again», «Try again» and «Open profile»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Sign-in failed: automatic start paused</figcaption>
+            </figure>
         </div>
 
         <h2 id="background">6. Sync stops in the background</h2>
@@ -644,6 +833,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/app_berechtigungen_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/app_berechtigungen_en.jpg">
                         <source srcset="../../images/LeoSync/app_berechtigungen_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/app_berechtigungen_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «App permissions» with access to photos and videos, notifications and the battery optimization row with «Open app settings»">
@@ -656,6 +847,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/akku_tipp_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/akku_tipp_en.jpg">
                         <source srcset="../../images/LeoSync/akku_tipp_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/akku_tipp_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync home screen: tip card for reliable background sync with «Open app settings», «How» and «Not now»">
@@ -677,9 +870,9 @@
 
         <ol>
             <li><strong>Old app:</strong> Pause all profiles so that both apps do not sync the same folders.</li>
-            <li><strong>Old app:</strong> Export under <strong>Settings → Language &amp; backup → Backup</strong> and save the file. Set an export password, otherwise the backup contains no passwords and you enter them again later. With an export password, the file contains your credentials (encrypted): keep it safe and delete it after the move.</li>
-            <li><strong>New app:</strong> On the home screen tap <strong>Start moving</strong> and choose <strong>Import backup</strong>.</li>
-            <li><strong>New app:</strong> Follow the <strong>After the import</strong> card on the home screen: choose folders again where needed, tap <strong>Test connection</strong> once, and start the first sync. The profiles deliberately wait for this first start.</li>
+            <li><strong>Old app:</strong> Export under <strong>Settings → Diagnostics &amp; backup → Backup</strong> and save the file. Set an export password, otherwise the backup contains no passwords and you enter them again later. With an export password, the file contains your credentials (encrypted): keep it safe and delete it after the move.</li>
+            <li><strong>New app:</strong> On the home screen tap <strong>Start moving</strong> and choose <strong>Import backup</strong>. If you do not want to take anything over, tap <strong>Set up fresh</strong> instead: this opens the wizard for a new profile and you create the profiles from scratch. The move card only appears as long as no profile exists.</li>
+            <li><strong>New app:</strong> Choose folders again where needed, tap <strong>Test connection</strong> once, and start the first sync with <strong>Start now</strong>. The <strong>Messages</strong> tile on the home screen shows what is still to do. The profiles deliberately wait for this first start.</li>
             <li><strong>Old app:</strong> Uninstall it only when everything works.</li>
         </ol>
 
@@ -687,6 +880,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/umzug_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/umzug_en.jpg">
                         <source srcset="../../images/LeoSync/umzug_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/umzug_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync after installation: the card for moving from the old LeoSync version with the button «Start moving»">
@@ -699,6 +894,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/umzug_anleitung_en.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../../images/LeoSync/umzug_anleitung_en.jpg">
                         <source srcset="../../images/LeoSync/umzug_anleitung_bright_en.webp" type="image/webp">
                         <img src="../../images/LeoSync/umzug_anleitung_bright_en.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync dialog for moving from the old LeoSync version with the five steps and a button to the backup settings">

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="theme-color" content="#1a6fd1">
+        <meta name="theme-color" content="#0d141d" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
 
     <title>LeoSync Hilfe – Einrichtung, Profile und häufige Meldungen</title>
@@ -111,10 +112,6 @@
             </ol>
         </nav>
 
-                <p>LeoSync sichert Fotos, Videos und beliebige Ordner vom Handy auf deinen Windows-PC – direkt im Heimnetz, ohne Cloud und ohne Konto. Die Dateien gehen nur zwischen Handy und PC.</p>
-
-                <p>LeoSync sichert Fotos, Videos und beliebige Ordner vom Handy auf deinen Windows-PC – direkt im Heimnetz, ohne Cloud und ohne Konto. Die Dateien gehen nur zwischen Handy und PC.</p>
-
         <h2 id="ordner-freigeben">1. Auf dem PC: Ordner freigeben</h2>
 
         <ol>
@@ -197,11 +194,11 @@
 
         <p>Der Assistent führt Schritt für Schritt durch Name, Quelle, Ziel und Optionen. Beim Ziel genügt der PC (<code>\\192.168.1.20</code>) mit Benutzer und Passwort; <strong>Ordner auf dem PC wählen…</strong> zeigt dann die Freigaben und Ordner zur Auswahl. Mit <strong>Verbindung testen</strong> siehst du sofort, ob alles stimmt.</p>
 
-        <p>Bei Fotos-Profilen wählst du die <strong>Ordnerstruktur</strong>: <code>Jahr\Monat - Land</code> (Standard), <code>Jahr\Land\Monat</code> oder <code>Jahr\Monat\Land</code>. Sie lässt sich bis zur ersten Synchronisierung des Profils ändern. Mehrere Fotos-Profile mit demselben Ziel müssen dieselbe Struktur verwenden.</p>
+        <p>Bei Fotos-Profilen wählst du die <strong>Ordnerstruktur</strong>. Mit dem Schalter <strong>Nach Land sortieren</strong> bestimmst du, ob Fotos aus dem Ausland in Länderordner kommen. <strong>An:</strong> <code>Jahr\Monat - Land</code> (Standard), <code>Jahr\Land\Monat</code>, <code>Jahr\Monat\Land</code>, <code>Jahr - Land</code> (z. B. <code>2026 - Ägypten\IMG_1.jpg</code>) oder <code>Jahr\Land</code> (<code>2026\Ägypten\IMG_1.jpg</code>). <strong>Aus:</strong> <code>Jahr\Monat</code> (<code>2026\06\IMG_1.jpg</code>) oder <strong>Nur Jahr</strong> (<code>2026\IMG_1.jpg</code>). Dazu kommt <strong>Struktur beibehalten</strong>: LeoSync übernimmt die Ordner des Handys (z. B. <code>DCIM\Camera\IMG_1.jpg</code>), ohne Jahres-, Monats- oder Länderordner. Verschiebst oder benennst du Fotos auf dem Handy um, sichert LeoSync sie im neuen Ordner erneut; die alte Kopie auf dem PC bleibt. Heimatland und Fotos ohne Ort bleiben ohne Land. Struktur und Schalter lassen sich bis zur ersten Synchronisierung des Profils ändern, danach sind sie gesperrt. Mehrere Fotos-Profile mit demselben Ziel müssen dieselbe Struktur verwenden. Gibt es auf dem PC bereits umbenannte Ordner, die mit der Jahreszahl (oder dem Monat) beginnen, fragt LeoSync nach (bei den Jahres-Strukturen «2026, ganzes Jahr»).</p>
 
-        <p><strong>Länderordner</strong> (nur Fotos-Profile): Dafür liest LeoSync den Aufnahmeort (GPS-Daten im Foto) aus deinen Fotos, um den Ordner zu bestimmen. Erst wenn du Länderordner wählst, fragt LeoSync mit einer Erklärung nach der Berechtigung <strong>Standort in Fotos</strong>. Der Ort wird nur auf dem Handy ausgewertet und weder gespeichert noch gesendet; die Fotos selbst werden unverändert übertragen. Lehnst du ab, bleiben die Länderordner aus; fehlt die Berechtigung später, steht im Profil «Aufnahmeort: Berechtigung fehlt» mit <strong>Erteilen</strong>.</p>
+        <p><strong>Länderordner</strong> (nur Fotos-Profile): Dafür liest LeoSync den Aufnahmeort (GPS-Daten im Foto) aus deinen Fotos, um den Ordner zu bestimmen. Erst wenn du eine Struktur mit Land wählst (nicht bei «Jahr\Monat - Land»), fragt LeoSync mit einer Erklärung nach der Berechtigung <strong>Standort in Fotos</strong>. Der Ort wird nur auf dem Handy ausgewertet und weder gespeichert noch gesendet; die Fotos selbst werden unverändert übertragen. Lehnst du ab, bleiben die Länderordner aus; fehlt die Berechtigung später, steht im Profil «Aufnahmeort: Berechtigung fehlt» mit <strong>Erteilen</strong>.</p>
 
-        <p>Unter <strong>PC-Erkennung</strong> im Profil siehst du, ob LeoSync deinen PC erkennt: <strong>PC erkannt</strong>, <strong>Noch nicht erkannt</strong> oder <strong>Anderer PC</strong>. LeoSync erkennt deinen PC an seiner Kennung, damit es nur mit deinem PC synchronisiert und nicht mit einem anderen Gerät. Die Kennung wird geprüft, bevor Benutzername und Passwort gesendet werden. Ist der PC noch nicht erkannt, tippe zu Hause auf <strong>Verbindung testen</strong>. Bei <strong>Anderer PC</strong> (z. B. nach einer Neuinstallation von Windows, dann ändert sich die Kennung) wird nichts synchronisiert; prüfe, ob wirklich dein PC antwortet, und bestätige dann mit <strong>Verbindung testen</strong>. LeoSync braucht dafür keinen WLAN-Namen und keine Standortberechtigung.</p>
+        <p>Unter <strong>PC-Kennung</strong> im Profil siehst du, ob LeoSync deinen PC erkennt: <strong>PC erkannt</strong>, <strong>Noch nicht erkannt</strong> oder <strong>Anderer PC</strong>. LeoSync erkennt deinen PC an seiner Kennung, damit es nur mit deinem PC synchronisiert und nicht mit einem anderen Gerät. Die Kennung wird geprüft, bevor Benutzername und Passwort gesendet werden. Ist der PC noch nicht erkannt, tippe zu Hause auf <strong>Verbindung testen</strong>. Bei <strong>Anderer PC</strong> (z. B. nach einer Neuinstallation von Windows, dann ändert sich die Kennung) wird nichts synchronisiert; prüfe, ob wirklich dein PC antwortet, und bestätige dann mit <strong>Verbindung testen</strong>. LeoSync braucht dafür keinen WLAN-Namen und keine Standortberechtigung.</p>
 
         <p>Unter <strong>Bekannte Netze: N</strong> steht, in wie vielen Netzen LeoSync deinen PC schon sicher erkannt hat. In fremden WLANs sucht es nur kurz nach dem PC, um Akku zu sparen; geschützt bist du durch die PC-Kennung, nicht durch die bekannten Netze. Namen der Netze zeigt LeoSync nicht an, nur die Anzahl. Nach einem Umzug oder einem Router-Wechsel kannst du mit <strong>Vergessen</strong> die bekannten Netze zurücksetzen: LeoSync lernt sie beim nächsten Verbinden neu, es geht keine Datei verloren. Profile aus einer alten Sicherung, die früher am WLAN-Namen hingen, stellt LeoSync beim Import auf die PC-Kennung um (ein Verlaufseintrag meldet es); kennt ein Profil den PC noch nicht, tippe einmal auf <strong>Verbindung testen</strong>.</p>
 
@@ -209,6 +206,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/laenderordner_berechtigung_dialog_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/laenderordner_berechtigung_dialog_de.jpg">
                         <source srcset="../images/LeoSync/laenderordner_berechtigung_dialog_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/laenderordner_berechtigung_dialog_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Neues Profil»: Dialog «Aufnahmeort der Fotos lesen?» mit den Schaltflächen «Weiter» und «Nicht jetzt»">
@@ -221,6 +220,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/pc_erkennung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/pc_erkennung_de.jpg">
                         <source srcset="../images/LeoSync/pc_erkennung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/pc_erkennung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Profil bearbeiten»: Karte «PC-Kennung» mit «PC erkannt», «Bekannte Netze: 1» und der Schaltfläche «Vergessen»">
@@ -229,6 +230,51 @@
                     <span class="phone-camera"></span>
                 </div>
                 <figcaption>PC-Kennung und bekannte Netze</figcaption>
+            </figure>
+        </div>
+
+        <div class="help-phones">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/ordnerstruktur_land_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/ordnerstruktur_land_de.jpg">
+                        <source srcset="../images/LeoSync/ordnerstruktur_land_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/ordnerstruktur_land_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync Fotos-Profil: Karte «Ordnerstruktur» mit dem Schalter «Nach Land sortieren», dem Strukturfeld und dem Heimatland">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Fotos-Profil: Ordnerstruktur mit Land</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/ordnerstruktur_auswahl_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/ordnerstruktur_auswahl_de.jpg">
+                        <source srcset="../images/LeoSync/ordnerstruktur_auswahl_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/ordnerstruktur_auswahl_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: Dialog «Ordnerstruktur wählen» mit sechs Strukturen, darunter «Struktur beibehalten»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Dialog «Ordnerstruktur wählen»</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/heimatland_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/heimatland_de.jpg">
+                        <source srcset="../images/LeoSync/heimatland_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/heimatland_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: Auswahl «Heimatland wählen» mit der Option «Kein Heimatland»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Heimatland wählen</figcaption>
             </figure>
         </div>
 
@@ -263,6 +309,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/new_profile_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/new_profile_de.jpg">
                         <source srcset="../images/LeoSync/new_profile_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/new_profile_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Neues Profil»: Auswahl zwischen «Fotos &amp; Videos sichern» und «Ordner synchronisieren»">
@@ -275,6 +323,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/profile_connection_test_verschluesselt_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/profile_connection_test_verschluesselt_de.jpg">
                         <source srcset="../images/LeoSync/profile_connection_test_verschluesselt_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/profile_connection_test_verschluesselt_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Profil bearbeiten» mit Freigabe-Pfad, Benutzer, «Ordner auf dem PC wählen…» und erfolgreichem Verbindungstest («Verbindung OK», «Verschlüsselt (SMB 3.1.1)»)">
@@ -287,6 +337,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verschluesselung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verschluesselung_de.jpg">
                         <source srcset="../images/LeoSync/verschluesselung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/verschluesselung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Profil bearbeiten»: Karte «PC-Kennung» und darunter die Karte «Verschlüsselung» mit den Stufen «Aus», «Wenn möglich (empfohlen)» und «Erforderlich»">
@@ -299,6 +351,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/profiles_tools_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/profiles_tools_de.jpg">
                         <source srcset="../images/LeoSync/profiles_tools_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/profiles_tools_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite mit zwei angelegten Profilen («Fotos» mit Schild-Symbol für die verschlüsselte Verbindung, «Dokumente» mit «2 offen») und den Tools «Speicher freigeben» und «Papierkorb»">
@@ -315,7 +369,7 @@
         <ul>
             <li><strong>Automatisch:</strong> Sobald das Handy mit einem WLAN verbunden ist, in dem LeoSync deinen PC erkennt, synchronisiert LeoSync im Hintergrund. Bekannte Netze (siehe Abschnitt 2) prüft es wie bisher; in einem unbekannten WLAN sucht es nur kurz nach dem PC, um Akku zu sparen.</li>
             <li><strong>Updates:</strong> LeoSync wird über Google Play aktualisiert, es gibt in der App keine Update-Seite. In <strong>Über LeoSync</strong> steht der Hinweis «Updates kommen über Google Play».</li>
-            <li><strong>Nach dem Import:</strong> Importierst du eine Sicherung, warten die Profile bewusst auf ihren ersten Start. Oben auf der Startseite zeigt die Karte <strong>Nach dem Import</strong> je Profil den nächsten Schritt mit einer Schaltfläche: <strong>Ordner wählen</strong> (wenn der Handy-Ordner neu verknüpft werden muss), <strong>Verbindung testen</strong> (wenn der PC noch nicht erkannt ist) und <strong>Jetzt starten</strong> (erster Abgleich). Die Karte lässt sich einklappen, aber nicht wegwischen; sie verschwindet, sobald jedes Profil einmal gelaufen ist.</li>
+            <li><strong>Nach dem Import:</strong> Importierst du eine Sicherung, warten die Profile bewusst auf ihren ersten Start. Auf der Startseite fasst die Kachel <strong>Meldungen</strong> das zusammen, zum Beispiel «2 Profile warten auf die erste Synchronisierung», mit der Schaltfläche <strong>Jetzt starten</strong> für den ersten Abgleich; nach dem Start verschwindet der Hinweis. Muss der Handy-Ordner neu verknüpft werden oder ist der PC noch nicht erkannt (<strong>Verbindung testen</strong>), meldet LeoSync das beim jeweiligen Profil. Eine eigene Karte <strong>Nach dem Import</strong> mit Einzelschritten gibt es nicht mehr.</li>
             <li><strong>Prüfintervall der Ordner-Profile:</strong> Unter <strong>Einstellungen → Übertragung</strong> legst du mit <strong>Ordner-Profile: Prüfintervall (Minuten)</strong> (15 bis 1440, Standard 60) fest, wie oft LeoSync bei Ordner-Profilen auf Änderungen prüft. Die Einstellung gilt für alle Ordner-Profile (früher je Profil, wirksam war das kürzeste); bei einem Update übernimmt die App das kürzeste bisherige Intervall. Geprüft wird nur, solange ein aktives Ordner-Profil existiert.</li>
             <li><strong>Neue Fotos (Mindestalter):</strong> <strong>Mindestalter für Fotos (Minuten)</strong> unter <strong>Einstellungen → Übertragung</strong> gibt an, wie alt ein Foto mindestens sein muss. Nach einer Fotoserie läuft nur noch ein Nachhol-Lauf, sobald das neuste Foto das Mindestalter erreicht hat (statt einer je Foto); sind keine Fotos übertragungsbereit, startet kein Lauf und es entsteht kein Verlaufseintrag.</li>
             <li><strong>Mobile Daten/VPN:</strong> Unter <strong>Einstellungen → Übertragung</strong> kannst du die Automatik auch ausserhalb des WLAN zulassen (standardmässig aus). Das kann Datenverbrauch und bei manchen Mobilfunkabos Kosten verursachen, etwa im Ausland. Ist der PC nicht erreichbar, prüft LeoSync ausserhalb des WLAN nur alle 2 Stunden erneut. Im Roaming (ausserhalb deines Heimnetzbetreibers, z. B. im Ausland) startet über mobile Daten oder VPN kein automatischer Lauf; WLAN und der Start von Hand funktionieren wie sonst.</li>
@@ -325,25 +379,29 @@
             <li><strong>Symbole auf der Profilkarte:</strong> Oben rechts zeigt die Karte nur die zutreffenden Symbole, von links nach rechts ohne Lücke: <strong>PC</strong> (die Kennung des PCs ist bekannt, «PC erkannt») und das <strong>Schild</strong> (die letzte Anmeldung war verschlüsselt; rot mit Warndreieck, wenn die Verschlüsselung abgelehnt wurde). Der Zustand steht zusätzlich in den Textzeilen unter dem Namen. Ein WLAN-Symbol gibt es nicht mehr, weil LeoSync den WLAN-Namen nicht mehr liest.</li>
             <li><strong>Der Hund</strong> zeigt den Zustand: schläft = alles gesichert, läuft = Synchronisierung läuft, steht = wartet auf deine Entscheidung, sitzt = wartet (z. B. auf das WLAN, die erste Synchronisierung oder auf Dateien, die später folgen). Die Statuskarte meldet «alles aktuell» nie bei einem offenen Konflikt, fehlender Verbindung, ausstehenden Dateien oder einem Fehler im letzten Lauf.</li>
             <li><strong>«Noch nicht alles gesichert»</strong> (mit Wiederholen-Symbol): Wurde eine Datei während der Synchronisierung auf dem Handy oder PC geändert, lässt LeoSync sie in diesem Lauf aus und holt sie später nach. Der Lauf zählt trotzdem als erfolgreich; im Verlauf steht «· N folgen später», und die Startseite meldet «N Dateien wurden während des Laufs geändert und folgen beim nächsten Sync.» Du musst nichts tun: LeoSync startet nach 5 Minuten automatisch einen Folgelauf, höchstens einen pro Stunde (Pause und «nur manuell» werden beachtet). Danach folgen die üblichen Auslöser wie Ordnerprüfung und WLAN. Sobald ein Lauf ohne ausstehende Dateien endet, steht wieder «Alles gesichert und aktuell».</li>
-            <li><strong>«Keine Verbindung» und «Start nicht möglich»:</strong> Konnte ein Start nicht ausgeführt werden, weil der PC oder das WLAN nicht verfügbar ist, zeigt die Statuskarte «Keine Verbindung» (der sitzende Hund auf blauem Kreis, solange Dateien warten) statt «Bereit» oder eines Fehlers; ein Start von Hand meldet «Start nicht möglich». «Alles gesichert» erscheint erst, wenn jedes aktive Profil einmal von Hand erfolgreich gestartet wurde. «Wartet auf das Heim-WLAN» erscheint nur nach einem Unterbruch mitten im Lauf. Bei «Keine Verbindung» nennt die Karte auch die Zahl der wartenden Dateien («1 Datei wartet auf die Synchronisierung.» / «N Dateien warten …»). Die Profilkarte eines Ordner-Profils zeigt zusätzlich «· N offen»: neue oder seit dem letzten Abgleich geänderte Dateien im Handy-Ordner. Die Zahl wird nur auf dem Handy gezählt (ohne Netzwerk); bei «PC → Handy» gibt es keinen Zähler, Fotos-Profile zeigen ihn nicht.</li>
+            <li><strong>«Keine Verbindung» und «Start nicht möglich»:</strong> Konnte ein Start nicht ausgeführt werden, weil der PC oder das WLAN nicht verfügbar ist, zeigt die Statuskarte «Keine Verbindung» (der sitzende Hund auf blauem Kreis, solange Dateien warten) statt «Bereit» oder eines Fehlers; ein Start von Hand meldet «Start nicht möglich». «Alles gesichert» erscheint erst, wenn jedes aktive Profil einmal von Hand erfolgreich gestartet wurde. «Wartet auf ein WLAN» erscheint nur nach einem Unterbruch mitten im Lauf. Bei «Keine Verbindung» nennt die Karte auch die Zahl der wartenden Dateien («1 Datei wartet auf die Synchronisierung.» / «N Dateien warten …»). Die Profilkarte eines Ordner-Profils zeigt zusätzlich «· N offen»: neue oder seit dem letzten Abgleich geänderte Dateien im Handy-Ordner. Die Zahl wird nur auf dem Handy gezählt (ohne Netzwerk); bei «PC → Handy» gibt es keinen Zähler, Fotos-Profile zeigen ihn nicht.</li>
             <li><strong>Sicherung:</strong> Die Meldungen beim Export und Import zählen auch den Abgleichstand der Ordner-Profile mit (vorher nur Fotodateien; der Ordner-Stand war schon vorher enthalten).</li>
             <li><strong>Datum und Uhrzeit:</strong> Alle Anzeigen folgen den Systemeinstellungen des Handys (Region, 12 h/24 h), auch wenn die App-Sprache davon abweicht (z. B. US-Format bei deutscher App). Feste Formate bleiben bei Dateinamen, Sicherung/Export, Diagnose und Papierkorb-Tagesordnern.</li>
             <li><strong>«Letzte Synchronisierung»:</strong> Die Startseite zeigt den letzten Lauf ohne Fehler (mit Profil), nicht den letzten Versuch; auch ein fehlerfreier Lauf, bei dem nichts zu übertragen war, zählt. Läufe mit Fehlern, Teilerfolg oder Abbruch ändern die Zeit nicht. Ohne erfolgreichen Lauf steht «Noch keine erfolgreiche Synchronisierung.».</li>
+            <li><strong>«Nächste Prüfung um 10:21»:</strong> Diese Zeile unter dem Status der Startseite sagt, wann LeoSync das nächste Mal von selbst nachsieht, wenn eine Prüfung zeitversetzt geplant ist, z. B. die Nachhol-Synchronisierung für gerade erst aufgenommene Fotos oder ein neuer Versuch, wenn der PC nicht erreichbar war. Sie steht nur, wenn mindestens ein Profil existiert, gerade nichts läuft oder wartet und du nicht von Hand pausiert hast.</li>
             <li><strong>«Meldungen» auf der Startseite:</strong> Probleme erscheinen gesammelt in einer Kachel zum Blättern (Pfeile und Zähler), nach Ursache gruppiert: Betrifft dieselbe Ursache mehrere Profile (derselbe PC, dieselbe Freigabe, dasselbe Konto), steht sie einmal da, mit den betroffenen Profilen. Jedes Profil behält seinen eigenen Zustand; kein Fehler verschwindet durch das Gruppieren. Die Farbe richtet sich nach dem Schwersten (rötlich: Schutzbremse, Sicherheit, du musst handeln; gelb: Entscheidungen und vorübergehende Meldungen). Tipps (z. B. Akku) und die Checkliste nach dem Import stehen ebenfalls dort, ohne Farbe. «Erneut versuchen» wiederholt nur die Profile der Gruppe; ein neues Passwort gibst du einmal je PC und Konto ein. «PC nicht erreichbar» erscheint erst, wenn 24 Stunden lang kein Lauf gelang. Die Überschrift der Statuskarte lautet <strong>Fehler</strong> (Schutzbremse, Sicherheit, du musst handeln, fehlende Pflichtberechtigung), <strong>Wartet auf dich</strong> (Konflikt, Monatsordner, Löschbestätigung) oder <strong>Meldungen</strong> (vorübergehend).</li>
             <li><strong>Profilnamen:</strong> Jeder Profilname darf nur einmal vorkommen (Gross-/Kleinschreibung und Leerzeichen am Rand zählen nicht). Geprüft wird bei <strong>Weiter</strong> im Namensschritt, beim Speichern und beim Bearbeiten. Bestehende Doppelnamen werden nicht umbenannt, sondern beim Bearbeiten gemeldet; Speichern anderer Änderungen bleibt möglich. Der Import mit <strong>Hinzufügen</strong> prüft die Namen bewusst nicht.</li>
             <li><strong>«Zugriff verweigert» beim Verbindungstest:</strong> Steht die Verschlüsselung auf <strong>Aus</strong>, nennt die Meldung sie als mögliche Ursache (der Server verlangt sie vielleicht).</li>
             <li><strong>Import «Ersetzen»:</strong> Die Warnung steht oben fest in Fehlerfarbe, die Angaben zur Sicherung scrollen darunter.</li>
             <li><strong>«Handy-Ordner: Zugriff verloren»:</strong> Hat LeoSync keinen Zugriff mehr auf den Handy-Ordner eines Profils (z. B. nach einem Import der Einstellungen), steht auf der Profilkarte (mit Warnsymbol) «Handy-Ordner: Zugriff verloren – tippen und neu wählen». Tippen öffnet das Profil, dort wählst du den Ordner neu.</li>
-            <li><strong>Speicher freigeben:</strong> Auf der Startseite unter den Werkzeugen entfernt LeoSync alte Dateien vom Handy, die nachweislich auf dem PC liegen. Jede Datei wird vorher auf dem PC geprüft; du wählst nach Alter, Ordner, Dateityp und Grösse und siehst eine Vorschau. Fotos und Videos kommen in den Papierkorb der Galerie (unter Android 10 gibt es ihn nicht; ein Hinweis weist darauf hin). Das Ergebnis nennt, wie viele Dateien gelöscht und übersprungen wurden und wie viel Speicher frei wurde. <strong>Tipp:</strong> Gib Speicherplatz auf dem Handy erst nach einer Synchronisierung frei, am sichersten mit <strong>Speicher freigeben</strong> in LeoSync. Google Fotos kann Originale löschen, bevor sie gesichert sind (<strong>Speicherplatz freigeben</strong> in Google Fotos); LeoSync zeigt dazu einmal nach dem Fotos-Profil-Assistenten einen Hinweis.</li>
-            <li><strong>Sicherung der Einstellungen:</strong> Profile, Einstellungen und Abgleichstand lassen sich als Datei exportieren und wieder importieren. Passwörter sind dabei nur mit einem Export-Passwort verschlüsselt enthalten. Die App-Sprache gehört nicht zur Sicherung. Beim Import ist <strong>Ersetzen</strong> in Warnfarbe hervorgehoben, weil es die vorhandenen Profile ersetzt.</li>
+            <li><strong>Speicher freigeben:</strong> Auf der Startseite unter den Werkzeugen entfernt LeoSync alte Dateien vom Handy, die nachweislich auf dem PC liegen. Jede Datei wird vorher auf dem PC geprüft; du wählst nach Alter, Ordner, Dateityp und Grösse und siehst eine Vorschau. Fotos und Videos kommen in den Papierkorb der Galerie (unter Android 10 gibt es ihn nicht; ein Hinweis weist darauf hin). Das Ergebnis nennt, wie viele Dateien gelöscht und übersprungen wurden und wie viel Speicher frei wurde. Als gesichert gilt eine Datei nur, wenn das gewählte Profil sie mit gleicher Grösse und gleichem Änderungsdatum gesichert hat; die Sicherung eines anderen Profils mit derselben Quelle zählt nicht. <strong>Tipp:</strong> Gib Speicherplatz auf dem Handy erst nach einer Synchronisierung frei, am sichersten mit <strong>Speicher freigeben</strong> in LeoSync. Google Fotos kann Originale löschen, bevor sie gesichert sind (<strong>Speicherplatz freigeben</strong> in Google Fotos); LeoSync zeigt dazu einmal nach dem Fotos-Profil-Assistenten einen Hinweis.</li>
+            <li><strong>Sicherung der Einstellungen:</strong> Profile, Einstellungen und Abgleichstand lassen sich als Datei exportieren und wieder importieren. Passwörter sind dabei nur mit einem Export-Passwort verschlüsselt enthalten. Die App-Sprache gehört nicht zur Sicherung. Beim Import ist <strong>Ersetzen</strong> in Warnfarbe hervorgehoben, weil es die vorhandenen Profile ersetzt. <strong>Empfehlung:</strong> Erstelle die Sicherung immer mit Export-Passwort. Nur dann ist sie gegen nachträgliche Veränderung geschützt: Ist die Datei verändert oder beschädigt, lehnt LeoSync den Import ab, bevor etwas geschrieben wird. Spiele nur Sicherungen ein, die du selbst erstellt hast. Ältere App-Versionen können eine Sicherung mit Export-Passwort nicht lesen; Sicherungen aus früheren Versionen lassen sich weiterhin einspielen, sind aber nicht gegen Veränderung geschützt (am besten neu exportieren). <strong>PC nach dem Import bestätigen:</strong> Aus einer nicht bestätigten Sicherung (ohne Export-Passwort, mit falschem Passwort oder aus einer älteren Version) übernimmt LeoSync die PC-Kennung nicht. Öffne dann jedes betroffene Profil und tippe <strong>Verbindung testen</strong>; bis der PC bestätigt ist, sendet LeoSync nichts. Die Bestätigung gilt für alle Profile desselben PCs. Die Vorschau zeigt je Profil PC, Freigabe und Benutzer und warnt bei einer nicht bestätigten Datei; das Ergebnis nennt die Profile, deren PC du bestätigen musst. Verlangt der Dialog <strong>Passwort neu eingeben</strong> zuerst das Öffnen des Profils, ist der PC noch nicht bestätigt.</li>
             <li><strong>Verlauf:</strong> Mit <strong>Verlauf löschen</strong> entfernst du die Einträge. LeoSync fragt vorher nach und bietet danach <strong>Rückgängig</strong> an, solange die Meldung unten zu sehen ist. Bei Fehlereinträgen steht eine Handlungsempfehlung. Der Verlauf-Filter setzt sich beim Verlassen der Seite zurück.</li>
-            <li><strong>Sprache:</strong> Die App-Sprache folgt der Handy-Sprache (Deutsch, sonst Englisch). Unter Einstellungen → Sprache lässt sie sich fest wählen.</li>
+            <li><strong>Sprache und Farben:</strong> Die App-Sprache folgt der Handy-Sprache (Deutsch, sonst Englisch). Unter Einstellungen → <strong>Sprache &amp; Farben</strong> lässt sie sich fest wählen. Dort steht auch die Karte <strong>Farben</strong>: LeoSync hat ein eigenes Farbschema (hell und dunkel; das richtet sich immer nach den Handy-Einstellungen). Mit <strong>Systemfarben</strong> (ab Android 12) passen sich die Farben deinem Hintergrundbild an. Die Sicherung findest du unter Einstellungen → <strong>Diagnose &amp; Sicherung</strong>.</li>
+            <li><strong>Heimatland:</strong> Das Heimatland gilt für alle Fotos-Profile mit Länderordnern; Fotos von dort bekommen keinen Länderordner. Es ist zu Beginn nicht festgelegt: Beim Einrichten eines Fotos-Profils mit Land wählst du es im Assistenten aus der Liste. Mit <strong>Kein Heimatland</strong> bekommt jedes Land einen eigenen Ordner, auch dein eigenes. Ändern kannst du es unter Einstellungen → <strong>Sprache &amp; Farben</strong>; gibt es Fotos-Profile mit Länderordnern, fragt LeoSync vorher nach (Standard <strong>Abbrechen</strong>). Bereits abgelegte Fotos bleiben, wo sie sind; neue Fotos kommen nach der neuen Regel in ihren Ordner, es kann Rückfragen zu umbenannten Ordnern geben. Wer schon vorher mit LeoSync gearbeitet hat, behält sein bisheriges Heimatland. Die Auswahl scrollt zum gewählten Land.</li>
         </ul>
 
         <div class="help-phones four">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/not_synced_yet_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/not_synced_yet_de.jpg">
                         <source srcset="../images/LeoSync/not_synced_yet_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/not_synced_yet_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Leo sitzt, «Noch keine Synchronisierung durchgeführt», darunter die Kachel «Meldungen» mit dem Hinweis auf die erste Synchronisierung">
@@ -356,6 +414,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/keine_verbindung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/keine_verbindung_de.jpg">
                         <source srcset="../images/LeoSync/keine_verbindung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/keine_verbindung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Leo sitzt auf einem blauen Kreis, «Keine Verbindung», «2 Dateien warten auf die Synchronisierung.» und «Start nicht möglich – PC nicht erreichbar»">
@@ -368,6 +428,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/syncing_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/syncing_de.jpg">
                         <source srcset="../images/LeoSync/syncing_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/syncing_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Leo läuft, die Fortschrittsanzeige zeigt Dateien und Datenmenge des laufenden Profils, darunter eine Schaltfläche zum Pausieren">
@@ -380,6 +442,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/all_synced_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/all_synced_de.jpg">
                         <source srcset="../images/LeoSync/all_synced_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/all_synced_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Leo schläft, die Statuskarte meldet «Alles gesichert und aktuell»">
@@ -395,6 +459,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/paused_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/paused_de.jpg">
                         <source srcset="../images/LeoSync/paused_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/paused_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Leo liegt auf dem Rücken, die Statuskarte meldet «Pausiert – nur manuell»">
@@ -407,6 +473,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/meldungen_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/meldungen_de.jpg">
                         <source srcset="../images/LeoSync/meldungen_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/meldungen_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Sammelkachel «Meldungen» mit Pfeilen und dem Zähler «1 von 3», Überschrift «Fehler»">
@@ -419,18 +487,22 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/nach_dem_import_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/nach_dem_import_de.jpg">
                         <source srcset="../images/LeoSync/nach_dem_import_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/nach_dem_import_bright_de.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync Startseite: Karte «Nach dem Import: noch ein Schritt» mit der Schaltfläche «Ordner wählen»">
+                             alt="LeoSync Startseite: Kachel «Meldungen» mit «2 Profile warten auf die erste Synchronisierung» und der Schaltfläche «Jetzt starten»">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>Nach dem Import: der nächste Schritt je Profil</figcaption>
+                <figcaption>Nach dem Import: die Profile warten auf den ersten Start</figcaption>
             </figure>
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/settings_transfer_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/settings_transfer_de.jpg">
                         <source srcset="../images/LeoSync/settings_transfer_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/settings_transfer_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Einstellungen → Übertragung» mit den Feldern «Mindestalter für Fotos (Minuten)» und «Ordner-Profile: Prüfintervall (Minuten)»">
@@ -442,20 +514,66 @@
             </figure>
         </div>
 
+        <div class="help-phones">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/naechste_pruefung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/naechste_pruefung_de.jpg">
+                        <source srcset="../images/LeoSync/naechste_pruefung_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/naechste_pruefung_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync Startseite mit der Zeile «Nächste Prüfung um 21:51» unter dem Status">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Startseite: «Nächste Prüfung um …»</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/speicher_freigeben_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/speicher_freigeben_de.jpg">
+                        <source srcset="../images/LeoSync/speicher_freigeben_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/speicher_freigeben_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync «Speicher freigeben» mit der Vorschau der Dateien, die vom Handy entfernt würden">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Speicher freigeben mit Vorschau</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/sprache_farben_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/sprache_farben_de.jpg">
+                        <source srcset="../images/LeoSync/sprache_farben_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/sprache_farben_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync «Einstellungen → Sprache &amp; Farben» mit der Karte «Farben» und dem Schalter «Systemfarben»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Einstellungen â†’ Sprache &amp; Farben</figcaption>
+            </figure>
+        </div>
+
         <h2 id="sicherheit">4. Sicherheit deiner Dateien</h2>
 
         <ul>
             <li><strong>Prüfung nach dem Hochladen:</strong> LeoSync liest die Datei auf dem PC zurück und vergleicht sie mit dem Original. Die Stufen reichen von <em>Aus</em> bis <em>Komplett</em>, Standard ist <em>Mittel</em>. Wer Fotos vom Handy entfernen lässt, prüft immer.</li>
             <li><strong>Papierkorb:</strong> Bei Ordner-Profilen landen gelöschte und überschriebene Dateien im Ordner <code>@LeoSync-Bin</code> (auf Handy und PC/NAS; ein normaler, sichtbarer Ordner, bei QNAP/Samba war der frühere Name <code>.LeoSync-Bin</code> versteckt). Ältere Papierkorb-Ordner (<code>.LeoSync-Bin</code> u. a.) benennt LeoSync beim nächsten Lauf automatisch um bzw. verschiebt den Inhalt, ohne etwas zu kopieren oder zu überschreiben; im Verlauf steht eine Zeile dazu. Lehnt ein PC den Namen <code>@LeoSync-Bin</code> ab, nutzt LeoSync dort <code>.LeoSync-Bin</code> und warnt im Verlauf. Die Zeile je Version im Papierkorb zeigt «geändert …» (Änderungszeit der Datei), sonst «gelöscht am …». Die Einträge lassen sich über <strong>Tools → Papierkorb</strong> zurückholen: Profil wählen, Einträge markieren und <strong>Wiederherstellen</strong> tippen (oder <strong>Endgültig löschen</strong>). Bei jeder Datei auf dem Handy steht <strong>Öffnen</strong>: Es öffnet die Datei nur zum Ansehen mit der Standard-App bzw. der Android-App-Auswahl, im Papierkorb ändert sich nichts; ohne passende App oder bei fehlender Datei erscheint eine Meldung. Bei Dateien nur auf dem PC fehlt <strong>Öffnen</strong>. Mit <strong>Anzeigen</strong> (Handy und PC / Nur Handy / Nur PC) und <strong>Tag</strong> schränkst du die Liste ein; ändert sich ein Filter und die Auswahl enthielte ausgeblendete Einträge, wird sie aufgehoben. Die Auswahlleiste und der Löschdialog nennen, welche Seiten betroffen sind. <strong>Wiederherstellen</strong> schreibt immer auf Handy und PC zurück, auch bei einem Filter; der Dialog nennt, wie viele Dateien laut Synchronisierungsstand ersetzt werden (die aktuelle Version kommt vorher in den Papierkorb) und wie viele neu angelegt werden. Auf dem Handy legt LeoSync im Papierkorb eine leere Datei <code>.nomedia</code> an, damit die Galerie ihn nicht anzeigt (nicht bei Download-Ordnern mit Nummern-Kennung); Dateien im Papierkorb werden vom Fotos-Profil nicht gesichert und bei <strong>Speicher freigeben</strong> nicht angeboten. Nach 30 Tagen (einstellbar) wird er geleert. Fotos-Profile haben keinen eigenen Papierkorb: Entfernte Fotos liegen im Papierkorb der Galerie. Im Papierkorb erscheint ein Hinweis, solange der Umzug von <code>.LeoSync-Bin</code> nach <code>@LeoSync-Bin</code> auf offene Wiederherstellungen wartet (es geht nichts verloren; bei mehrfach fehlgeschlagenen Wiederherstellungen versuchst du sie erneut oder verwirfst sie) oder wenn dein PC oder NAS den Namen <code>@LeoSync-Bin</code> ablehnt und LeoSync dort bei <code>.LeoSync-Bin</code> bleibt (normal, deine Dateien sind geschützt).</li>
-            <li><strong>Schutzbremse:</strong> Würden auf einmal viele Dateien gelöscht (Standard: mehr als 20 %) oder fehlt ein ganzer Ordner, hält LeoSync an und fragt dich zuerst. Du entscheidest dann zwischen <strong>Nicht löschen</strong> und <strong>Trotzdem in den Papierkorb</strong>; bis dahin ruht das Profil.</li>
+            <li><strong>Schutzbremse:</strong> Würden auf einmal viele Dateien gelöscht (Standard: mehr als 20 %) oder fehlt ein ganzer Ordner, hält LeoSync an und fragt dich zuerst. Du entscheidest dann zwischen <strong>Nicht löschen</strong> und <strong>Trotzdem in den Papierkorb</strong>; bis dahin ruht das Profil. Dieselbe Frage kommt, wenn auf einmal ungewöhnlich viele bereits synchronisierte Dateien durch geänderte Versionen der anderen Seite <strong>ersetzt</strong> würden (Titel <strong>Viele Dateien würden ersetzt</strong>, gleiche Schwellen, unabhängig vom Versionsschutz): <strong>Jetzt nicht</strong> ändert nichts und das Profil ruht, <strong>Trotzdem übertragen</strong> gibt den Lauf einmal frei (ohne Versionsschutz mit zusätzlicher Bestätigung). Die Simulation meldet, dass der Lauf anhalten und nachfragen würde.</li>
             <li><strong>Änderung bestätigen:</strong> Änderst du bei einem bestehenden Ordner-Profil die Richtung oder schaltest <strong>Löschungen übernehmen</strong> ein, zeigt LeoSync vor dem Speichern, was sich ändert, und du bestätigst mit <strong>Speichern</strong> oder brichst mit <strong>Abbrechen</strong> ab. Bei einer Richtung nur in eine Richtung werden abweichende Dateien auf der Zielseite ersetzt; die ersetzte Version kann in den Papierkorb kommen.</li>
-            <li><strong>Entfernen nach der Sicherung:</strong> Bevor LeoSync ein gesichertes Foto vom Handy entfernt, prüft es die Kopie auf dem PC erneut. Ist der PC nicht erreichbar, wird nichts gelöscht («PC nicht erreichbar – nichts gelöscht»). Fehlt die Kopie oder weicht sie ab, bleibt das Original auf dem Handy und wird beim nächsten Lauf erneut gesichert. <strong>Speicher freigeben</strong> prüft zusätzlich Grösse, Teil-Prüfsumme und Änderungsdatum.</li>
+            <li><strong>Entfernen nach der Sicherung:</strong> Bevor LeoSync ein gesichertes Foto vom Handy entfernt, prüft es die Kopie auf dem PC erneut. Ist der PC nicht erreichbar, wird nichts gelöscht («PC nicht erreichbar – nichts gelöscht»). Fehlt die Kopie oder weicht sie ab, bleibt das Original auf dem Handy und wird beim nächsten Lauf erneut gesichert. <strong>Speicher freigeben</strong> prüft zusätzlich Grösse, Teil-Prüfsumme und Änderungsdatum. Unter Android 10 gibt es keinen Papierkorb: Wählst du im Fotos-Profil <strong>In den Papierkorb verschieben</strong>, weist der Profileditor darauf hin, dass die Fotos nach der Sicherung endgültig vom Handy gelöscht werden. Ob eine Datei auch ein zweites Profil sichern muss, bevor das Original entfernt wird, richtet sich nach dem tatsächlichen Typ (Foto oder Video) und nach den Filtermustern dieses Profils.</li>
             <li><strong>Konflikte:</strong> Wurde eine Datei auf Handy und PC geändert und ist keine automatische Regel eingestellt, entscheidest du, welche Version gilt. Die andere kommt in den Papierkorb. Auf der Konfliktkarte steht bei der neueren Seite «(neuer)», bei gleichem Zeitstempel (auf die Sekunde) «(gleich alt)». Mit <strong>Beide behalten</strong> wird die Handy-Datei zur Konfliktkopie <code>…_conflict-phone</code>; gibt es diesen Namen schon, heisst sie <code>…_conflict-phone-2</code>, <code>-3</code> usw. Die Konfliktkopie überschreibt nie eine vorhandene PC-Datei. <strong>Rückgängig</strong> nach einer Entscheidung wirkt zuverlässig: Hast du rückgängig gemacht, führt LeoSync die Entscheidung nicht mehr aus, auch wenn gerade ein Sync läuft. Bei Bildern und Videos zeigt die Konfliktkarte, wo es sich ermitteln lässt, zusätzlich die Auflösung beider Seiten (bei Videos mit Dauer); die höhere ist mit «(grösser)» beschriftet, aber nie vorausgewählt. Messenger verkleinern Fotos oft, die Datei mit der höheren Auflösung hat meist die bessere Qualität.</li>
             <li><strong>Verschlüsselung:</strong> Mit der Stufe <strong>Erforderlich</strong> sendet LeoSync Benutzername und Passwort nur, wenn die Verbindung verschlüsselt werden kann (siehe <strong>Verschlüsselung einschalten</strong>).</li>
             <li><strong>PC-Kennung:</strong> LeoSync sendet Benutzername und Passwort nur an einen erkannten PC. Bei einem unbekannten PC meldet sich die App nicht an und überspringt das Profil. Die Kennung ist nicht geheim: Sie schützt vor einem fremden Server in einem fremden Netz, nicht vor einem gezielten Angriff.</li>
-            <li><strong>Verschlüsselung oder Signierung nicht mehr verfügbar:</strong> War ein Profil früher verschlüsselt (oder signiert) verbunden und bietet der PC oder das NAS das jetzt nicht mehr an, hält LeoSync das Profil an und überträgt nichts. Möglich ist, dass du die Einstellung am NAS oder PC geändert hast, oder dass jemand die Verbindung im Netz stört. Auf der Startseite und im Profil erscheint eine Karte «Verschlüsselung nicht mehr verfügbar» (bzw. «Signierung nicht mehr verfügbar»), die Profilkarte zeigt das Schild-Symbol rot mit Warndreieck, im Verlauf steht «Angehalten: Verschlüsselung abgelehnt (früher verschlüsselt)», und LeoSync benachrichtigt dich einmal. Mit <strong>Verbindung testen</strong> prüfst du erneut; <strong>Unverschlüsselt erlauben</strong> (bzw. <strong>Ohne Signierung erlauben</strong>) setzt den Merker zurück und überträgt danach ohne diesen Schutz. Wähle das nur, wenn du die Einstellung selbst geändert hast.</li>
+            <li><strong>Verschlüsselung oder Signierung nicht mehr verfügbar:</strong> War ein Profil früher verschlüsselt (oder signiert) verbunden und bietet der PC oder das NAS das jetzt nicht mehr an, hält LeoSync das Profil an und überträgt nichts. Möglich ist, dass du die Einstellung am NAS oder PC geändert hast, oder dass jemand die Verbindung im Netz stört. Auf der Startseite (in der Kachel «Meldungen») und im Profil erscheint eine Karte «Verschlüsselung nicht verfügbar» (bzw. «Signierung nicht mehr verfügbar»), die Profilkarte zeigt das Schild-Symbol rot mit Warndreieck, im Verlauf steht «Angehalten: Verschlüsselung abgelehnt (früher verschlüsselt)», und LeoSync benachrichtigt dich einmal. Die Karte hat die Knöpfe <strong>Erneut versuchen</strong> (prüft erneut), <strong>Schutz verringern: &lt;Profil&gt;</strong> (stellt die Verschlüsselung des Profils nach einer Rückfrage auf «Wenn möglich»; <strong>Abbrechen</strong> ist vorgewählt) und <strong>Profil öffnen</strong>. Bei der Signierung heisst der Knopf <strong>Ohne Signierung erlauben</strong>. Verringere den Schutz nur, wenn du die Einstellung selbst geändert hast.</li>
             <li><strong>Verschlüsselung automatisch auf «Erforderlich»:</strong> Verschlüsselt der PC tatsächlich, während ein Profil auf <strong>Wenn möglich</strong> steht, stellt LeoSync es selbst auf <strong>Erforderlich</strong> um und meldet das im Verlauf und mit einer Zeile oben im Profil (mit <strong>OK</strong>). Das schützt vor einer unbemerkten Herabstufung. Die Stufe bleibt frei wählbar: Wenn du sie wieder auf <strong>Wenn möglich</strong> oder <strong>Aus</strong> stellst, fragt LeoSync nach («Weniger Schutz?»), und für dieses Profil stellt es danach nie mehr automatisch um.</li>
             <li><strong>Anderes Laufwerk erkannt:</strong> LeoSync merkt sich die Kennung des Laufwerks hinter der PC-Freigabe. Weicht sie ab, hält der Ordner-Sync an, bevor eine Datei angefasst wird. Die Karte nennt die möglichen Ursachen (Festplatte oder NAS getauscht, Laufwerk neu formatiert, anderes Gerät unter derselben Adresse). <strong>Nicht synchronisieren</strong> lässt das Profil angehalten; <strong>Ist das richtige Laufwerk – weiter</strong> übernimmt die neue Kennung, danach prüft eine Stichprobe den PC-Ordner. Das schützt vor Datenverlust, ist aber kein Schutz vor einem gezielten Angriff. Als Kennzeichen nutzt LeoSync die Erstellungszeit der Freigabe; wird sie auf demselben Laufwerk neu angelegt oder liefert ein NAS sie nicht stabil, kann die Karte öfter erscheinen. Es geht dabei nie eine Datei verloren.</li>
+            <li><strong>Verbindung nicht manipulierbar:</strong> In einer verschlüsselten Verbindung weist LeoSync unverschlüsselte Antworten ab und trennt die Verbindung (der Lauf endet mit einem Fehler). Hat ein Server die Verbindung ohne Verschlüsselung einmal signiert, verlangt LeoSync die Signierung künftig; lehnt er sie später ab, erscheint die Karte «Signierung nicht mehr verfügbar». Verbindungen ohne Verschlüsselung und ohne Signierung lassen sich im Netz verändern; deshalb ist die Verschlüsselung empfohlen. Gast- und anonyme Anmeldungen lehnt LeoSync ab, sobald ein Benutzer eingetragen ist.</li>
             <li><strong>Umbenennen und Verschieben (Ordner-Profile):</strong> Mit <strong>Löschungen übernehmen</strong> erkennt LeoSync, wenn du eine Datei oder einen ganzen Ordner umbenennst oder verschiebst, und führt das auf der anderen Seite ebenfalls aus (statt Löschen und neu Hochladen); der Inhalt wird vorher geprüft. <strong>Ohne «Löschungen übernehmen» bleiben beim Umbenennen beide Namen auf beiden Seiten, es entstehen also bewusst Dubletten.</strong> Im Verlauf steht «umbenannt/verschoben: alt → neu». Kann der Speicherort deines Handys nichts verschieben, ist die Erkennung für dieses Profil aus (es wird nie kopiert).</li>
             <li><strong>Geändert und gelöscht:</strong> Bei Richtung <strong>Beidseitig</strong> mit <strong>Löschungen übernehmen</strong> gilt: Wurde eine Datei auf einer Seite gelöscht und auf der anderen geändert, wird sie wiederhergestellt statt in den Papierkorb zu gehen; der Verlauf nennt es.</li>
             <li><strong>Namen, die Windows nicht erlaubt:</strong> Dateien mit unzulässigen Zeichen, Punkt oder Leerzeichen am Ende oder reservierten Namen (z. B. <code>CON</code>) lädt LeoSync nicht auf den PC, sondern überspringt sie mit einem Hinweis (kein Fehler). Namen, die sich nur durch Gross-/Kleinschreibung unterscheiden, meldet LeoSync als Kollision.</li>
@@ -466,6 +584,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/papierkorb_profilwahl_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/papierkorb_profilwahl_de.jpg">
                         <source srcset="../images/LeoSync/papierkorb_profilwahl_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/papierkorb_profilwahl_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Papierkorb»: Auswahl, welcher Papierkorb geöffnet werden soll">
@@ -478,6 +598,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/papierkorb_wiederherstellung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/papierkorb_wiederherstellung_de.jpg">
                         <source srcset="../images/LeoSync/papierkorb_wiederherstellung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/papierkorb_wiederherstellung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Papierkorb des Profils «Dokumente» mit den Filtern «Anzeigen» und «Tag», einer Datei mit dem Knopf «Öffnen» und den Schaltflächen «Wiederherstellen» und «Endgültig löschen»">
@@ -490,6 +612,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzbremse_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzbremse_de.jpg">
                         <source srcset="../images/LeoSync/schutzbremse_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/schutzbremse_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite mit der Statuskarte «Fehler», der Sammelkachel «Meldungen» und der Warnung «Viele Dateien würden gelöscht» mit den Schaltflächen «Nicht löschen» und «Trotzdem in den Papierkorb»">
@@ -502,6 +626,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/konflikt_aufloesung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/konflikt_aufloesung_de.jpg">
                         <source srcset="../images/LeoSync/konflikt_aufloesung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/konflikt_aufloesung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Konflikte» bei zwei Bildern: Auflösung beider Seiten, die grössere mit «(grösser)» beschriftet, und die Schaltflächen «Handy behalten», «PC behalten» und «Beide behalten»">
@@ -513,10 +639,12 @@
             </figure>
         </div>
 
-        <div class="help-phones">
+        <div class="help-phones four">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzkarte_verschluesselung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzkarte_verschluesselung_de.jpg">
                         <source srcset="../images/LeoSync/schutzkarte_verschluesselung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/schutzkarte_verschluesselung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Karte «Verschlüsselung nicht verfügbar» mit den Schaltflächen «Erneut versuchen», «Schutz verringern» und «Profil öffnen»">
@@ -529,18 +657,22 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
-                        <source srcset="../images/LeoSync/schutzkarte_profilkarte_bright_de.webp" type="image/webp">
-                        <img src="../images/LeoSync/schutzkarte_profilkarte_bright_de.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync Profilkarte «Dokumente» mit rotem Schild und der Zeile «Verschlüsselung abgelehnt»">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/dialog_schutz_verringern_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/dialog_schutz_verringern_de.jpg">
+                        <source srcset="../images/LeoSync/dialog_schutz_verringern_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/dialog_schutz_verringern_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync: Rückfrage «Weniger Schutz?» mit der vorgewählten Schaltfläche «Abbrechen» und der Option «Schutz verringern»">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>Profilkarte: rotes Schild bei abgelehnter Verschlüsselung</figcaption>
+                <figcaption>Rückfrage «Schutz verringern»: «Abbrechen» ist vorgewählt</figcaption>
             </figure>
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/anderes_laufwerk_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/anderes_laufwerk_de.jpg">
                         <source srcset="../images/LeoSync/anderes_laufwerk_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/anderes_laufwerk_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Karte «Anderes Laufwerk erkannt» mit den Schaltflächen «Nicht synchronisieren» und «Ist das richtige Laufwerk – weiter»">
@@ -550,16 +682,32 @@
                 </div>
                 <figcaption>Anderes Laufwerk erkannt: LeoSync hält an</figcaption>
             </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzbremse_ersetzt_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/schutzbremse_ersetzt_de.jpg">
+                        <source srcset="../images/LeoSync/schutzbremse_ersetzt_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/schutzbremse_ersetzt_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync Startseite: Frage «Viele Dateien würden ersetzt» mit den Schaltflächen «Jetzt nicht» und «Trotzdem übertragen»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Schutzbremse: LeoSync fragt, bevor viele Dateien ersetzt werden</figcaption>
+            </figure>
         </div>
 
         <h2 id="meldungen">5. Häufige Meldungen</h2>
 
-        <p>So erscheint eine Meldung beim <strong>Verbindung testen</strong> (links: Benutzer oder Passwort stimmt nicht, rechts: die Freigabe verlangt Verschlüsselung):</p>
+        <p>So erscheint eine Meldung beim <strong>Verbindung testen</strong> (links: Benutzer oder Passwort stimmt nicht, rechts: PC oder NAS kann keine verschlüsselte Verbindung herstellen):</p>
 
         <div class="help-phones two">
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verbindungsfehler_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verbindungsfehler_de.jpg">
                         <source srcset="../images/LeoSync/verbindungsfehler_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/verbindungsfehler_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «Profil bearbeiten» mit der Fehlermeldung «Benutzer oder Passwort stimmt nicht» nach dem Verbindungstest">
@@ -572,14 +720,16 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verbindungstest_verschluesselung_verlangt_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/verbindungstest_verschluesselung_verlangt_de.jpg">
                         <source srcset="../images/LeoSync/verbindungstest_verschluesselung_verlangt_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/verbindungstest_verschluesselung_verlangt_bright_de.jpg" width="1080" height="2412" loading="lazy"
-                             alt="LeoSync «Profil bearbeiten»: Der Verbindungstest meldet «Kein Zugriff auf diesen Ordner» und empfiehlt, die Verschlüsselung des Profils auf «Wenn möglich» oder «Erforderlich» zu stellen">
+                             alt="LeoSync «Profil bearbeiten»: Der Verbindungstest meldet «Verbindung nicht möglich: Dein PC oder NAS kann keine verschlüsselte Verbindung herstellen» und bietet «Hilfe: Verschlüsselung einschalten» an">
                     </picture>
                     <span class="phone-speaker"></span>
                     <span class="phone-camera"></span>
                 </div>
-                <figcaption>Verbindungstest: die Freigabe verlangt Verschlüsselung</figcaption>
+                <figcaption>Verbindungstest: PC oder NAS kann nicht verschlüsseln</figcaption>
             </figure>
         </div>
 
@@ -602,7 +752,7 @@
                     </tr>
                     <tr>
                         <td>Kein Zugriff auf diesen Ordner</td>
-                        <td>In den Freigabe-Berechtigungen dem Benutzer <strong>Ändern</strong> erlauben.</td>
+                        <td>In den Freigabe-Berechtigungen dem Benutzer <strong>Ändern</strong> erlauben. Verlangt die Freigabe Verschlüsselung, das Profil aber nicht verschlüsselt, stelle die Verschlüsselung des Profils auf <strong>Wenn möglich</strong> oder <strong>Erforderlich</strong> (die App hängt diesen Hinweis an).</td>
                     </tr>
                     <tr>
                         <td>Der PC ist nicht erreichbar</td>
@@ -611,6 +761,14 @@
                     <tr>
                         <td>PC nicht erreichbar – nichts gelöscht</td>
                         <td>Erscheint als Meldung unten (ca. 8 Sekunden, schliessbar), wenn LeoSync beim Entfernen nach der Sicherung den PC nicht prüfen konnte. Die Dateien bleiben vorgemerkt und auf dem Handy. Prüfe die Verbindung und versuche es erneut.</td>
+                    </tr>
+                    <tr>
+                        <td>Zugriff auf Fotos und Videos fehlt (Meldung «Zugriff erlauben»)</td>
+                        <td>Die Fotosicherung läuft nur mit vollem Medienzugriff. Fehlt die Berechtigung (entzogen oder von Android automatisch zurückgesetzt) oder hast du unter Android 14 <strong>Nur ausgewählte Fotos</strong> gewählt, meldet LeoSync einen Fehler statt «nichts zu tun» und benachrichtigt dich einmal. Tippe <strong>Zugriff erlauben</strong> und wähle <strong>Alle Fotos und Videos zulassen</strong>. Solange der Zugriff fehlt, ändert LeoSync nichts an Löschstatus und gibt in <strong>Speicher freigeben</strong> nichts frei. Die Erinnerung «lange nicht gesichert» kommt auch ohne Zugriff. <strong>Tipp «Berechtigungen behalten»</strong> (Android 11 und neuer): Android entzieht Berechtigungen ungenutzter Apps automatisch; schalte in den App-Info die automatische Entfernung für LeoSync aus.</td>
+                    </tr>
+                    <tr>
+                        <td>Anmeldung fehlgeschlagen / Anmeldung pausiert</td>
+                        <td>Der PC hat Benutzername oder Passwort abgelehnt (oder das Konto ist gesperrt). Damit dein Konto am PC oder die IP-Adresse am NAS nicht gesperrt wird, versucht LeoSync sich danach im Hintergrund <strong>höchstens einmal in 24 Stunden</strong> je PC und Konto anzumelden, unabhängig von der Zahl der Profile; die übrigen Profile desselben Kontos zeigen weiter «Anmeldung fehlgeschlagen». Eine Benachrichtigung kommt nur beim ersten Mal. Wenn du das Passwort korrigierst, <strong>Erneut versuchen</strong> oder <strong>Verbindung testen</strong> tippst oder von Hand startest, versucht LeoSync es sofort; eine gelungene Anmeldung hebt die Pause auf. Auch ein Fehlschlag von <strong>Verbindung testen</strong> pausiert das Konto (alle Profile desselben PCs und Kontos).</td>
                     </tr>
                     <tr>
                         <td>Der PC ist noch nicht erkannt / PC unbekannt</td>
@@ -625,8 +783,8 @@
                         <td>Wurde der Ordner umbenannt oder verschoben? Zurückbenennen und <strong>Erneut prüfen</strong> tippen – oder einen neuen Ordner wählen.</td>
                     </tr>
                     <tr>
-                        <td>Verschlüsselung nicht mehr verfügbar / Verschlüsselung abgelehnt</td>
-                        <td>Das Profil war früher verschlüsselt, der PC oder das NAS bietet jetzt keine Verschlüsselung mehr an. Es wird nichts übertragen, bis du entscheidest. Tippe auf <strong>Verbindung testen</strong>. Hast du die Einstellung am NAS oder PC selbst geändert, kannst du <strong>Unverschlüsselt erlauben</strong>; sonst lass das Profil angehalten (siehe Abschnitt 4).</td>
+                        <td>Verschlüsselung nicht verfügbar / Verschlüsselung abgelehnt</td>
+                        <td>Das Profil verlangt Verschlüsselung (oder war früher verschlüsselt), der PC oder das NAS bietet sie jetzt nicht an. Es wird nichts übertragen, bis du entscheidest. Tippe auf <strong>Erneut versuchen</strong>. Hast du die Einstellung am NAS oder PC selbst geändert, kannst du <strong>Schutz verringern: &lt;Profil&gt;</strong> wählen; sonst lass das Profil angehalten (siehe Abschnitt 4).</td>
                     </tr>
                     <tr>
                         <td>Anderes Laufwerk erkannt</td>
@@ -634,6 +792,37 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="help-phones two">
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/medienzugriff_fehlt_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/medienzugriff_fehlt_de.jpg">
+                        <source srcset="../images/LeoSync/medienzugriff_fehlt_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/medienzugriff_fehlt_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync Startseite: Meldung «Zugriff auf Fotos und Videos fehlt» mit den Schaltflächen «Zugriff erlauben» und «Erneut versuchen»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Meldung: Zugriff auf Fotos und Videos fehlt</figcaption>
+            </figure>
+            <figure>
+                <div class="phone-frame">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/anmeldung_pausiert_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/anmeldung_pausiert_de.jpg">
+                        <source srcset="../images/LeoSync/anmeldung_pausiert_bright_de.webp" type="image/webp">
+                        <img src="../images/LeoSync/anmeldung_pausiert_bright_de.jpg" width="1080" height="2412" loading="lazy"
+                             alt="LeoSync Startseite: Meldung «Anmeldung fehlgeschlagen» mit den Schaltflächen «Passwort erneut eingeben», «Erneut versuchen» und «Profil öffnen»">
+                    </picture>
+                    <span class="phone-speaker"></span>
+                    <span class="phone-camera"></span>
+                </div>
+                <figcaption>Anmeldung fehlgeschlagen: automatischer Start pausiert</figcaption>
+            </figure>
         </div>
 
         <h2 id="hintergrund">6. Synchronisierung bricht im Hintergrund ab</h2>
@@ -644,6 +833,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/app_berechtigungen_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/app_berechtigungen_de.jpg">
                         <source srcset="../images/LeoSync/app_berechtigungen_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/app_berechtigungen_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync «App-Berechtigungen» mit Zugriff auf Fotos und Videos, Benachrichtigungen und der Zeile zur Akku-Optimierung mit «App-Einstellungen öffnen»">
@@ -656,6 +847,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/akku_tipp_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/akku_tipp_de.jpg">
                         <source srcset="../images/LeoSync/akku_tipp_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/akku_tipp_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Startseite: Tipp-Karte «Zuverlässige Hintergrund-Synchronisierung» mit «App-Einstellungen öffnen», «So geht es» und «Nicht jetzt»">
@@ -677,9 +870,9 @@
 
         <ol>
             <li><strong>Alte App:</strong> Pausiere alle Profile, damit nicht beide Apps dieselben Ordner synchronisieren.</li>
-            <li><strong>Alte App:</strong> Exportiere unter <strong>Einstellungen → Sprache &amp; Sicherung → Sicherung</strong> und speichere die Datei. Vergib ein Export-Passwort, sonst enthält die Sicherung keine Passwörter und du gibst sie später neu ein. Mit Export-Passwort enthält die Datei deine Zugangsdaten (verschlüsselt): bewahre sie sicher auf und lösche sie nach dem Umzug.</li>
-            <li><strong>Neue App:</strong> Tippe auf der Startseite auf <strong>Umzug starten</strong> und wähle <strong>Sicherung importieren</strong>.</li>
-            <li><strong>Neue App:</strong> Folge der Karte <strong>Nach dem Import</strong> auf der Startseite: Ordner neu wählen, wo es nötig ist, einmal <strong>Verbindung testen</strong> und den ersten Abgleich starten. Die Profile warten bewusst auf diesen ersten Start.</li>
+            <li><strong>Alte App:</strong> Exportiere unter <strong>Einstellungen → Diagnose &amp; Sicherung → Sicherung</strong> und speichere die Datei. Vergib ein Export-Passwort, sonst enthält die Sicherung keine Passwörter und du gibst sie später neu ein. Mit Export-Passwort enthält die Datei deine Zugangsdaten (verschlüsselt): bewahre sie sicher auf und lösche sie nach dem Umzug.</li>
+            <li><strong>Neue App:</strong> Tippe auf der Startseite auf <strong>Umzug starten</strong> und wähle <strong>Sicherung importieren</strong>. Willst du nichts übernehmen, tippe stattdessen auf <strong>Neu einrichten</strong>: Das öffnet den Assistenten für ein neues Profil, und du legst die Profile von Grund auf neu an. Die Umzugskarte erscheint nur, solange noch kein Profil existiert.</li>
+            <li><strong>Neue App:</strong> Wähle die Ordner neu, wo es nötig ist, tippe einmal auf <strong>Verbindung testen</strong> und starte den ersten Abgleich mit <strong>Jetzt starten</strong>. Was noch zu tun ist, zeigt die Kachel <strong>Meldungen</strong> auf der Startseite. Die Profile warten bewusst auf diesen ersten Start.</li>
             <li><strong>Alte App:</strong> Deinstalliere sie erst, wenn alles läuft.</li>
         </ol>
 
@@ -687,6 +880,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/umzug_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/umzug_de.jpg">
                         <source srcset="../images/LeoSync/umzug_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/umzug_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync nach der Installation: Karte «Von der alten LeoSync-Version umziehen?» mit den Schaltflächen «Umzug starten» und «Neu einrichten»">
@@ -699,6 +894,8 @@
             <figure>
                 <div class="phone-frame">
                     <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/umzug_anleitung_de.webp" type="image/webp">
+                        <source media="(prefers-color-scheme: dark)" srcset="../images/LeoSync/umzug_anleitung_de.jpg">
                         <source srcset="../images/LeoSync/umzug_anleitung_bright_de.webp" type="image/webp">
                         <img src="../images/LeoSync/umzug_anleitung_bright_de.jpg" width="1080" height="2412" loading="lazy"
                              alt="LeoSync Dialog «Von der alten LeoSync-Version umziehen» mit den fünf Schritten und der Schaltfläche «Zur Sicherung (Einstellungen)»">

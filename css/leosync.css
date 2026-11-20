@@ -2296,3 +2296,174 @@ section {
 .button-soon:hover {
     transform: none;
 }
+
+/* =========================================================
+   DARK THEME
+   Folgt automatisch der System- bzw. Browsereinstellung
+   (prefers-color-scheme: dark). Die Screenshots wechseln in den
+   HTML-Seiten per <picture> (media="(prefers-color-scheme: dark)")
+   auf die dunklen App-Aufnahmen.
+   Hinweis: --white ist die Flächenfarbe, nicht Schriftfarbe auf Blau;
+   Schrift auf blauem Grund wird unten ausdrücklich auf #fff gesetzt.
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        color-scheme: dark;
+        --blue: #3b8ae6;
+        --blue-dark: #9cc7ff;
+        --blue-light: #1c3a5e;
+        --blue-pale: #131f2e;
+        --cream: #161f2b;
+        --white: #0d141d;
+        --text: #e3eaf2;
+        --muted: #9eaec0;
+        --border: #2b3b4f;
+        --green: #5cc4a0;
+        --green-light: #143027;
+        --yellow-soft: #3a3210;
+        --shadow: 0 12px 35px rgba(0, 0, 0, .45);
+        --background: #0d141d;
+    }
+
+    /* Schrift auf blauem oder dunklem Grund bleibt weiss */
+    .button-primary,
+    .button-secondary,
+    .hero,
+    .step-number,
+    .download-panel,
+    .beta-label,
+    .download-links a,
+    .site-footer,
+    .footer-links a:hover,
+    .privacy-header {
+        color: #fff;
+    }
+
+    .button-primary {
+        background: #1a6fd1;
+    }
+
+    .button-primary:hover {
+        background: #0f4fa3;
+    }
+
+    .hero .button-primary {
+        background: var(--yellow);
+        color: #14305a;
+    }
+
+    .hero .button-primary:hover {
+        background: var(--yellow-dark);
+    }
+
+    .step-number {
+        background: #1a6fd1;
+    }
+
+    /* Kopfzeile und Fussbereich */
+    .site-header {
+        background: rgba(13, 20, 29, .94);
+    }
+
+    .site-footer {
+        background: #080d13;
+    }
+
+    /* Blaue Flächen etwas abgedunkelt */
+    .hero {
+        background:
+            radial-gradient(circle at 78% 30%, rgba(255, 255, 255, .14), transparent 38%),
+            linear-gradient(135deg, #0a3d86 0%, #0e55b3 55%, #1a6fd1 100%);
+    }
+
+    .download-panel,
+    .privacy-header {
+        background: linear-gradient(120deg, #0a3d86, #1565c0);
+    }
+
+    /* Ordnerbeispiel */
+    .folder-example {
+        background: #0a1119;
+        color: #b9c8d8;
+    }
+
+    .file {
+        color: #8ea3b8;
+    }
+
+    .feature-card:hover {
+        border-color: #3b5775;
+    }
+
+    /* Helle Comic-Kacheln bleiben bewusst hell (dunkle Icon-Konturen) */
+
+    /* Handlungsaufruf-Band */
+    .cta-band {
+        background: linear-gradient(100deg, #14283f 0%, #2b2810 100%);
+        border-top-color: #3b5775;
+        border-bottom-color: #3b5775;
+    }
+
+    .cta-band-text h2 {
+        color: #e3eaf2;
+    }
+
+    .cta-band-text p,
+    .cta-band-link {
+        color: #9cc7ff;
+    }
+
+    .cta-band-link:hover {
+        color: #fff;
+    }
+
+    /* Ladebildschirm */
+    .loading-bar {
+        background: #2b3b4f;
+        border-color: #2b3b4f;
+    }
+
+    .loading-title {
+        color: var(--blue-dark);
+    }
+
+    /* Screenshots: weicher Schatten auf dunklem Grund */
+    .help-shots img,
+    .help-phones img,
+    .download-splash,
+    .app-preview-image img,
+    .mode-card-preview img {
+        box-shadow:
+            0 2px 4px rgba(0, 0, 0, .5),
+            3px 5px 14px rgba(0, 0, 0, .45);
+    }
+
+    .help-phones img {
+        background: #0d141d;
+    }
+
+    /* Handy-Rahmen heller, damit er sich vom dunklen Hintergrund abhebt */
+    .help-phones img,
+    .download-splash,
+    .app-preview-image img,
+    .mode-card-preview img {
+        border: 3px solid #8b95a5 !important;
+        border-right: 7px solid #b4bdca !important;
+        border-bottom: 7px solid #b4bdca !important;
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, .06),
+            0 2px 4px rgba(0, 0, 0, .5),
+            3px 5px 14px rgba(0, 0, 0, .45);
+    }
+
+    .phone-speaker,
+    .phone-camera {
+        background: #3a414c;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .guide-sub { color: var(--muted); }
+}
