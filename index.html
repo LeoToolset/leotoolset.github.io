@@ -16,6 +16,7 @@
     <link rel="alternate" hreflang="en" href="https://leotoolset.github.io/en/">
     <link rel="alternate" hreflang="x-default" href="https://leotoolset.github.io/">
     <meta name="theme-color" content="#285681">
+    <meta name="theme-color" content="#0d141d" media="(prefers-color-scheme: dark)">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -782,6 +783,85 @@
                 width: 100%;
             }
 
+        }
+
+        /* =====================================================
+        DARK THEME (folgt der System-/Browsereinstellung)
+        ===================================================== */
+
+        @media (prefers-color-scheme: dark) {
+
+            :root {
+                color-scheme: dark;
+
+                --blue: #3b8ae6;
+                --blue-dark: #9cc7ff;
+                --blue-light: #1c3a5e;
+
+                --background: #0d141d;
+                --surface: #131f2e;
+
+                --text: #e3eaf2;
+                --muted: #9eaec0;
+
+                --border: #2b3b4f;
+
+                --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+            }
+
+            header {
+                background: rgba(13, 20, 29, 0.96);
+            }
+
+            .button {
+                color: #1d3550;
+            }
+
+            .button:hover {
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            }
+
+            .button-secondary {
+                background: #2f6fc0;
+                color: #fff;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, #0f2a4d, #1e5aa8);
+                color: #fff;
+            }
+
+            .hero p {
+                color: #dbe7f5;
+            }
+
+            .more {
+                background: #101a26;
+            }
+
+            .feature {
+                background: #182739;
+            }
+
+            /* Die farbigen Comic-Kacheln bleiben hell, damit die Symbole lesbar bleiben. */
+            .mini-icon {
+                background: #fff;
+                box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.35);
+            }
+
+            footer {
+                background: #0a1119;
+                color: #dce9f5;
+                border-top: 1px solid var(--border);
+            }
+
+            .footer-brand small {
+                color: #9eaec0;
+            }
+
+            .loading-bar {
+                background: #1c2a3b;
+            }
         }
 
     </style>
